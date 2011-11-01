@@ -35,6 +35,7 @@
 @synthesize EntryTag;
 @synthesize tvCell;
 @synthesize hotelDataList;
+@synthesize resultDataList;
 @synthesize bbtnGame,bbtnSort,bbtnFilter,bbtnToMap,bbtnToList,bbtnWhereMe;
 @synthesize aryBbtnForTableView,aryBbtnForMapView;
 
@@ -281,10 +282,10 @@
     //  Different entry init
     //
     if(self.EntryTag == TAIPEI_AERA_LBS){
-//        self.TotalTableView.hidden = YES;
-//        self.TotalMapView.hidden = NO;          
-//        self.TotalTableView.delegate = self;       
-//        self.toolbarItems = aryBbtnForMapView; 
+        self.TotalTableView.hidden = YES;
+        self.TotalMapView.hidden = NO;          
+        self.TotalTableView.delegate = self;       
+        self.toolbarItems = aryBbtnForMapView; 
     }else{
         self.TotalMapView.hidden = YES;
         self.TotalTableView.hidden = NO;
@@ -308,6 +309,12 @@
 		[NSSortDescriptor sortDescriptorWithKey:@"favorites" ascending:NO],
 		[NSSortDescriptor sortDescriptorWithKey:@"odIdentifier" ascending:YES],nil];
 	hotelDataList = [[NSMutableArray alloc]initWithArray:[searchQuery inputPredicateShowHotelList:hotelPredicateString sortWith:hotelSortString]];
+
+ resultDataList = [hotelDataList copy];
+  
+  
+  NSLog(@"update resultDataList !!!");
+  NSLog(@"1 H:R = %d : %d" ,[hotelDataList count], [resultDataList count]);
 }
 -(void)showWhereAmI
 {
@@ -385,17 +392,43 @@
   
   NSInteger segment = FilterBtn_1.selectedSegmentIndex;
   
+  // hotelDataList = resultDataList;
+   
+
+   hotelDataList = [resultDataList mutableCopy];
+
   switch (segment){
     case 0:
       // all
-      NSLog(@"tesetast");
+      // 顯示更新資料
+     
+      NSLog(@"1-0: %d" ,[hotelDataList count]);
+      [hotelDataList filterUsingPredicate:[NSPredicate predicateWithFormat:[NSString stringWithFormat:@"costStay >= 0"]]];
+      [self.TotalTableView reloadData];
+      NSLog(@"1-0: %d" ,[hotelDataList count]);
+
       break;
     case 1:
       // ~1499
+      // 顯示更新資料
+      NSLog(@"1-1: %d" ,[hotelDataList count]);
+      [hotelDataList filterUsingPredicate:[NSPredicate predicateWithFormat:[NSString stringWithFormat:@"costStay <= 1499"]]];
+      [self.TotalTableView reloadData];
+        NSLog(@"1-1: %d" ,[hotelDataList count]);
+
       break;
     case 2:
+      // 顯示更新資料
+      NSLog(@"1-2: %d" ,[hotelDataList count]);
+      [hotelDataList filterUsingPredicate:[NSPredicate predicateWithFormat:[NSString stringWithFormat:@"costStay >= 1500 and costStay <= 2999"]]];
+      [self.TotalTableView reloadData];
+      NSLog(@"1-2: %d" ,[hotelDataList count]);
       break;
     case 3:
+      NSLog(@"1-2: %d" ,[hotelDataList count]);
+      [hotelDataList filterUsingPredicate:[NSPredicate predicateWithFormat:[NSString stringWithFormat:@"costStay >= 3000"]]];
+      [self.TotalTableView reloadData];
+      NSLog(@"1-2: %d" ,[hotelDataList count]);
       break;
   }                                            
 }
@@ -406,13 +439,33 @@
   switch (segment){
     case 0:
       // all
+      // ~1499
+      // 顯示更新資料
+      NSLog(@"2-0: %d" ,[hotelDataList count]);
+      [hotelDataList filterUsingPredicate:[NSPredicate predicateWithFormat:[NSString stringWithFormat:@"costRest >= 0"]]];
+      [self.TotalTableView reloadData];
+      NSLog(@"2-0: %d" ,[hotelDataList count]);
       break;
     case 1:
-      // ~999
+      // 顯示更新資料
+      NSLog(@"2-0: %d" ,[hotelDataList count]);
+      [hotelDataList filterUsingPredicate:[NSPredicate predicateWithFormat:[NSString stringWithFormat:@"costRest <= 999"]]];
+      [self.TotalTableView reloadData];
+      NSLog(@"2-0: %d" ,[hotelDataList count]);
       break;
     case 2:
+      // 顯示更新資料
+      NSLog(@"2-0: %d" ,[hotelDataList count]);
+      [hotelDataList filterUsingPredicate:[NSPredicate predicateWithFormat:[NSString stringWithFormat:@"costRest >= 1000 and costRest <= 1999"]]];
+      [self.TotalTableView reloadData];
+      NSLog(@"2-0: %d" ,[hotelDataList count]);
       break;
     case 3:
+      // 顯示更新資料
+      NSLog(@"2-0: %d" ,[hotelDataList count]);
+      [hotelDataList filterUsingPredicate:[NSPredicate predicateWithFormat:[NSString stringWithFormat:@"costRest >= 2000"]]];
+      [self.TotalTableView reloadData];
+      NSLog(@"2-0: %d" ,[hotelDataList count]);
       break;
   }    
 }
@@ -421,14 +474,32 @@
   
   switch (segment){
     case 0:
-      //  all
+      // 顯示更新資料
+      NSLog(@"3-0: %d" ,[hotelDataList count]);
+      [hotelDataList filterUsingPredicate:[NSPredicate predicateWithFormat:[NSString stringWithFormat:@"distance >= 0"]]];
+      [self.TotalTableView reloadData];
+      NSLog(@"3-0: %d" ,[hotelDataList count]);
       break;
     case 1:
-      //~100
+      // 顯示更新資料
+      NSLog(@"3-0: %d" ,[hotelDataList count]);
+      [hotelDataList filterUsingPredicate:[NSPredicate predicateWithFormat:[NSString stringWithFormat:@"distance < 100"]]];
+      [self.TotalTableView reloadData];
+      NSLog(@"3-0: %d" ,[hotelDataList count]);
       break;
     case 2:
+      // 顯示更新資料
+      NSLog(@"3-0: %d" ,[hotelDataList count]);
+      [hotelDataList filterUsingPredicate:[NSPredicate predicateWithFormat:[NSString stringWithFormat:@"distance >= 100 and distance < 500 "]]];
+      [self.TotalTableView reloadData];
+      NSLog(@"3-0: %d" ,[hotelDataList count]);
       break;
     case 3:
+      // 顯示更新資料
+      NSLog(@"3-0: %d" ,[hotelDataList count]);
+      [hotelDataList filterUsingPredicate:[NSPredicate predicateWithFormat:[NSString stringWithFormat:@"distance >= 500"]]];
+      [self.TotalTableView reloadData];
+      NSLog(@"3-0: %d" ,[hotelDataList count]);
       break;
   }    
 }
@@ -509,14 +580,15 @@
     if (isCurl) {
         hiddenView = YES;
         [transition setType:@"pageCurl"];   
-		transition.endProgress=0.8;
+        transition.endProgress=0.8;
         lastView = self.TotalMapView.hidden;
-		NSLog(@"setFilterMethod1 isCurl");
+        NSLog(@"setFilterMethod1 isCurl");
     } else {
         hiddenView = NO;
         [transition setType:@"pageUnCurl"];
-		transition.startProgress=0.2;
-		NSLog(@"setFilterMethod2 is NOT Curl");
+        transition.startProgress=0.2;
+        NSLog(@"setFilterMethod2 is NOT Curl");
+
     }
     
     if(lastView)
@@ -638,172 +710,10 @@
 #endif
 }
 
-//
-//  all about MAP View 
-//
-//+ (NSString *) imageNameForAnnotationType:(MapAnnotationType)aType {    
-//	return (((NSString *[]){
-//		[AnnotationOneStarType] = @"bubble02",
-//		[AnnotationTwoStarsType] = @"bubble05",
-//		[AnnotationThreeStarsType] = @"bubble07",
-//		[AnnotationFourStarsType] = @"bubble08",
-//		[AnnotationFiveStarsType] = @"bubble11",
-//		[AnnotationUnknownType] = @"bubble10",
-//		[6] = @"bubble10",
-//		[7] = @"bubble10",
-//		[8] = @"bubble10",
-//		[9] = @"bubble10",
-//		[10] = @"bubble10",
-//		[11] = @"bubble10",
-//		[12] = @"bubble10",
-//	})[aType]);
-//}
-//
-//- (void) mapView:(MKMapView *)aMapView regionDidChangeAnimated:(BOOL)animated {
-//
-//	NSFetchRequest *newFetchRequest = [[self class] fetchRequestInContext:self.managedObjectContext forCoordinateRegion:aMapView.region];
-//	
-//	if (self.fetchedResultsController.cacheName)
-//		[[self.fetchedResultsController class] deleteCacheWithName:self.fetchedResultsController.cacheName];
-//    
-//	self.fetchedResultsController.fetchRequest.predicate = newFetchRequest.predicate;
-//	
-//	NSError *fetchingError = nil;
-//	if (![self.fetchedResultsController performFetch:&fetchingError])
-//		NSLog(@"Error fetching: %@", fetchingError);
-//	
-//	[self refreshAnnotations];
-//	
-//}
-/*
-- (void) refreshAnnotations {
-    NSArray *shownHotels = self.fetchedResultsController.fetchedObjects;
-	NSMutableArray *shownAnnotations = [NSMutableArray arrayWithCapacity:[shownHotels count]];
-    
-	for (unsigned int i = 0; i < [shownHotels count]; i++)
-		[shownAnnotations addObject:[NSNull null]];
-    
-	NSArray *removedAnnotations = [self.TotalMapView.annotations filteredArrayUsingPredicate:[NSPredicate predicateWithBlock: ^ (MapAnnotation *anAnnotation, NSDictionary *bindings) {
-		
-		if (![anAnnotation isKindOfClass:[MapAnnotation class]])
-			return (BOOL)NO;
-		
-		NSUInteger hotelIndex = [shownHotels indexOfObject:anAnnotation.representedObject];
-		if (hotelIndex == NSNotFound)
-			return (BOOL)YES;
-		
-		[shownAnnotations replaceObjectAtIndex:hotelIndex withObject:anAnnotation];
-		return (BOOL)NO;		
-	}]];
-    
-	[self.TotalMapView removeAnnotations:removedAnnotations];
-	
-	[shownHotels enumerateObjectsUsingBlock: ^ (Hotel *aHotel, NSUInteger idx, BOOL *stop) {
-        
-		MapAnnotation *annotation = [shownAnnotations objectAtIndex:idx];
-		if (![annotation isKindOfClass:[MapAnnotation class]]) {
-			annotation = [[[MapAnnotation alloc] init] autorelease];
-			[shownAnnotations replaceObjectAtIndex:idx withObject:annotation];
-		}
-		
-		annotation.coordinate = (CLLocationCoordinate2D) {
-			[aHotel.latitude doubleValue],
-			[aHotel.longitude doubleValue]
-		};
-		
-        annotation.odIdentifier = aHotel.odIdentifier;
-		annotation.title = aHotel.displayName;
-		annotation.type = aHotel.areaCode.integerValue;
-		annotation.costStay = aHotel.costStay;
-		annotation.costRest = aHotel.costRest;
-		annotation.representedObject = aHotel;
-        //NSLog(@"CostStay = %@",aHotel.costStay);
-	}];
-	
-	[self.TotalMapView addAnnotations:shownAnnotations];
-	
-}
 
-- (MKAnnotationView *) mapView:(MKMapView *)aMapView viewForAnnotation:(MapAnnotation *)annotation{
-    
-	if (![annotation isKindOfClass:[MapAnnotation class]]) {
-		NSLog(@"%s: Handle user location annotation view", __PRETTY_FUNCTION__);
-		return nil;	
-	}
-	
-	NSString * identifier = [[self class] imageNameForAnnotationType:annotation.type];
-    
-	MKAnnotationView *pinView = (MKAnnotationView *)[aMapView dequeueReusableAnnotationViewWithIdentifier:identifier];
-	
-	if (!pinView) {
-		
-		pinView = [[[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:identifier] autorelease];
-		pinView.canShowCallout = YES;
-		pinView.calloutOffset = CGPointZero;
-		
-		UIButton *leftCalloutButton = [UIButton buttonWithType:UIButtonTypeCustom];
-		leftCalloutButton.tag = kMapViewController_Accessory_StreetView;
-		[leftCalloutButton setImage:[UIImage imageNamed:@"StreetView_2"] forState:UIControlStateNormal];
-		[leftCalloutButton sizeToFit];
-		leftCalloutButton.frame = (CGRect){ 0, 0, 25, 25 };
-		pinView.leftCalloutAccessoryView = leftCalloutButton;
-		
-		UIButton *rightCalloutButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
-		rightCalloutButton.tag = kMapViewController_Accessory_Disclose;
-		pinView.rightCalloutAccessoryView = rightCalloutButton;
-        
-	}
-    
-	NSUInteger price = [annotation.costStay unsignedIntValue];
-    
-	pinView.image = [[UIImage imageNamed:identifier] compositeImageWithOverlayText:
-                     [NSString stringWithFormat:!price ?
-                      @"未提供" :
-                      //[[annotation.costStay stringValue] stringByAppendingFormat:@" 起"]
-                      @"NT:%5i",[annotation.costStay intValue] 
-                      ]
-                     ];
-	
-	pinView.annotation = annotation;
-	
-	return pinView;
-    
-}
 
-- (void) mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)annotationView calloutAccessoryControlTapped:(UIControl *)control{
-    
-	switch (control.tag) {	
-            
-		case kMapViewController_Accessory_StreetView: {
-            //[self showStreetViewFromAnnotation:annotationView.annotation];  
-            __block void (^noclip)(UIView *) = ^ (UIView *aView) {
-                aView.clipsToBounds = NO;
-                if (aView.superview)
-                    noclip(aView.superview);
-            };
-            noclip(self.view);  
-            
-            StreetViewController *streetViewController = [[[StreetViewController alloc] initWithCoordinate:[annotationView.annotation coordinate]] autorelease];
-            [self.navigationController pushViewController:streetViewController animated:YES];
-            break;
-		}
-            
-		case kMapViewController_Accessory_Disclose: {
-            /*
-             DetailInfoTableViewController *DetailInfoTVC = [[[DetailInfoTableViewController alloc]init]autorelease];
-             [self.navigationController pushViewController:DetailInfoTVC animated:YES];
-             *//*
-            MapAnnotation *hotelData = [[[MapAnnotation alloc]init]autorelease];
-            hotelData = annotationView.annotation;
-            DetailInfoTableViewController *detailsView = [[[DetailInfoTableViewController alloc]initWithHotelID:hotelData.odIdentifier] autorelease]; 
-            
-            [self.navigationController pushViewController:detailsView animated:NO];
-			break;
-		}       
-	}
-}
 
-*/
+
 //
 //  default setting part
 //

@@ -58,11 +58,12 @@ enum {
     NSArray *aryBbtnForTableView;
     NSArray *aryBbtnForMapView;
     NSMutableArray *hotelDataList;
-	NSArray *hotelSortString;
-	NSPredicate *hotelPredicateString;
-  IBOutlet UISegmentedControl *FilterBtn_1;
-  IBOutlet UISegmentedControl *FilterBtn_2;
-  IBOutlet UISegmentedControl *FilterBtn_3;
+    NSMutableArray *resultDataList;
+    NSArray *hotelSortString;
+    NSPredicate *hotelPredicateString;
+    IBOutlet UISegmentedControl *FilterBtn_1;
+    IBOutlet UISegmentedControl *FilterBtn_2;
+    IBOutlet UISegmentedControl *FilterBtn_3;
   
 }
 
@@ -74,11 +75,14 @@ enum {
 - (void) showDetailsViewFromAnnotation:(id<MKAnnotation>)anAnnotation;
 - (void) showStreetViewFromAnnotation:(id<MKAnnotation>)anAnnotation;
 
-@property(nonatomic, retain)	NSMutableArray *hotelDataList;
-@property(nonatomic,retain)		MADataStore *MAD;
-@property(nonatomic,retain)		Hotel *Hotels;
+@property(nonatomic,retain)   NSMutableArray *hotelDataList;
+@property(nonatomic,retain)   NSMutableArray *resultDataList;
 @property(nonatomic,retain) 	NSArray *hotelSortString;
 @property(nonatomic,retain) 	NSPredicate *hotelPredicateString;
+
+@property(nonatomic,retain)		MADataStore *MAD;
+@property(nonatomic,retain)		Hotel *Hotels;
+
 
 @property(nonatomic,retain)		IBOutlet UIView *SetSortView;
 @property(nonatomic,retain)		IBOutlet UIView *SetFilterView;
