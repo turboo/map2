@@ -1,0 +1,1206 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2A4C8ABC145D7BC900ED06D4 /* DetailInfoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A4C8ABA145D7BC900ED06D4 /* DetailInfoTableViewController.m */; };
+		2A4C8ABD145D7BC900ED06D4 /* DetailInfoTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A4C8ABB145D7BC900ED06D4 /* DetailInfoTableViewController.xib */; };
+		2A60B1B91455CA6100E28913 /* TotalTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A60B1B71455CA6100E28913 /* TotalTableViewController.m */; };
+		2A60B1BA1455CA6100E28913 /* TotalTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A60B1B81455CA6100E28913 /* TotalTableViewController.xib */; };
+		2A60B1BD1455D07400E28913 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A60B1BC1455D07400E28913 /* CustomCell.xib */; };
+		2A62E7EF145AC7630054915B /* myFavorite_empty.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A62E7E9145AC7630054915B /* myFavorite_empty.png */; };
+		2A62E7F0145AC7630054915B /* myFavorite_empty@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A62E7EA145AC7630054915B /* myFavorite_empty@2x.png */; };
+		2A62E7F1145AC7630054915B /* myFavorite.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A62E7EB145AC7630054915B /* myFavorite.png */; };
+		2A62E7F2145AC7630054915B /* myFavorite@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A62E7EC145AC7630054915B /* myFavorite@2x.png */; };
+		2A62E7F3145AC7630054915B /* myFavoriteTab.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A62E7ED145AC7630054915B /* myFavoriteTab.png */; };
+		2A62E7F4145AC7630054915B /* myFavoriteTab@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A62E7EE145AC7630054915B /* myFavoriteTab@2x.png */; };
+		2A62E7F7145AC83D0054915B /* map@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A62E7F6145AC83D0054915B /* map@2x.png */; };
+		2A6411C5145AED4B00910378 /* games.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A6411C3145AED4B00910378 /* games.png */; };
+		2A6411C6145AED4B00910378 /* games@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A6411C4145AED4B00910378 /* games@2x.png */; };
+		2A6411C8145AEE4000910378 /* mail.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2A6411C7145AEE4000910378 /* mail.gif */; };
+		2A6411CA145AFACB00910378 /* cell_bg1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A6411C9145AFACB00910378 /* cell_bg1.png */; };
+		2A6411CE145AFF1900910378 /* SetSortMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A6411CC145AFF1800910378 /* SetSortMethod.m */; };
+		2A6411CF145AFF1900910378 /* SetSortMethod.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A6411CD145AFF1900910378 /* SetSortMethod.xib */; };
+		2A6411D3145AFF4900910378 /* SetFilterMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A6411D1145AFF4900910378 /* SetFilterMethod.m */; };
+		2A6411D4145AFF4900910378 /* SetFilterMethod.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A6411D2145AFF4900910378 /* SetFilterMethod.xib */; };
+		38176D701455952B008D6537 /* MapDefines.m in Sources */ = {isa = PBXBuildFile; fileRef = 38176D6F1455952B008D6537 /* MapDefines.m */; };
+		38176D7414559552008D6537 /* CombineImages.m in Sources */ = {isa = PBXBuildFile; fileRef = 38176D7314559552008D6537 /* CombineImages.m */; };
+		38176D771455955E008D6537 /* StreetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38176D761455955E008D6537 /* StreetView.m */; };
+		38176D7A14559573008D6537 /* Hotel.m in Sources */ = {isa = PBXBuildFile; fileRef = 38176D7914559573008D6537 /* Hotel.m */; };
+		38176D7C145595DF008D6537 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38176D7B145595DF008D6537 /* MapKit.framework */; };
+		38176D7E145595E9008D6537 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38176D7D145595E9008D6537 /* CoreData.framework */; };
+		38176D81145596BB008D6537 /* MADataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 38176D80145596BB008D6537 /* MADataStore.m */; };
+		38176D8B14559FE0008D6537 /* OKHotel.db in Resources */ = {isa = PBXBuildFile; fileRef = 38176D8A14559FDF008D6537 /* OKHotel.db */; };
+		38176D9114559FF3008D6537 /* OKHotel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 38176D8C14559FF2008D6537 /* OKHotel.xcdatamodeld */; };
+		38176D941455A254008D6537 /* MapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 38176D931455A253008D6537 /* MapAnnotation.m */; };
+		38176D9A1455B51A008D6537 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 38176D991455B519008D6537 /* libsqlite3.dylib */; };
+		38FA2687143F04B700BBE99E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38FA2686143F04B700BBE99E /* UIKit.framework */; };
+		38FA2689143F04B700BBE99E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38FA2688143F04B700BBE99E /* Foundation.framework */; };
+		38FA268B143F04B700BBE99E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38FA268A143F04B700BBE99E /* CoreGraphics.framework */; };
+		38FA2691143F04B700BBE99E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 38FA268F143F04B700BBE99E /* InfoPlist.strings */; };
+		38FA2693143F04B700BBE99E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FA2692143F04B700BBE99E /* main.m */; };
+		38FA2697143F04B700BBE99E /* MapViewAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FA2696143F04B700BBE99E /* MapViewAppDelegate.m */; };
+		38FA269A143F04B700BBE99E /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38FA2698143F04B700BBE99E /* MainWindow.xib */; };
+		38FA26A2143F04B700BBE99E /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38FA26A1143F04B700BBE99E /* SenTestingKit.framework */; };
+		38FA26A3143F04B700BBE99E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38FA2686143F04B700BBE99E /* UIKit.framework */; };
+		38FA26A4143F04B700BBE99E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38FA2688143F04B700BBE99E /* Foundation.framework */; };
+		38FA26A5143F04B700BBE99E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38FA268A143F04B700BBE99E /* CoreGraphics.framework */; };
+		38FA26BD143F04E100BBE99E /* LocationSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FA26BB143F04E100BBE99E /* LocationSearchViewController.m */; };
+		38FA26BE143F04E100BBE99E /* LocationSearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38FA26BC143F04E100BBE99E /* LocationSearchViewController.xib */; };
+		A9AB706F145F8E4C00268276 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9AB706E145F8E4C00268276 /* MapViewController.m */; };
+		A9AFB214146040B70015E7D9 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A9AFB212146040B70015E7D9 /* Default.png */; };
+		A9AFB215146040B70015E7D9 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A9AFB213146040B70015E7D9 /* Default@2x.png */; };
+		DDA6D485145E9C7400C20CCE /* SearchHotelQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA6D484145E9C7400C20CCE /* SearchHotelQuery.m */; };
+		DDA6D489145E9CCE00C20CCE /* TableViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA6D488145E9CCE00C20CCE /* TableViewItem.m */; };
+		DDA6D48C145EA29400C20CCE /* ImageOnURL.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA6D48B145EA29400C20CCE /* ImageOnURL.m */; };
+		DDA6D48E145EA30F00C20CCE /* CustomCell_detail.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDA6D48D145EA30F00C20CCE /* CustomCell_detail.xib */; };
+		DDAD311A145A4A2B004145A6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDAD3119145A4A2B004145A6 /* QuartzCore.framework */; };
+		DDAD311E145A4C4B004145A6 /* MVGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = DDAD311D145A4C4B004145A6 /* MVGradientView.m */; };
+		DDAD312D145A746A004145A6 /* AdvSearch.png in Resources */ = {isa = PBXBuildFile; fileRef = DDAD3123145A746A004145A6 /* AdvSearch.png */; };
+		DDAD312F145A746A004145A6 /* History.png in Resources */ = {isa = PBXBuildFile; fileRef = DDAD3125145A746A004145A6 /* History.png */; };
+		DDAD3131145A746A004145A6 /* list.png in Resources */ = {isa = PBXBuildFile; fileRef = DDAD3127145A746A004145A6 /* list.png */; };
+		DDAD3135145A746A004145A6 /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = DDAD312B145A746A004145A6 /* map.png */; };
+		DDAD3136145A746A004145A6 /* zone.png in Resources */ = {isa = PBXBuildFile; fileRef = DDAD312C145A746A004145A6 /* zone.png */; };
+		DDAD3143145A81E5004145A6 /* AdvSearch@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDAD3137145A81E2004145A6 /* AdvSearch@2x.png */; };
+		DDAD3146145A81E5004145A6 /* History@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDAD313A145A81E3004145A6 /* History@2x.png */; };
+		DDAD3147145A81E5004145A6 /* LBS.png in Resources */ = {isa = PBXBuildFile; fileRef = DDAD313B145A81E3004145A6 /* LBS.png */; };
+		DDAD3148145A81E5004145A6 /* LBS@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDAD313C145A81E3004145A6 /* LBS@2x.png */; };
+		DDAD3149145A81E5004145A6 /* LBSbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = DDAD313D145A81E3004145A6 /* LBSbutton.png */; };
+		DDAD314A145A81E5004145A6 /* LBSbutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDAD313E145A81E4004145A6 /* LBSbutton@2x.png */; };
+		DDAD314B145A81E5004145A6 /* list@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDAD313F145A81E4004145A6 /* list@2x.png */; };
+		DDAD314E145A81E5004145A6 /* zone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDAD3142145A81E4004145A6 /* zone@2x.png */; };
+		DDDF07071458EF0E0042B157 /* bar1.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06971458EF0E0042B157 /* bar1.png */; };
+		DDDF07081458EF0E0042B157 /* bar2.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06981458EF0E0042B157 /* bar2.png */; };
+		DDDF07091458EF0E0042B157 /* bar3.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06991458EF0E0042B157 /* bar3.png */; };
+		DDDF070A1458EF0E0042B157 /* bar4.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF069A1458EF0E0042B157 /* bar4.png */; };
+		DDDF070B1458EF0E0042B157 /* bar5.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF069B1458EF0E0042B157 /* bar5.png */; };
+		DDDF070C1458EF0E0042B157 /* bar6.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF069C1458EF0E0042B157 /* bar6.png */; };
+		DDDF070D1458EF0E0042B157 /* bar7.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF069D1458EF0E0042B157 /* bar7.png */; };
+		DDDF070E1458EF0E0042B157 /* bar8-1.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF069E1458EF0E0042B157 /* bar8-1.png */; };
+		DDDF070F1458EF0E0042B157 /* bar8-2.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF069F1458EF0E0042B157 /* bar8-2.png */; };
+		DDDF07101458EF0E0042B157 /* bar8.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06A01458EF0E0042B157 /* bar8.png */; };
+		DDDF07111458EF0E0042B157 /* bar9.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06A11458EF0E0042B157 /* bar9.png */; };
+		DDDF07121458EF0E0042B157 /* CellBackImg.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06A21458EF0E0042B157 /* CellBackImg.png */; };
+		DDDF07131458EF0E0042B157 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06A41458EF0E0042B157 /* icon.png */; };
+		DDDF07141458EF0E0042B157 /* icon1.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06A51458EF0E0042B157 /* icon1.png */; };
+		DDDF07151458EF0E0042B157 /* icon1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06A61458EF0E0042B157 /* icon1@2x.png */; };
+		DDDF07161458EF0E0042B157 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06A71458EF0E0042B157 /* icon@2x.png */; };
+		DDDF07171458EF0E0042B157 /* JOBS.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06A81458EF0E0042B157 /* JOBS.jpg */; };
+		DDDF07181458EF0E0042B157 /* jobs.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06A91458EF0E0042B157 /* jobs.png */; };
+		DDDF07191458EF0E0042B157 /* BTN1.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06AB1458EF0E0042B157 /* BTN1.png */; };
+		DDDF071A1458EF0E0042B157 /* BTN1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06AC1458EF0E0042B157 /* BTN1@2x.png */; };
+		DDDF071B1458EF0E0042B157 /* BTN2.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06AD1458EF0E0042B157 /* BTN2.png */; };
+		DDDF071C1458EF0E0042B157 /* BTN2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06AE1458EF0E0042B157 /* BTN2@2x.png */; };
+		DDDF071D1458EF0E0042B157 /* BTN3.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06AF1458EF0E0042B157 /* BTN3.png */; };
+		DDDF071E1458EF0E0042B157 /* BTN3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06B01458EF0E0042B157 /* BTN3@2x.png */; };
+		DDDF071F1458EF0E0042B157 /* BTN4.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06B11458EF0E0042B157 /* BTN4.png */; };
+		DDDF07201458EF0E0042B157 /* BTN4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06B21458EF0E0042B157 /* BTN4@2x.png */; };
+		DDDF07211458EF0E0042B157 /* BTN5.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06B31458EF0E0042B157 /* BTN5.png */; };
+		DDDF07221458EF0E0042B157 /* BTN5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06B41458EF0E0042B157 /* BTN5@2x.png */; };
+		DDDF07231458EF0E0042B157 /* BTN6.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06B51458EF0E0042B157 /* BTN6.png */; };
+		DDDF07241458EF0E0042B157 /* BTN6@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06B61458EF0E0042B157 /* BTN6@2x.png */; };
+		DDDF07251458EF0E0042B157 /* 00TaipeiMap.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06B91458EF0E0042B157 /* 00TaipeiMap.png */; };
+		DDDF07261458EF0E0042B157 /* 00TaipeiMap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06BA1458EF0E0042B157 /* 00TaipeiMap@2x.png */; };
+		DDDF07271458EF0E0042B157 /* 中山區btnD.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06BB1458EF0E0042B157 /* 中山區btnD.png */; };
+		DDDF07281458EF0E0042B157 /* 中山區btnD@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06BC1458EF0E0042B157 /* 中山區btnD@2x.png */; };
+		DDDF07291458EF0E0042B157 /* 中正區btnD.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06BD1458EF0E0042B157 /* 中正區btnD.png */; };
+		DDDF072A1458EF0E0042B157 /* 中正區btnD@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06BE1458EF0E0042B157 /* 中正區btnD@2x.png */; };
+		DDDF072B1458EF0E0042B157 /* 信義區btnD.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06BF1458EF0E0042B157 /* 信義區btnD.png */; };
+		DDDF072C1458EF0E0042B157 /* 信義區btnD@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06C01458EF0E0042B157 /* 信義區btnD@2x.png */; };
+		DDDF072D1458EF0E0042B157 /* 內湖區btnD.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06C11458EF0E0042B157 /* 內湖區btnD.png */; };
+		DDDF072E1458EF0E0042B157 /* 內湖區btnD@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06C21458EF0E0042B157 /* 內湖區btnD@2x.png */; };
+		DDDF072F1458EF0E0042B157 /* 北投區btnD.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06C31458EF0E0042B157 /* 北投區btnD.png */; };
+		DDDF07301458EF0E0042B157 /* 北投區btnD@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06C41458EF0E0042B157 /* 北投區btnD@2x.png */; };
+		DDDF07311458EF0E0042B157 /* 南港區btnD.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06C51458EF0E0042B157 /* 南港區btnD.png */; };
+		DDDF07321458EF0E0042B157 /* 南港區btnD@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06C61458EF0E0042B157 /* 南港區btnD@2x.png */; };
+		DDDF07331458EF0E0042B157 /* 士林區btnD.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06C71458EF0E0042B157 /* 士林區btnD.png */; };
+		DDDF07341458EF0E0042B157 /* 士林區btnD@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06C81458EF0E0042B157 /* 士林區btnD@2x.png */; };
+		DDDF07351458EF0E0042B157 /* 大同區btnD.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06C91458EF0E0042B157 /* 大同區btnD.png */; };
+		DDDF07361458EF0E0042B157 /* 大同區btnD@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06CA1458EF0E0042B157 /* 大同區btnD@2x.png */; };
+		DDDF07371458EF0E0042B157 /* 大安區btnD.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06CB1458EF0E0042B157 /* 大安區btnD.png */; };
+		DDDF07381458EF0E0042B157 /* 大安區btnD@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06CC1458EF0E0042B157 /* 大安區btnD@2x.png */; };
+		DDDF07391458EF0E0042B157 /* 文山區btnD.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06CD1458EF0E0042B157 /* 文山區btnD.png */; };
+		DDDF073A1458EF0E0042B157 /* 文山區btnD@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06CE1458EF0E0042B157 /* 文山區btnD@2x.png */; };
+		DDDF073B1458EF0E0042B157 /* 松山區btnD.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06CF1458EF0E0042B157 /* 松山區btnD.png */; };
+		DDDF073C1458EF0E0042B157 /* 松山區btnD@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06D01458EF0E0042B157 /* 松山區btnD@2x.png */; };
+		DDDF073D1458EF0E0042B157 /* 萬華區btnD.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06D11458EF0E0042B157 /* 萬華區btnD.png */; };
+		DDDF073E1458EF0E0042B157 /* 萬華區btnD@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06D21458EF0E0042B157 /* 萬華區btnD@2x.png */; };
+		DDDF07401458EF0E0042B157 /* 中山區LbtnD.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06D51458EF0E0042B157 /* 中山區LbtnD.png */; };
+		DDDF07411458EF0E0042B157 /* 中山區LbtnD@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06D61458EF0E0042B157 /* 中山區LbtnD@2x.png */; };
+		DDDF07421458EF0E0042B157 /* 中正區LbtnD.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06D71458EF0E0042B157 /* 中正區LbtnD.png */; };
+		DDDF07431458EF0E0042B157 /* 中正區LbtnD@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06D81458EF0E0042B157 /* 中正區LbtnD@2x.png */; };
+		DDDF07441458EF0E0042B157 /* 信義區LbtnD.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06D91458EF0E0042B157 /* 信義區LbtnD.png */; };
+		DDDF07451458EF0E0042B157 /* 信義區LbtnD@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06DA1458EF0E0042B157 /* 信義區LbtnD@2x.png */; };
+		DDDF07461458EF0E0042B157 /* 內湖區LbtnD.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06DB1458EF0E0042B157 /* 內湖區LbtnD.png */; };
+		DDDF07471458EF0E0042B157 /* 內湖區LbtnD@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06DC1458EF0E0042B157 /* 內湖區LbtnD@2x.png */; };
+		DDDF07481458EF0E0042B157 /* 北投區LbtnD.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06DD1458EF0E0042B157 /* 北投區LbtnD.png */; };
+		DDDF07491458EF0E0042B157 /* 北投區LbtnD@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06DE1458EF0E0042B157 /* 北投區LbtnD@2x.png */; };
+		DDDF074A1458EF0E0042B157 /* 南港區LbtnD.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06DF1458EF0E0042B157 /* 南港區LbtnD.png */; };
+		DDDF074B1458EF0E0042B157 /* 南港區LbtnD@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06E01458EF0E0042B157 /* 南港區LbtnD@2x.png */; };
+		DDDF074C1458EF0E0042B157 /* 士林區LbtnD.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06E11458EF0E0042B157 /* 士林區LbtnD.png */; };
+		DDDF074D1458EF0E0042B157 /* 士林區LbtnD@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06E21458EF0E0042B157 /* 士林區LbtnD@2x.png */; };
+		DDDF074E1458EF0E0042B157 /* 大同區LbtnD.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06E31458EF0E0042B157 /* 大同區LbtnD.png */; };
+		DDDF074F1458EF0E0042B157 /* 大同區LbtnD@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06E41458EF0E0042B157 /* 大同區LbtnD@2x.png */; };
+		DDDF07501458EF0E0042B157 /* 大安區LbtnD.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06E51458EF0E0042B157 /* 大安區LbtnD.png */; };
+		DDDF07511458EF0E0042B157 /* 大安區LbtnD@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06E61458EF0E0042B157 /* 大安區LbtnD@2x.png */; };
+		DDDF07521458EF0E0042B157 /* 文山區LbtnD.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06E71458EF0E0042B157 /* 文山區LbtnD.png */; };
+		DDDF07531458EF0E0042B157 /* 文山區LbtnD@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06E81458EF0E0042B157 /* 文山區LbtnD@2x.png */; };
+		DDDF07541458EF0E0042B157 /* 松山區LbtnD.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06E91458EF0E0042B157 /* 松山區LbtnD.png */; };
+		DDDF07551458EF0E0042B157 /* 松山區LbtnD@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06EA1458EF0E0042B157 /* 松山區LbtnD@2x.png */; };
+		DDDF07561458EF0E0042B157 /* 萬華區LbtnD.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06EB1458EF0E0042B157 /* 萬華區LbtnD.png */; };
+		DDDF07571458EF0E0042B157 /* 萬華區LbtnD@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06EC1458EF0E0042B157 /* 萬華區LbtnD@2x.png */; };
+		DDDF07581458EF0E0042B157 /* bubble01.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06EE1458EF0E0042B157 /* bubble01.png */; };
+		DDDF07591458EF0E0042B157 /* bubble01@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06EF1458EF0E0042B157 /* bubble01@2x.png */; };
+		DDDF075A1458EF0E0042B157 /* bubble02.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06F01458EF0E0042B157 /* bubble02.png */; };
+		DDDF075B1458EF0E0042B157 /* bubble02@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06F11458EF0E0042B157 /* bubble02@2x.png */; };
+		DDDF075C1458EF0E0042B157 /* bubble03.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06F21458EF0E0042B157 /* bubble03.png */; };
+		DDDF075D1458EF0E0042B157 /* bubble03@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06F31458EF0E0042B157 /* bubble03@2x.png */; };
+		DDDF075E1458EF0E0042B157 /* bubble04.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06F41458EF0E0042B157 /* bubble04.png */; };
+		DDDF075F1458EF0E0042B157 /* bubble04@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06F51458EF0E0042B157 /* bubble04@2x.png */; };
+		DDDF07601458EF0E0042B157 /* bubble05.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06F61458EF0E0042B157 /* bubble05.png */; };
+		DDDF07611458EF0E0042B157 /* bubble05@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06F71458EF0E0042B157 /* bubble05@2x.png */; };
+		DDDF07621458EF0E0042B157 /* bubble06.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06F81458EF0E0042B157 /* bubble06.png */; };
+		DDDF07631458EF0E0042B157 /* bubble06@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06F91458EF0E0042B157 /* bubble06@2x.png */; };
+		DDDF07641458EF0E0042B157 /* bubble07.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06FA1458EF0E0042B157 /* bubble07.png */; };
+		DDDF07651458EF0E0042B157 /* bubble07@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06FB1458EF0E0042B157 /* bubble07@2x.png */; };
+		DDDF07661458EF0E0042B157 /* bubble08.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06FC1458EF0E0042B157 /* bubble08.png */; };
+		DDDF07671458EF0E0042B157 /* bubble08@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06FD1458EF0E0042B157 /* bubble08@2x.png */; };
+		DDDF07681458EF0E0042B157 /* bubble09.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06FE1458EF0E0042B157 /* bubble09.png */; };
+		DDDF07691458EF0E0042B157 /* bubble09@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06FF1458EF0E0042B157 /* bubble09@2x.png */; };
+		DDDF076A1458EF0E0042B157 /* bubble10.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF07001458EF0E0042B157 /* bubble10.png */; };
+		DDDF076B1458EF0E0042B157 /* bubble10@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF07011458EF0E0042B157 /* bubble10@2x.png */; };
+		DDDF076C1458EF0E0042B157 /* bubble11.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF07021458EF0E0042B157 /* bubble11.png */; };
+		DDDF076D1458EF0E0042B157 /* bubble11@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF07031458EF0E0042B157 /* bubble11@2x.png */; };
+		DDDF076E1458EF0E0042B157 /* StreetView.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF07041458EF0E0042B157 /* StreetView.png */; };
+		DDDF076F1458EF0E0042B157 /* StreetView_2.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF07051458EF0E0042B157 /* StreetView_2.png */; };
+		DDDF07701458EF0E0042B157 /* tokyo_hotel.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DDDF07061458EF0E0042B157 /* tokyo_hotel.jpg */; };
+		DDDF077A145906B50042B157 /* cell_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF0779145906B50042B157 /* cell_bg.png */; };
+		DDDF077C145906CC0042B157 /* GeneralRoomImg.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF077B145906CC0042B157 /* GeneralRoomImg.png */; };
+		DDDF0785145927A90042B157 /* HistoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDDF0783145927A80042B157 /* HistoryTableViewController.m */; };
+		DDDF0786145927A90042B157 /* HistoryTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDDF0784145927A90042B157 /* HistoryTableViewController.xib */; };
+		DDDF078A1459290B0042B157 /* MyFavoriteTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DDDF07881459290A0042B157 /* MyFavoriteTableViewController.m */; };
+		DDDF078B1459290B0042B157 /* MyFavoriteTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DDDF07891459290B0042B157 /* MyFavoriteTableViewController.xib */; };
+		DDDF078F145947590042B157 /* cell.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF078E145947590042B157 /* cell.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		38FA26A6143F04B700BBE99E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 38FA2679143F04B700BBE99E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 38FA2681143F04B700BBE99E;
+			remoteInfo = MapView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2A4C8AB9145D7BC900ED06D4 /* DetailInfoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailInfoTableViewController.h; sourceTree = "<group>"; };
+		2A4C8ABA145D7BC900ED06D4 /* DetailInfoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailInfoTableViewController.m; sourceTree = "<group>"; };
+		2A4C8ABB145D7BC900ED06D4 /* DetailInfoTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailInfoTableViewController.xib; sourceTree = "<group>"; };
+		2A60B1B61455CA6100E28913 /* TotalTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TotalTableViewController.h; sourceTree = "<group>"; };
+		2A60B1B71455CA6100E28913 /* TotalTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TotalTableViewController.m; sourceTree = "<group>"; };
+		2A60B1B81455CA6100E28913 /* TotalTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TotalTableViewController.xib; sourceTree = "<group>"; };
+		2A60B1BC1455D07400E28913 /* CustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
+		2A62E7E9145AC7630054915B /* myFavorite_empty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = myFavorite_empty.png; sourceTree = "<group>"; };
+		2A62E7EA145AC7630054915B /* myFavorite_empty@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "myFavorite_empty@2x.png"; sourceTree = "<group>"; };
+		2A62E7EB145AC7630054915B /* myFavorite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = myFavorite.png; sourceTree = "<group>"; };
+		2A62E7EC145AC7630054915B /* myFavorite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "myFavorite@2x.png"; sourceTree = "<group>"; };
+		2A62E7ED145AC7630054915B /* myFavoriteTab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = myFavoriteTab.png; sourceTree = "<group>"; };
+		2A62E7EE145AC7630054915B /* myFavoriteTab@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "myFavoriteTab@2x.png"; sourceTree = "<group>"; };
+		2A62E7F6145AC83D0054915B /* map@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map@2x.png"; sourceTree = "<group>"; };
+		2A6411C3145AED4B00910378 /* games.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = games.png; sourceTree = "<group>"; };
+		2A6411C4145AED4B00910378 /* games@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "games@2x.png"; sourceTree = "<group>"; };
+		2A6411C7145AEE4000910378 /* mail.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = mail.gif; sourceTree = "<group>"; };
+		2A6411C9145AFACB00910378 /* cell_bg1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_bg1.png; sourceTree = "<group>"; };
+		2A6411CB145AFF1800910378 /* SetSortMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetSortMethod.h; sourceTree = "<group>"; };
+		2A6411CC145AFF1800910378 /* SetSortMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetSortMethod.m; sourceTree = "<group>"; };
+		2A6411CD145AFF1900910378 /* SetSortMethod.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetSortMethod.xib; sourceTree = "<group>"; };
+		2A6411D0145AFF4900910378 /* SetFilterMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetFilterMethod.h; sourceTree = "<group>"; };
+		2A6411D1145AFF4900910378 /* SetFilterMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetFilterMethod.m; sourceTree = "<group>"; };
+		2A6411D2145AFF4900910378 /* SetFilterMethod.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetFilterMethod.xib; sourceTree = "<group>"; };
+		38176D6E1455952B008D6537 /* MapDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapDefines.h; sourceTree = "<group>"; };
+		38176D6F1455952B008D6537 /* MapDefines.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapDefines.m; sourceTree = "<group>"; };
+		38176D7214559552008D6537 /* CombineImages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CombineImages.h; sourceTree = "<group>"; };
+		38176D7314559552008D6537 /* CombineImages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CombineImages.m; sourceTree = "<group>"; };
+		38176D751455955E008D6537 /* StreetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreetView.h; sourceTree = "<group>"; };
+		38176D761455955E008D6537 /* StreetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreetView.m; sourceTree = "<group>"; };
+		38176D7814559573008D6537 /* Hotel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hotel.h; sourceTree = "<group>"; };
+		38176D7914559573008D6537 /* Hotel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hotel.m; sourceTree = "<group>"; };
+		38176D7B145595DF008D6537 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		38176D7D145595E9008D6537 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		38176D7F145596BB008D6537 /* MADataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MADataStore.h; sourceTree = "<group>"; };
+		38176D80145596BB008D6537 /* MADataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MADataStore.m; sourceTree = "<group>"; };
+		38176D8A14559FDF008D6537 /* OKHotel.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = OKHotel.db; sourceTree = "<group>"; };
+		38176D8D14559FF3008D6537 /* OKHotel 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "OKHotel 2.xcdatamodel"; sourceTree = "<group>"; };
+		38176D8E14559FF3008D6537 /* OKHotel 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "OKHotel 3.xcdatamodel"; sourceTree = "<group>"; };
+		38176D8F14559FF3008D6537 /* OKHotel 4.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "OKHotel 4.xcdatamodel"; sourceTree = "<group>"; };
+		38176D9014559FF3008D6537 /* OKHotel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OKHotel.xcdatamodel; sourceTree = "<group>"; };
+		38176D921455A253008D6537 /* MapAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapAnnotation.h; sourceTree = "<group>"; };
+		38176D931455A253008D6537 /* MapAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapAnnotation.m; sourceTree = "<group>"; };
+		38176D991455B519008D6537 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		38FA2682143F04B700BBE99E /* MapView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		38FA2686143F04B700BBE99E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		38FA2688143F04B700BBE99E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		38FA268A143F04B700BBE99E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		38FA268E143F04B700BBE99E /* MapView-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MapView-Info.plist"; sourceTree = "<group>"; };
+		38FA2690143F04B700BBE99E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		38FA2692143F04B700BBE99E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		38FA2694143F04B700BBE99E /* MapView-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MapView-Prefix.pch"; sourceTree = "<group>"; };
+		38FA2695143F04B700BBE99E /* MapViewAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapViewAppDelegate.h; sourceTree = "<group>"; };
+		38FA2696143F04B700BBE99E /* MapViewAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapViewAppDelegate.m; sourceTree = "<group>"; };
+		38FA2699143F04B700BBE99E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		38FA26A0143F04B700BBE99E /* MapViewTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MapViewTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		38FA26A1143F04B700BBE99E /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		38FA26BA143F04E100BBE99E /* LocationSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationSearchViewController.h; sourceTree = "<group>"; };
+		38FA26BB143F04E100BBE99E /* LocationSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationSearchViewController.m; sourceTree = "<group>"; };
+		38FA26BC143F04E100BBE99E /* LocationSearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocationSearchViewController.xib; sourceTree = "<group>"; };
+		A9AB706D145F8E4C00268276 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		A9AB706E145F8E4C00268276 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		A9AFB212146040B70015E7D9 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		A9AFB213146040B70015E7D9 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		DDA6D483145E9C7400C20CCE /* SearchHotelQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchHotelQuery.h; sourceTree = "<group>"; };
+		DDA6D484145E9C7400C20CCE /* SearchHotelQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchHotelQuery.m; sourceTree = "<group>"; };
+		DDA6D487145E9CCE00C20CCE /* TableViewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewItem.h; sourceTree = "<group>"; };
+		DDA6D488145E9CCE00C20CCE /* TableViewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewItem.m; sourceTree = "<group>"; };
+		DDA6D48A145EA29400C20CCE /* ImageOnURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageOnURL.h; sourceTree = "<group>"; };
+		DDA6D48B145EA29400C20CCE /* ImageOnURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageOnURL.m; sourceTree = "<group>"; };
+		DDA6D48D145EA30F00C20CCE /* CustomCell_detail.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCell_detail.xib; sourceTree = "<group>"; };
+		DDAD3119145A4A2B004145A6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		DDAD311C145A4C4B004145A6 /* MVGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVGradientView.h; sourceTree = "<group>"; };
+		DDAD311D145A4C4B004145A6 /* MVGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MVGradientView.m; sourceTree = "<group>"; };
+		DDAD3123145A746A004145A6 /* AdvSearch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AdvSearch.png; sourceTree = "<group>"; };
+		DDAD3125145A746A004145A6 /* History.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = History.png; sourceTree = "<group>"; };
+		DDAD3127145A746A004145A6 /* list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = list.png; sourceTree = "<group>"; };
+		DDAD312B145A746A004145A6 /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map.png; sourceTree = "<group>"; };
+		DDAD312C145A746A004145A6 /* zone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zone.png; sourceTree = "<group>"; };
+		DDAD3137145A81E2004145A6 /* AdvSearch@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AdvSearch@2x.png"; sourceTree = "<group>"; };
+		DDAD313A145A81E3004145A6 /* History@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "History@2x.png"; sourceTree = "<group>"; };
+		DDAD313B145A81E3004145A6 /* LBS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LBS.png; sourceTree = "<group>"; };
+		DDAD313C145A81E3004145A6 /* LBS@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LBS@2x.png"; sourceTree = "<group>"; };
+		DDAD313D145A81E3004145A6 /* LBSbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LBSbutton.png; sourceTree = "<group>"; };
+		DDAD313E145A81E4004145A6 /* LBSbutton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LBSbutton@2x.png"; sourceTree = "<group>"; };
+		DDAD313F145A81E4004145A6 /* list@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "list@2x.png"; sourceTree = "<group>"; };
+		DDAD3142145A81E4004145A6 /* zone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zone@2x.png"; sourceTree = "<group>"; };
+		DDDF06971458EF0E0042B157 /* bar1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bar1.png; sourceTree = "<group>"; };
+		DDDF06981458EF0E0042B157 /* bar2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bar2.png; sourceTree = "<group>"; };
+		DDDF06991458EF0E0042B157 /* bar3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bar3.png; sourceTree = "<group>"; };
+		DDDF069A1458EF0E0042B157 /* bar4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bar4.png; sourceTree = "<group>"; };
+		DDDF069B1458EF0E0042B157 /* bar5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bar5.png; sourceTree = "<group>"; };
+		DDDF069C1458EF0E0042B157 /* bar6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bar6.png; sourceTree = "<group>"; };
+		DDDF069D1458EF0E0042B157 /* bar7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bar7.png; sourceTree = "<group>"; };
+		DDDF069E1458EF0E0042B157 /* bar8-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bar8-1.png"; sourceTree = "<group>"; };
+		DDDF069F1458EF0E0042B157 /* bar8-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bar8-2.png"; sourceTree = "<group>"; };
+		DDDF06A01458EF0E0042B157 /* bar8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bar8.png; sourceTree = "<group>"; };
+		DDDF06A11458EF0E0042B157 /* bar9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bar9.png; sourceTree = "<group>"; };
+		DDDF06A21458EF0E0042B157 /* CellBackImg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CellBackImg.png; sourceTree = "<group>"; };
+		DDDF06A41458EF0E0042B157 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		DDDF06A51458EF0E0042B157 /* icon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon1.png; sourceTree = "<group>"; };
+		DDDF06A61458EF0E0042B157 /* icon1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon1@2x.png"; sourceTree = "<group>"; };
+		DDDF06A71458EF0E0042B157 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
+		DDDF06A81458EF0E0042B157 /* JOBS.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = JOBS.jpg; sourceTree = "<group>"; };
+		DDDF06A91458EF0E0042B157 /* jobs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jobs.png; sourceTree = "<group>"; };
+		DDDF06AB1458EF0E0042B157 /* BTN1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BTN1.png; sourceTree = "<group>"; };
+		DDDF06AC1458EF0E0042B157 /* BTN1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BTN1@2x.png"; sourceTree = "<group>"; };
+		DDDF06AD1458EF0E0042B157 /* BTN2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BTN2.png; sourceTree = "<group>"; };
+		DDDF06AE1458EF0E0042B157 /* BTN2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BTN2@2x.png"; sourceTree = "<group>"; };
+		DDDF06AF1458EF0E0042B157 /* BTN3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BTN3.png; sourceTree = "<group>"; };
+		DDDF06B01458EF0E0042B157 /* BTN3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BTN3@2x.png"; sourceTree = "<group>"; };
+		DDDF06B11458EF0E0042B157 /* BTN4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BTN4.png; sourceTree = "<group>"; };
+		DDDF06B21458EF0E0042B157 /* BTN4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BTN4@2x.png"; sourceTree = "<group>"; };
+		DDDF06B31458EF0E0042B157 /* BTN5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BTN5.png; sourceTree = "<group>"; };
+		DDDF06B41458EF0E0042B157 /* BTN5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BTN5@2x.png"; sourceTree = "<group>"; };
+		DDDF06B51458EF0E0042B157 /* BTN6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BTN6.png; sourceTree = "<group>"; };
+		DDDF06B61458EF0E0042B157 /* BTN6@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BTN6@2x.png"; sourceTree = "<group>"; };
+		DDDF06B91458EF0E0042B157 /* 00TaipeiMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 00TaipeiMap.png; sourceTree = "<group>"; };
+		DDDF06BA1458EF0E0042B157 /* 00TaipeiMap@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "00TaipeiMap@2x.png"; sourceTree = "<group>"; };
+		DDDF06BB1458EF0E0042B157 /* 中山區btnD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "中山區btnD.png"; sourceTree = "<group>"; };
+		DDDF06BC1458EF0E0042B157 /* 中山區btnD@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "中山區btnD@2x.png"; sourceTree = "<group>"; };
+		DDDF06BD1458EF0E0042B157 /* 中正區btnD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "中正區btnD.png"; sourceTree = "<group>"; };
+		DDDF06BE1458EF0E0042B157 /* 中正區btnD@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "中正區btnD@2x.png"; sourceTree = "<group>"; };
+		DDDF06BF1458EF0E0042B157 /* 信義區btnD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "信義區btnD.png"; sourceTree = "<group>"; };
+		DDDF06C01458EF0E0042B157 /* 信義區btnD@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "信義區btnD@2x.png"; sourceTree = "<group>"; };
+		DDDF06C11458EF0E0042B157 /* 內湖區btnD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "內湖區btnD.png"; sourceTree = "<group>"; };
+		DDDF06C21458EF0E0042B157 /* 內湖區btnD@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "內湖區btnD@2x.png"; sourceTree = "<group>"; };
+		DDDF06C31458EF0E0042B157 /* 北投區btnD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "北投區btnD.png"; sourceTree = "<group>"; };
+		DDDF06C41458EF0E0042B157 /* 北投區btnD@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "北投區btnD@2x.png"; sourceTree = "<group>"; };
+		DDDF06C51458EF0E0042B157 /* 南港區btnD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "南港區btnD.png"; sourceTree = "<group>"; };
+		DDDF06C61458EF0E0042B157 /* 南港區btnD@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "南港區btnD@2x.png"; sourceTree = "<group>"; };
+		DDDF06C71458EF0E0042B157 /* 士林區btnD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "士林區btnD.png"; sourceTree = "<group>"; };
+		DDDF06C81458EF0E0042B157 /* 士林區btnD@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "士林區btnD@2x.png"; sourceTree = "<group>"; };
+		DDDF06C91458EF0E0042B157 /* 大同區btnD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "大同區btnD.png"; sourceTree = "<group>"; };
+		DDDF06CA1458EF0E0042B157 /* 大同區btnD@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "大同區btnD@2x.png"; sourceTree = "<group>"; };
+		DDDF06CB1458EF0E0042B157 /* 大安區btnD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "大安區btnD.png"; sourceTree = "<group>"; };
+		DDDF06CC1458EF0E0042B157 /* 大安區btnD@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "大安區btnD@2x.png"; sourceTree = "<group>"; };
+		DDDF06CD1458EF0E0042B157 /* 文山區btnD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "文山區btnD.png"; sourceTree = "<group>"; };
+		DDDF06CE1458EF0E0042B157 /* 文山區btnD@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "文山區btnD@2x.png"; sourceTree = "<group>"; };
+		DDDF06CF1458EF0E0042B157 /* 松山區btnD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "松山區btnD.png"; sourceTree = "<group>"; };
+		DDDF06D01458EF0E0042B157 /* 松山區btnD@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "松山區btnD@2x.png"; sourceTree = "<group>"; };
+		DDDF06D11458EF0E0042B157 /* 萬華區btnD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "萬華區btnD.png"; sourceTree = "<group>"; };
+		DDDF06D21458EF0E0042B157 /* 萬華區btnD@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "萬華區btnD@2x.png"; sourceTree = "<group>"; };
+		DDDF06D51458EF0E0042B157 /* 中山區LbtnD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "中山區LbtnD.png"; sourceTree = "<group>"; };
+		DDDF06D61458EF0E0042B157 /* 中山區LbtnD@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "中山區LbtnD@2x.png"; sourceTree = "<group>"; };
+		DDDF06D71458EF0E0042B157 /* 中正區LbtnD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "中正區LbtnD.png"; sourceTree = "<group>"; };
+		DDDF06D81458EF0E0042B157 /* 中正區LbtnD@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "中正區LbtnD@2x.png"; sourceTree = "<group>"; };
+		DDDF06D91458EF0E0042B157 /* 信義區LbtnD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "信義區LbtnD.png"; sourceTree = "<group>"; };
+		DDDF06DA1458EF0E0042B157 /* 信義區LbtnD@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "信義區LbtnD@2x.png"; sourceTree = "<group>"; };
+		DDDF06DB1458EF0E0042B157 /* 內湖區LbtnD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "內湖區LbtnD.png"; sourceTree = "<group>"; };
+		DDDF06DC1458EF0E0042B157 /* 內湖區LbtnD@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "內湖區LbtnD@2x.png"; sourceTree = "<group>"; };
+		DDDF06DD1458EF0E0042B157 /* 北投區LbtnD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "北投區LbtnD.png"; sourceTree = "<group>"; };
+		DDDF06DE1458EF0E0042B157 /* 北投區LbtnD@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "北投區LbtnD@2x.png"; sourceTree = "<group>"; };
+		DDDF06DF1458EF0E0042B157 /* 南港區LbtnD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "南港區LbtnD.png"; sourceTree = "<group>"; };
+		DDDF06E01458EF0E0042B157 /* 南港區LbtnD@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "南港區LbtnD@2x.png"; sourceTree = "<group>"; };
+		DDDF06E11458EF0E0042B157 /* 士林區LbtnD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "士林區LbtnD.png"; sourceTree = "<group>"; };
+		DDDF06E21458EF0E0042B157 /* 士林區LbtnD@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "士林區LbtnD@2x.png"; sourceTree = "<group>"; };
+		DDDF06E31458EF0E0042B157 /* 大同區LbtnD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "大同區LbtnD.png"; sourceTree = "<group>"; };
+		DDDF06E41458EF0E0042B157 /* 大同區LbtnD@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "大同區LbtnD@2x.png"; sourceTree = "<group>"; };
+		DDDF06E51458EF0E0042B157 /* 大安區LbtnD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "大安區LbtnD.png"; sourceTree = "<group>"; };
+		DDDF06E61458EF0E0042B157 /* 大安區LbtnD@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "大安區LbtnD@2x.png"; sourceTree = "<group>"; };
+		DDDF06E71458EF0E0042B157 /* 文山區LbtnD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "文山區LbtnD.png"; sourceTree = "<group>"; };
+		DDDF06E81458EF0E0042B157 /* 文山區LbtnD@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "文山區LbtnD@2x.png"; sourceTree = "<group>"; };
+		DDDF06E91458EF0E0042B157 /* 松山區LbtnD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "松山區LbtnD.png"; sourceTree = "<group>"; };
+		DDDF06EA1458EF0E0042B157 /* 松山區LbtnD@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "松山區LbtnD@2x.png"; sourceTree = "<group>"; };
+		DDDF06EB1458EF0E0042B157 /* 萬華區LbtnD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "萬華區LbtnD.png"; sourceTree = "<group>"; };
+		DDDF06EC1458EF0E0042B157 /* 萬華區LbtnD@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "萬華區LbtnD@2x.png"; sourceTree = "<group>"; };
+		DDDF06EE1458EF0E0042B157 /* bubble01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bubble01.png; sourceTree = "<group>"; };
+		DDDF06EF1458EF0E0042B157 /* bubble01@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bubble01@2x.png"; sourceTree = "<group>"; };
+		DDDF06F01458EF0E0042B157 /* bubble02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bubble02.png; sourceTree = "<group>"; };
+		DDDF06F11458EF0E0042B157 /* bubble02@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bubble02@2x.png"; sourceTree = "<group>"; };
+		DDDF06F21458EF0E0042B157 /* bubble03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bubble03.png; sourceTree = "<group>"; };
+		DDDF06F31458EF0E0042B157 /* bubble03@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bubble03@2x.png"; sourceTree = "<group>"; };
+		DDDF06F41458EF0E0042B157 /* bubble04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bubble04.png; sourceTree = "<group>"; };
+		DDDF06F51458EF0E0042B157 /* bubble04@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bubble04@2x.png"; sourceTree = "<group>"; };
+		DDDF06F61458EF0E0042B157 /* bubble05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bubble05.png; sourceTree = "<group>"; };
+		DDDF06F71458EF0E0042B157 /* bubble05@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bubble05@2x.png"; sourceTree = "<group>"; };
+		DDDF06F81458EF0E0042B157 /* bubble06.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bubble06.png; sourceTree = "<group>"; };
+		DDDF06F91458EF0E0042B157 /* bubble06@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bubble06@2x.png"; sourceTree = "<group>"; };
+		DDDF06FA1458EF0E0042B157 /* bubble07.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bubble07.png; sourceTree = "<group>"; };
+		DDDF06FB1458EF0E0042B157 /* bubble07@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bubble07@2x.png"; sourceTree = "<group>"; };
+		DDDF06FC1458EF0E0042B157 /* bubble08.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bubble08.png; sourceTree = "<group>"; };
+		DDDF06FD1458EF0E0042B157 /* bubble08@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bubble08@2x.png"; sourceTree = "<group>"; };
+		DDDF06FE1458EF0E0042B157 /* bubble09.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bubble09.png; sourceTree = "<group>"; };
+		DDDF06FF1458EF0E0042B157 /* bubble09@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bubble09@2x.png"; sourceTree = "<group>"; };
+		DDDF07001458EF0E0042B157 /* bubble10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bubble10.png; sourceTree = "<group>"; };
+		DDDF07011458EF0E0042B157 /* bubble10@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bubble10@2x.png"; sourceTree = "<group>"; };
+		DDDF07021458EF0E0042B157 /* bubble11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bubble11.png; sourceTree = "<group>"; };
+		DDDF07031458EF0E0042B157 /* bubble11@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bubble11@2x.png"; sourceTree = "<group>"; };
+		DDDF07041458EF0E0042B157 /* StreetView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StreetView.png; sourceTree = "<group>"; };
+		DDDF07051458EF0E0042B157 /* StreetView_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StreetView_2.png; sourceTree = "<group>"; };
+		DDDF07061458EF0E0042B157 /* tokyo_hotel.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tokyo_hotel.jpg; sourceTree = "<group>"; };
+		DDDF0779145906B50042B157 /* cell_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell_bg.png; sourceTree = "<group>"; };
+		DDDF077B145906CC0042B157 /* GeneralRoomImg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GeneralRoomImg.png; sourceTree = "<group>"; };
+		DDDF0782145927A80042B157 /* HistoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryTableViewController.h; sourceTree = "<group>"; };
+		DDDF0783145927A80042B157 /* HistoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryTableViewController.m; sourceTree = "<group>"; };
+		DDDF0784145927A90042B157 /* HistoryTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HistoryTableViewController.xib; sourceTree = "<group>"; };
+		DDDF07871459290A0042B157 /* MyFavoriteTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyFavoriteTableViewController.h; sourceTree = "<group>"; };
+		DDDF07881459290A0042B157 /* MyFavoriteTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyFavoriteTableViewController.m; sourceTree = "<group>"; };
+		DDDF07891459290B0042B157 /* MyFavoriteTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyFavoriteTableViewController.xib; sourceTree = "<group>"; };
+		DDDF078E145947590042B157 /* cell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cell.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		38FA267F143F04B700BBE99E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDAD311A145A4A2B004145A6 /* QuartzCore.framework in Frameworks */,
+				38176D9A1455B51A008D6537 /* libsqlite3.dylib in Frameworks */,
+				38176D7E145595E9008D6537 /* CoreData.framework in Frameworks */,
+				38176D7C145595DF008D6537 /* MapKit.framework in Frameworks */,
+				38FA2687143F04B700BBE99E /* UIKit.framework in Frameworks */,
+				38FA2689143F04B700BBE99E /* Foundation.framework in Frameworks */,
+				38FA268B143F04B700BBE99E /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38FA269C143F04B700BBE99E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38FA26A2143F04B700BBE99E /* SenTestingKit.framework in Frameworks */,
+				38FA26A3143F04B700BBE99E /* UIKit.framework in Frameworks */,
+				38FA26A4143F04B700BBE99E /* Foundation.framework in Frameworks */,
+				38FA26A5143F04B700BBE99E /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		38FA2677143F04B700BBE99E = {
+			isa = PBXGroup;
+			children = (
+				A9AFB212146040B70015E7D9 /* Default.png */,
+				A9AFB213146040B70015E7D9 /* Default@2x.png */,
+				38FA26DB143F138600BBE99E /* resource */,
+				38FA268C143F04B700BBE99E /* MapView */,
+				38FA2685143F04B700BBE99E /* Frameworks */,
+				38FA2683143F04B700BBE99E /* Products */,
+			);
+			sourceTree = "<group>";
+			wrapsLines = 1;
+		};
+		38FA2683143F04B700BBE99E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				38FA2682143F04B700BBE99E /* MapView.app */,
+				38FA26A0143F04B700BBE99E /* MapViewTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		38FA2685143F04B700BBE99E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				38176D991455B519008D6537 /* libsqlite3.dylib */,
+				DDAD3119145A4A2B004145A6 /* QuartzCore.framework */,
+				38176D7D145595E9008D6537 /* CoreData.framework */,
+				38176D7B145595DF008D6537 /* MapKit.framework */,
+				38FA2686143F04B700BBE99E /* UIKit.framework */,
+				38FA2688143F04B700BBE99E /* Foundation.framework */,
+				38FA268A143F04B700BBE99E /* CoreGraphics.framework */,
+				38FA26A1143F04B700BBE99E /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		38FA268C143F04B700BBE99E /* MapView */ = {
+			isa = PBXGroup;
+			children = (
+				38FA2695143F04B700BBE99E /* MapViewAppDelegate.h */,
+				38FA2696143F04B700BBE99E /* MapViewAppDelegate.m */,
+				38FA2698143F04B700BBE99E /* MainWindow.xib */,
+				A9AB706D145F8E4C00268276 /* MapViewController.h */,
+				A9AB706E145F8E4C00268276 /* MapViewController.m */,
+				38FA26BA143F04E100BBE99E /* LocationSearchViewController.h */,
+				38FA26BB143F04E100BBE99E /* LocationSearchViewController.m */,
+				38FA26BC143F04E100BBE99E /* LocationSearchViewController.xib */,
+				2A60B1B61455CA6100E28913 /* TotalTableViewController.h */,
+				2A60B1B71455CA6100E28913 /* TotalTableViewController.m */,
+				2A60B1B81455CA6100E28913 /* TotalTableViewController.xib */,
+				2A60B1BC1455D07400E28913 /* CustomCell.xib */,
+				DDDF0782145927A80042B157 /* HistoryTableViewController.h */,
+				DDDF0783145927A80042B157 /* HistoryTableViewController.m */,
+				DDDF0784145927A90042B157 /* HistoryTableViewController.xib */,
+				DDDF07871459290A0042B157 /* MyFavoriteTableViewController.h */,
+				DDDF07881459290A0042B157 /* MyFavoriteTableViewController.m */,
+				DDDF07891459290B0042B157 /* MyFavoriteTableViewController.xib */,
+				2A4C8AB9145D7BC900ED06D4 /* DetailInfoTableViewController.h */,
+				2A4C8ABA145D7BC900ED06D4 /* DetailInfoTableViewController.m */,
+				2A4C8ABB145D7BC900ED06D4 /* DetailInfoTableViewController.xib */,
+				DDA6D48D145EA30F00C20CCE /* CustomCell_detail.xib */,
+				2A6411CB145AFF1800910378 /* SetSortMethod.h */,
+				2A6411CC145AFF1800910378 /* SetSortMethod.m */,
+				2A6411CD145AFF1900910378 /* SetSortMethod.xib */,
+				2A6411D0145AFF4900910378 /* SetFilterMethod.h */,
+				2A6411D1145AFF4900910378 /* SetFilterMethod.m */,
+				2A6411D2145AFF4900910378 /* SetFilterMethod.xib */,
+				38FA268D143F04B700BBE99E /* Supporting Files */,
+			);
+			path = MapView;
+			sourceTree = "<group>";
+		};
+		38FA268D143F04B700BBE99E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DDA6D48A145EA29400C20CCE /* ImageOnURL.h */,
+				DDA6D48B145EA29400C20CCE /* ImageOnURL.m */,
+				DDA6D487145E9CCE00C20CCE /* TableViewItem.h */,
+				DDA6D488145E9CCE00C20CCE /* TableViewItem.m */,
+				38176D6E1455952B008D6537 /* MapDefines.h */,
+				38176D6F1455952B008D6537 /* MapDefines.m */,
+				DDA6D483145E9C7400C20CCE /* SearchHotelQuery.h */,
+				DDA6D484145E9C7400C20CCE /* SearchHotelQuery.m */,
+				DDAD311C145A4C4B004145A6 /* MVGradientView.h */,
+				DDAD311D145A4C4B004145A6 /* MVGradientView.m */,
+				38176D921455A253008D6537 /* MapAnnotation.h */,
+				38176D931455A253008D6537 /* MapAnnotation.m */,
+				38176D7F145596BB008D6537 /* MADataStore.h */,
+				38176D80145596BB008D6537 /* MADataStore.m */,
+				38176D7814559573008D6537 /* Hotel.h */,
+				38176D7914559573008D6537 /* Hotel.m */,
+				38176D751455955E008D6537 /* StreetView.h */,
+				38176D761455955E008D6537 /* StreetView.m */,
+				38176D7214559552008D6537 /* CombineImages.h */,
+				38176D7314559552008D6537 /* CombineImages.m */,
+				38FA268E143F04B700BBE99E /* MapView-Info.plist */,
+				38176D8C14559FF2008D6537 /* OKHotel.xcdatamodeld */,
+				38176D8A14559FDF008D6537 /* OKHotel.db */,
+				38FA268F143F04B700BBE99E /* InfoPlist.strings */,
+				38FA2692143F04B700BBE99E /* main.m */,
+				38FA2694143F04B700BBE99E /* MapView-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		38FA26DB143F138600BBE99E /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				DDDF06961458EF0E0042B157 /* Img */,
+			);
+			name = resource;
+			sourceTree = "<group>";
+		};
+		DDDF06961458EF0E0042B157 /* Img */ = {
+			isa = PBXGroup;
+			children = (
+				DDDF078E145947590042B157 /* cell.png */,
+				DDDF0779145906B50042B157 /* cell_bg.png */,
+				2A6411C9145AFACB00910378 /* cell_bg1.png */,
+				DDDF06971458EF0E0042B157 /* bar1.png */,
+				DDDF06981458EF0E0042B157 /* bar2.png */,
+				DDDF06991458EF0E0042B157 /* bar3.png */,
+				DDDF069A1458EF0E0042B157 /* bar4.png */,
+				DDDF069B1458EF0E0042B157 /* bar5.png */,
+				DDDF069C1458EF0E0042B157 /* bar6.png */,
+				DDDF069D1458EF0E0042B157 /* bar7.png */,
+				DDDF069E1458EF0E0042B157 /* bar8-1.png */,
+				DDDF069F1458EF0E0042B157 /* bar8-2.png */,
+				DDDF06A01458EF0E0042B157 /* bar8.png */,
+				DDDF06A11458EF0E0042B157 /* bar9.png */,
+				DDDF06A21458EF0E0042B157 /* CellBackImg.png */,
+				DDDF077B145906CC0042B157 /* GeneralRoomImg.png */,
+				DDDF06A81458EF0E0042B157 /* JOBS.jpg */,
+				DDDF06A91458EF0E0042B157 /* jobs.png */,
+				DDDF06A31458EF0E0042B157 /* Icon */,
+				DDDF06AA1458EF0E0042B157 /* LBtnPic */,
+				DDDF06B71458EF0E0042B157 /* Location */,
+				DDDF06ED1458EF0E0042B157 /* PinImg */,
+				DDDF07061458EF0E0042B157 /* tokyo_hotel.jpg */,
+			);
+			path = Img;
+			sourceTree = "<group>";
+		};
+		DDDF06A31458EF0E0042B157 /* Icon */ = {
+			isa = PBXGroup;
+			children = (
+				2A6411C7145AEE4000910378 /* mail.gif */,
+				DDAD313B145A81E3004145A6 /* LBS.png */,
+				DDAD313C145A81E3004145A6 /* LBS@2x.png */,
+				DDAD313D145A81E3004145A6 /* LBSbutton.png */,
+				DDAD313E145A81E4004145A6 /* LBSbutton@2x.png */,
+				2A6411C3145AED4B00910378 /* games.png */,
+				2A6411C4145AED4B00910378 /* games@2x.png */,
+				DDAD3127145A746A004145A6 /* list.png */,
+				DDAD313F145A81E4004145A6 /* list@2x.png */,
+				DDAD312C145A746A004145A6 /* zone.png */,
+				DDAD3142145A81E4004145A6 /* zone@2x.png */,
+				DDAD3123145A746A004145A6 /* AdvSearch.png */,
+				DDAD3137145A81E2004145A6 /* AdvSearch@2x.png */,
+				DDAD3125145A746A004145A6 /* History.png */,
+				DDAD313A145A81E3004145A6 /* History@2x.png */,
+				DDAD312B145A746A004145A6 /* map.png */,
+				2A62E7F6145AC83D0054915B /* map@2x.png */,
+				2A62E7E9145AC7630054915B /* myFavorite_empty.png */,
+				2A62E7EA145AC7630054915B /* myFavorite_empty@2x.png */,
+				2A62E7EB145AC7630054915B /* myFavorite.png */,
+				2A62E7EC145AC7630054915B /* myFavorite@2x.png */,
+				2A62E7ED145AC7630054915B /* myFavoriteTab.png */,
+				2A62E7EE145AC7630054915B /* myFavoriteTab@2x.png */,
+				DDDF06A41458EF0E0042B157 /* icon.png */,
+				DDDF06A71458EF0E0042B157 /* icon@2x.png */,
+				DDDF06A51458EF0E0042B157 /* icon1.png */,
+				DDDF06A61458EF0E0042B157 /* icon1@2x.png */,
+			);
+			path = Icon;
+			sourceTree = "<group>";
+		};
+		DDDF06AA1458EF0E0042B157 /* LBtnPic */ = {
+			isa = PBXGroup;
+			children = (
+				DDDF06AB1458EF0E0042B157 /* BTN1.png */,
+				DDDF06AC1458EF0E0042B157 /* BTN1@2x.png */,
+				DDDF06AD1458EF0E0042B157 /* BTN2.png */,
+				DDDF06AE1458EF0E0042B157 /* BTN2@2x.png */,
+				DDDF06AF1458EF0E0042B157 /* BTN3.png */,
+				DDDF06B01458EF0E0042B157 /* BTN3@2x.png */,
+				DDDF06B11458EF0E0042B157 /* BTN4.png */,
+				DDDF06B21458EF0E0042B157 /* BTN4@2x.png */,
+				DDDF06B31458EF0E0042B157 /* BTN5.png */,
+				DDDF06B41458EF0E0042B157 /* BTN5@2x.png */,
+				DDDF06B51458EF0E0042B157 /* BTN6.png */,
+				DDDF06B61458EF0E0042B157 /* BTN6@2x.png */,
+			);
+			path = LBtnPic;
+			sourceTree = "<group>";
+		};
+		DDDF06B71458EF0E0042B157 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				DDDF06B81458EF0E0042B157 /* ShowButtonDown */,
+				DDDF06D31458EF0E0042B157 /* ShowLocationDown */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		DDDF06B81458EF0E0042B157 /* ShowButtonDown */ = {
+			isa = PBXGroup;
+			children = (
+				DDDF06B91458EF0E0042B157 /* 00TaipeiMap.png */,
+				DDDF06BA1458EF0E0042B157 /* 00TaipeiMap@2x.png */,
+				DDDF06BB1458EF0E0042B157 /* 中山區btnD.png */,
+				DDDF06BC1458EF0E0042B157 /* 中山區btnD@2x.png */,
+				DDDF06BD1458EF0E0042B157 /* 中正區btnD.png */,
+				DDDF06BE1458EF0E0042B157 /* 中正區btnD@2x.png */,
+				DDDF06BF1458EF0E0042B157 /* 信義區btnD.png */,
+				DDDF06C01458EF0E0042B157 /* 信義區btnD@2x.png */,
+				DDDF06C11458EF0E0042B157 /* 內湖區btnD.png */,
+				DDDF06C21458EF0E0042B157 /* 內湖區btnD@2x.png */,
+				DDDF06C31458EF0E0042B157 /* 北投區btnD.png */,
+				DDDF06C41458EF0E0042B157 /* 北投區btnD@2x.png */,
+				DDDF06C51458EF0E0042B157 /* 南港區btnD.png */,
+				DDDF06C61458EF0E0042B157 /* 南港區btnD@2x.png */,
+				DDDF06C71458EF0E0042B157 /* 士林區btnD.png */,
+				DDDF06C81458EF0E0042B157 /* 士林區btnD@2x.png */,
+				DDDF06C91458EF0E0042B157 /* 大同區btnD.png */,
+				DDDF06CA1458EF0E0042B157 /* 大同區btnD@2x.png */,
+				DDDF06CB1458EF0E0042B157 /* 大安區btnD.png */,
+				DDDF06CC1458EF0E0042B157 /* 大安區btnD@2x.png */,
+				DDDF06CD1458EF0E0042B157 /* 文山區btnD.png */,
+				DDDF06CE1458EF0E0042B157 /* 文山區btnD@2x.png */,
+				DDDF06CF1458EF0E0042B157 /* 松山區btnD.png */,
+				DDDF06D01458EF0E0042B157 /* 松山區btnD@2x.png */,
+				DDDF06D11458EF0E0042B157 /* 萬華區btnD.png */,
+				DDDF06D21458EF0E0042B157 /* 萬華區btnD@2x.png */,
+			);
+			path = ShowButtonDown;
+			sourceTree = "<group>";
+		};
+		DDDF06D31458EF0E0042B157 /* ShowLocationDown */ = {
+			isa = PBXGroup;
+			children = (
+				DDDF06D51458EF0E0042B157 /* 中山區LbtnD.png */,
+				DDDF06D61458EF0E0042B157 /* 中山區LbtnD@2x.png */,
+				DDDF06D71458EF0E0042B157 /* 中正區LbtnD.png */,
+				DDDF06D81458EF0E0042B157 /* 中正區LbtnD@2x.png */,
+				DDDF06D91458EF0E0042B157 /* 信義區LbtnD.png */,
+				DDDF06DA1458EF0E0042B157 /* 信義區LbtnD@2x.png */,
+				DDDF06DB1458EF0E0042B157 /* 內湖區LbtnD.png */,
+				DDDF06DC1458EF0E0042B157 /* 內湖區LbtnD@2x.png */,
+				DDDF06DD1458EF0E0042B157 /* 北投區LbtnD.png */,
+				DDDF06DE1458EF0E0042B157 /* 北投區LbtnD@2x.png */,
+				DDDF06DF1458EF0E0042B157 /* 南港區LbtnD.png */,
+				DDDF06E01458EF0E0042B157 /* 南港區LbtnD@2x.png */,
+				DDDF06E11458EF0E0042B157 /* 士林區LbtnD.png */,
+				DDDF06E21458EF0E0042B157 /* 士林區LbtnD@2x.png */,
+				DDDF06E31458EF0E0042B157 /* 大同區LbtnD.png */,
+				DDDF06E41458EF0E0042B157 /* 大同區LbtnD@2x.png */,
+				DDDF06E51458EF0E0042B157 /* 大安區LbtnD.png */,
+				DDDF06E61458EF0E0042B157 /* 大安區LbtnD@2x.png */,
+				DDDF06E71458EF0E0042B157 /* 文山區LbtnD.png */,
+				DDDF06E81458EF0E0042B157 /* 文山區LbtnD@2x.png */,
+				DDDF06E91458EF0E0042B157 /* 松山區LbtnD.png */,
+				DDDF06EA1458EF0E0042B157 /* 松山區LbtnD@2x.png */,
+				DDDF06EB1458EF0E0042B157 /* 萬華區LbtnD.png */,
+				DDDF06EC1458EF0E0042B157 /* 萬華區LbtnD@2x.png */,
+			);
+			path = ShowLocationDown;
+			sourceTree = "<group>";
+		};
+		DDDF06ED1458EF0E0042B157 /* PinImg */ = {
+			isa = PBXGroup;
+			children = (
+				DDDF06EE1458EF0E0042B157 /* bubble01.png */,
+				DDDF06EF1458EF0E0042B157 /* bubble01@2x.png */,
+				DDDF06F01458EF0E0042B157 /* bubble02.png */,
+				DDDF06F11458EF0E0042B157 /* bubble02@2x.png */,
+				DDDF06F21458EF0E0042B157 /* bubble03.png */,
+				DDDF06F31458EF0E0042B157 /* bubble03@2x.png */,
+				DDDF06F41458EF0E0042B157 /* bubble04.png */,
+				DDDF06F51458EF0E0042B157 /* bubble04@2x.png */,
+				DDDF06F61458EF0E0042B157 /* bubble05.png */,
+				DDDF06F71458EF0E0042B157 /* bubble05@2x.png */,
+				DDDF06F81458EF0E0042B157 /* bubble06.png */,
+				DDDF06F91458EF0E0042B157 /* bubble06@2x.png */,
+				DDDF06FA1458EF0E0042B157 /* bubble07.png */,
+				DDDF06FB1458EF0E0042B157 /* bubble07@2x.png */,
+				DDDF06FC1458EF0E0042B157 /* bubble08.png */,
+				DDDF06FD1458EF0E0042B157 /* bubble08@2x.png */,
+				DDDF06FE1458EF0E0042B157 /* bubble09.png */,
+				DDDF06FF1458EF0E0042B157 /* bubble09@2x.png */,
+				DDDF07001458EF0E0042B157 /* bubble10.png */,
+				DDDF07011458EF0E0042B157 /* bubble10@2x.png */,
+				DDDF07021458EF0E0042B157 /* bubble11.png */,
+				DDDF07031458EF0E0042B157 /* bubble11@2x.png */,
+				DDDF07041458EF0E0042B157 /* StreetView.png */,
+				DDDF07051458EF0E0042B157 /* StreetView_2.png */,
+			);
+			path = PinImg;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		38FA2681143F04B700BBE99E /* MapView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38FA26B4143F04B700BBE99E /* Build configuration list for PBXNativeTarget "MapView" */;
+			buildPhases = (
+				38FA267E143F04B700BBE99E /* Sources */,
+				38FA267F143F04B700BBE99E /* Frameworks */,
+				38FA2680143F04B700BBE99E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MapView;
+			productName = MapView;
+			productReference = 38FA2682143F04B700BBE99E /* MapView.app */;
+			productType = "com.apple.product-type.application";
+		};
+		38FA269F143F04B700BBE99E /* MapViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38FA26B7143F04B700BBE99E /* Build configuration list for PBXNativeTarget "MapViewTests" */;
+			buildPhases = (
+				38FA269B143F04B700BBE99E /* Sources */,
+				38FA269C143F04B700BBE99E /* Frameworks */,
+				38FA269D143F04B700BBE99E /* Resources */,
+				38FA269E143F04B700BBE99E /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				38FA26A7143F04B700BBE99E /* PBXTargetDependency */,
+			);
+			name = MapViewTests;
+			productName = MapViewTests;
+			productReference = 38FA26A0143F04B700BBE99E /* MapViewTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		38FA2679143F04B700BBE99E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 38FA267C143F04B700BBE99E /* Build configuration list for PBXProject "MapView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 38FA2677143F04B700BBE99E;
+			productRefGroup = 38FA2683143F04B700BBE99E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				38FA2681143F04B700BBE99E /* MapView */,
+				38FA269F143F04B700BBE99E /* MapViewTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		38FA2680143F04B700BBE99E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38FA2691143F04B700BBE99E /* InfoPlist.strings in Resources */,
+				38FA269A143F04B700BBE99E /* MainWindow.xib in Resources */,
+				38FA26BE143F04E100BBE99E /* LocationSearchViewController.xib in Resources */,
+				38176D8B14559FE0008D6537 /* OKHotel.db in Resources */,
+				2A60B1BA1455CA6100E28913 /* TotalTableViewController.xib in Resources */,
+				2A60B1BD1455D07400E28913 /* CustomCell.xib in Resources */,
+				DDDF07071458EF0E0042B157 /* bar1.png in Resources */,
+				DDDF07081458EF0E0042B157 /* bar2.png in Resources */,
+				DDDF07091458EF0E0042B157 /* bar3.png in Resources */,
+				DDDF070A1458EF0E0042B157 /* bar4.png in Resources */,
+				DDDF070B1458EF0E0042B157 /* bar5.png in Resources */,
+				DDDF070C1458EF0E0042B157 /* bar6.png in Resources */,
+				DDDF070D1458EF0E0042B157 /* bar7.png in Resources */,
+				DDDF070E1458EF0E0042B157 /* bar8-1.png in Resources */,
+				DDDF070F1458EF0E0042B157 /* bar8-2.png in Resources */,
+				DDDF07101458EF0E0042B157 /* bar8.png in Resources */,
+				DDDF07111458EF0E0042B157 /* bar9.png in Resources */,
+				DDDF07121458EF0E0042B157 /* CellBackImg.png in Resources */,
+				DDDF07131458EF0E0042B157 /* icon.png in Resources */,
+				DDDF07141458EF0E0042B157 /* icon1.png in Resources */,
+				DDDF07151458EF0E0042B157 /* icon1@2x.png in Resources */,
+				DDDF07161458EF0E0042B157 /* icon@2x.png in Resources */,
+				DDDF07171458EF0E0042B157 /* JOBS.jpg in Resources */,
+				DDDF07181458EF0E0042B157 /* jobs.png in Resources */,
+				DDDF07191458EF0E0042B157 /* BTN1.png in Resources */,
+				DDDF071A1458EF0E0042B157 /* BTN1@2x.png in Resources */,
+				DDDF071B1458EF0E0042B157 /* BTN2.png in Resources */,
+				DDDF071C1458EF0E0042B157 /* BTN2@2x.png in Resources */,
+				DDDF071D1458EF0E0042B157 /* BTN3.png in Resources */,
+				DDDF071E1458EF0E0042B157 /* BTN3@2x.png in Resources */,
+				DDDF071F1458EF0E0042B157 /* BTN4.png in Resources */,
+				DDDF07201458EF0E0042B157 /* BTN4@2x.png in Resources */,
+				DDDF07211458EF0E0042B157 /* BTN5.png in Resources */,
+				DDDF07221458EF0E0042B157 /* BTN5@2x.png in Resources */,
+				DDDF07231458EF0E0042B157 /* BTN6.png in Resources */,
+				DDDF07241458EF0E0042B157 /* BTN6@2x.png in Resources */,
+				DDDF07251458EF0E0042B157 /* 00TaipeiMap.png in Resources */,
+				DDDF07261458EF0E0042B157 /* 00TaipeiMap@2x.png in Resources */,
+				DDDF07271458EF0E0042B157 /* 中山區btnD.png in Resources */,
+				DDDF07281458EF0E0042B157 /* 中山區btnD@2x.png in Resources */,
+				DDDF07291458EF0E0042B157 /* 中正區btnD.png in Resources */,
+				DDDF072A1458EF0E0042B157 /* 中正區btnD@2x.png in Resources */,
+				DDDF072B1458EF0E0042B157 /* 信義區btnD.png in Resources */,
+				DDDF072C1458EF0E0042B157 /* 信義區btnD@2x.png in Resources */,
+				DDDF072D1458EF0E0042B157 /* 內湖區btnD.png in Resources */,
+				DDDF072E1458EF0E0042B157 /* 內湖區btnD@2x.png in Resources */,
+				DDDF072F1458EF0E0042B157 /* 北投區btnD.png in Resources */,
+				DDDF07301458EF0E0042B157 /* 北投區btnD@2x.png in Resources */,
+				DDDF07311458EF0E0042B157 /* 南港區btnD.png in Resources */,
+				DDDF07321458EF0E0042B157 /* 南港區btnD@2x.png in Resources */,
+				DDDF07331458EF0E0042B157 /* 士林區btnD.png in Resources */,
+				DDDF07341458EF0E0042B157 /* 士林區btnD@2x.png in Resources */,
+				DDDF07351458EF0E0042B157 /* 大同區btnD.png in Resources */,
+				DDDF07361458EF0E0042B157 /* 大同區btnD@2x.png in Resources */,
+				DDDF07371458EF0E0042B157 /* 大安區btnD.png in Resources */,
+				DDDF07381458EF0E0042B157 /* 大安區btnD@2x.png in Resources */,
+				DDDF07391458EF0E0042B157 /* 文山區btnD.png in Resources */,
+				DDDF073A1458EF0E0042B157 /* 文山區btnD@2x.png in Resources */,
+				DDDF073B1458EF0E0042B157 /* 松山區btnD.png in Resources */,
+				DDDF073C1458EF0E0042B157 /* 松山區btnD@2x.png in Resources */,
+				DDDF073D1458EF0E0042B157 /* 萬華區btnD.png in Resources */,
+				DDDF073E1458EF0E0042B157 /* 萬華區btnD@2x.png in Resources */,
+				DDDF07401458EF0E0042B157 /* 中山區LbtnD.png in Resources */,
+				DDDF07411458EF0E0042B157 /* 中山區LbtnD@2x.png in Resources */,
+				DDDF07421458EF0E0042B157 /* 中正區LbtnD.png in Resources */,
+				DDDF07431458EF0E0042B157 /* 中正區LbtnD@2x.png in Resources */,
+				DDDF07441458EF0E0042B157 /* 信義區LbtnD.png in Resources */,
+				DDDF07451458EF0E0042B157 /* 信義區LbtnD@2x.png in Resources */,
+				DDDF07461458EF0E0042B157 /* 內湖區LbtnD.png in Resources */,
+				DDDF07471458EF0E0042B157 /* 內湖區LbtnD@2x.png in Resources */,
+				DDDF07481458EF0E0042B157 /* 北投區LbtnD.png in Resources */,
+				DDDF07491458EF0E0042B157 /* 北投區LbtnD@2x.png in Resources */,
+				DDDF074A1458EF0E0042B157 /* 南港區LbtnD.png in Resources */,
+				DDDF074B1458EF0E0042B157 /* 南港區LbtnD@2x.png in Resources */,
+				DDDF074C1458EF0E0042B157 /* 士林區LbtnD.png in Resources */,
+				DDDF074D1458EF0E0042B157 /* 士林區LbtnD@2x.png in Resources */,
+				DDDF074E1458EF0E0042B157 /* 大同區LbtnD.png in Resources */,
+				DDDF074F1458EF0E0042B157 /* 大同區LbtnD@2x.png in Resources */,
+				DDDF07501458EF0E0042B157 /* 大安區LbtnD.png in Resources */,
+				DDDF07511458EF0E0042B157 /* 大安區LbtnD@2x.png in Resources */,
+				DDDF07521458EF0E0042B157 /* 文山區LbtnD.png in Resources */,
+				DDDF07531458EF0E0042B157 /* 文山區LbtnD@2x.png in Resources */,
+				DDDF07541458EF0E0042B157 /* 松山區LbtnD.png in Resources */,
+				DDDF07551458EF0E0042B157 /* 松山區LbtnD@2x.png in Resources */,
+				DDDF07561458EF0E0042B157 /* 萬華區LbtnD.png in Resources */,
+				DDDF07571458EF0E0042B157 /* 萬華區LbtnD@2x.png in Resources */,
+				DDDF07581458EF0E0042B157 /* bubble01.png in Resources */,
+				DDDF07591458EF0E0042B157 /* bubble01@2x.png in Resources */,
+				DDDF075A1458EF0E0042B157 /* bubble02.png in Resources */,
+				DDDF075B1458EF0E0042B157 /* bubble02@2x.png in Resources */,
+				DDDF075C1458EF0E0042B157 /* bubble03.png in Resources */,
+				DDDF075D1458EF0E0042B157 /* bubble03@2x.png in Resources */,
+				DDDF075E1458EF0E0042B157 /* bubble04.png in Resources */,
+				DDDF075F1458EF0E0042B157 /* bubble04@2x.png in Resources */,
+				DDDF07601458EF0E0042B157 /* bubble05.png in Resources */,
+				DDDF07611458EF0E0042B157 /* bubble05@2x.png in Resources */,
+				DDDF07621458EF0E0042B157 /* bubble06.png in Resources */,
+				DDDF07631458EF0E0042B157 /* bubble06@2x.png in Resources */,
+				DDDF07641458EF0E0042B157 /* bubble07.png in Resources */,
+				DDDF07651458EF0E0042B157 /* bubble07@2x.png in Resources */,
+				DDDF07661458EF0E0042B157 /* bubble08.png in Resources */,
+				DDDF07671458EF0E0042B157 /* bubble08@2x.png in Resources */,
+				DDDF07681458EF0E0042B157 /* bubble09.png in Resources */,
+				DDDF07691458EF0E0042B157 /* bubble09@2x.png in Resources */,
+				DDDF076A1458EF0E0042B157 /* bubble10.png in Resources */,
+				DDDF076B1458EF0E0042B157 /* bubble10@2x.png in Resources */,
+				DDDF076C1458EF0E0042B157 /* bubble11.png in Resources */,
+				DDDF076D1458EF0E0042B157 /* bubble11@2x.png in Resources */,
+				DDDF076E1458EF0E0042B157 /* StreetView.png in Resources */,
+				DDDF076F1458EF0E0042B157 /* StreetView_2.png in Resources */,
+				DDDF07701458EF0E0042B157 /* tokyo_hotel.jpg in Resources */,
+				DDDF077A145906B50042B157 /* cell_bg.png in Resources */,
+				DDDF077C145906CC0042B157 /* GeneralRoomImg.png in Resources */,
+				DDDF0786145927A90042B157 /* HistoryTableViewController.xib in Resources */,
+				DDDF078B1459290B0042B157 /* MyFavoriteTableViewController.xib in Resources */,
+				DDDF078F145947590042B157 /* cell.png in Resources */,
+				DDAD312D145A746A004145A6 /* AdvSearch.png in Resources */,
+				DDAD312F145A746A004145A6 /* History.png in Resources */,
+				DDAD3131145A746A004145A6 /* list.png in Resources */,
+				DDAD3135145A746A004145A6 /* map.png in Resources */,
+				DDAD3136145A746A004145A6 /* zone.png in Resources */,
+				DDAD3143145A81E5004145A6 /* AdvSearch@2x.png in Resources */,
+				DDAD3146145A81E5004145A6 /* History@2x.png in Resources */,
+				DDAD3147145A81E5004145A6 /* LBS.png in Resources */,
+				DDAD3148145A81E5004145A6 /* LBS@2x.png in Resources */,
+				DDAD3149145A81E5004145A6 /* LBSbutton.png in Resources */,
+				DDAD314A145A81E5004145A6 /* LBSbutton@2x.png in Resources */,
+				DDAD314B145A81E5004145A6 /* list@2x.png in Resources */,
+				DDAD314E145A81E5004145A6 /* zone@2x.png in Resources */,
+				2A62E7EF145AC7630054915B /* myFavorite_empty.png in Resources */,
+				2A62E7F0145AC7630054915B /* myFavorite_empty@2x.png in Resources */,
+				2A62E7F1145AC7630054915B /* myFavorite.png in Resources */,
+				2A62E7F2145AC7630054915B /* myFavorite@2x.png in Resources */,
+				2A62E7F3145AC7630054915B /* myFavoriteTab.png in Resources */,
+				2A62E7F4145AC7630054915B /* myFavoriteTab@2x.png in Resources */,
+				2A62E7F7145AC83D0054915B /* map@2x.png in Resources */,
+				2A6411C5145AED4B00910378 /* games.png in Resources */,
+				2A6411C6145AED4B00910378 /* games@2x.png in Resources */,
+				2A6411C8145AEE4000910378 /* mail.gif in Resources */,
+				2A6411CA145AFACB00910378 /* cell_bg1.png in Resources */,
+				2A6411CF145AFF1900910378 /* SetSortMethod.xib in Resources */,
+				2A6411D4145AFF4900910378 /* SetFilterMethod.xib in Resources */,
+				2A4C8ABD145D7BC900ED06D4 /* DetailInfoTableViewController.xib in Resources */,
+				DDA6D48E145EA30F00C20CCE /* CustomCell_detail.xib in Resources */,
+				A9AFB214146040B70015E7D9 /* Default.png in Resources */,
+				A9AFB215146040B70015E7D9 /* Default@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38FA269D143F04B700BBE99E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		38FA269E143F04B700BBE99E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		38FA267E143F04B700BBE99E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38FA2693143F04B700BBE99E /* main.m in Sources */,
+				38FA2697143F04B700BBE99E /* MapViewAppDelegate.m in Sources */,
+				38FA26BD143F04E100BBE99E /* LocationSearchViewController.m in Sources */,
+				38176D701455952B008D6537 /* MapDefines.m in Sources */,
+				38176D7414559552008D6537 /* CombineImages.m in Sources */,
+				38176D771455955E008D6537 /* StreetView.m in Sources */,
+				38176D7A14559573008D6537 /* Hotel.m in Sources */,
+				38176D81145596BB008D6537 /* MADataStore.m in Sources */,
+				38176D9114559FF3008D6537 /* OKHotel.xcdatamodeld in Sources */,
+				38176D941455A254008D6537 /* MapAnnotation.m in Sources */,
+				2A60B1B91455CA6100E28913 /* TotalTableViewController.m in Sources */,
+				DDDF0785145927A90042B157 /* HistoryTableViewController.m in Sources */,
+				DDDF078A1459290B0042B157 /* MyFavoriteTableViewController.m in Sources */,
+				DDAD311E145A4C4B004145A6 /* MVGradientView.m in Sources */,
+				2A6411CE145AFF1900910378 /* SetSortMethod.m in Sources */,
+				2A6411D3145AFF4900910378 /* SetFilterMethod.m in Sources */,
+				2A4C8ABC145D7BC900ED06D4 /* DetailInfoTableViewController.m in Sources */,
+				DDA6D485145E9C7400C20CCE /* SearchHotelQuery.m in Sources */,
+				DDA6D489145E9CCE00C20CCE /* TableViewItem.m in Sources */,
+				DDA6D48C145EA29400C20CCE /* ImageOnURL.m in Sources */,
+				A9AB706F145F8E4C00268276 /* MapViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38FA269B143F04B700BBE99E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		38FA26A7143F04B700BBE99E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 38FA2681143F04B700BBE99E /* MapView */;
+			targetProxy = 38FA26A6143F04B700BBE99E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		38FA268F143F04B700BBE99E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				38FA2690143F04B700BBE99E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		38FA2698143F04B700BBE99E /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				38FA2699143F04B700BBE99E /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		38FA26B2143F04B700BBE99E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		38FA26B3143F04B700BBE99E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		38FA26B5143F04B700BBE99E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MapView/MapView-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "MapView/MapView-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		38FA26B6143F04B700BBE99E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MapView/MapView-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "MapView/MapView-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		38FA26B8143F04B700BBE99E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MapView.app/MapView";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MapView/MapView-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "MapViewTests/MapViewTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		38FA26B9143F04B700BBE99E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MapView.app/MapView";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MapView/MapView-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "MapViewTests/MapViewTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		38FA267C143F04B700BBE99E /* Build configuration list for PBXProject "MapView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38FA26B2143F04B700BBE99E /* Debug */,
+				38FA26B3143F04B700BBE99E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		38FA26B4143F04B700BBE99E /* Build configuration list for PBXNativeTarget "MapView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38FA26B5143F04B700BBE99E /* Debug */,
+				38FA26B6143F04B700BBE99E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		38FA26B7143F04B700BBE99E /* Build configuration list for PBXNativeTarget "MapViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38FA26B8143F04B700BBE99E /* Debug */,
+				38FA26B9143F04B700BBE99E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		38176D8C14559FF2008D6537 /* OKHotel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				38176D8D14559FF3008D6537 /* OKHotel 2.xcdatamodel */,
+				38176D8E14559FF3008D6537 /* OKHotel 3.xcdatamodel */,
+				38176D8F14559FF3008D6537 /* OKHotel 4.xcdatamodel */,
+				38176D9014559FF3008D6537 /* OKHotel.xcdatamodel */,
+			);
+			currentVersion = 38176D8D14559FF3008D6537 /* OKHotel 2.xcdatamodel */;
+			path = OKHotel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 38FA2679143F04B700BBE99E /* Project object */;
+}
