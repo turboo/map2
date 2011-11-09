@@ -64,6 +64,7 @@ enum {
     IBOutlet UISegmentedControl *FilterBtn_1;
     IBOutlet UISegmentedControl *FilterBtn_2;
     IBOutlet UISegmentedControl *FilterBtn_3;
+    IBOutlet UILabel *dataCountLabel;
   
 }
 
@@ -74,6 +75,8 @@ enum {
 
 - (void) showDetailsViewFromAnnotation:(id<MKAnnotation>)anAnnotation;
 - (void) showStreetViewFromAnnotation:(id<MKAnnotation>)anAnnotation;
+- (void) setAnnotationsWithArray:(MapAnnotation *)shownHotels;
+- (void) reViewData:(NSMutableArray *)myHotelDataList;
 
 @property(nonatomic,retain)   NSMutableArray *hotelDataList;
 @property(nonatomic,retain)   NSMutableArray *resultDataList;
@@ -100,5 +103,5 @@ enum {
 @property(nonatomic,retain)UIBarButtonItem *bbtnGame;
 @property(nonatomic,retain)NSArray *aryBbtnForTableView;
 @property(nonatomic,retain)NSArray *aryBbtnForMapView;
-
+@property(nonatomic,retain)IBOutlet UILabel *dataCountLabel;
 @end

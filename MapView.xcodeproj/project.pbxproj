@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A4102371461B55300AAD8DA /* telphone.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2A4102361461B55300AAD8DA /* telphone.gif */; };
+		2A41023F1461B79000AAD8DA /* DetailMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A41023E1461B79000AAD8DA /* DetailMapViewController.m */; };
+		2A4102471461B7EB00AAD8DA /* AdvanceSearchPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A4102451461B7EB00AAD8DA /* AdvanceSearchPage.m */; };
+		2A4102481461B7EB00AAD8DA /* AdvanceSearchPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A4102461461B7EB00AAD8DA /* AdvanceSearchPage.xib */; };
 		2A4C8ABC145D7BC900ED06D4 /* DetailInfoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A4C8ABA145D7BC900ED06D4 /* DetailInfoTableViewController.m */; };
 		2A4C8ABD145D7BC900ED06D4 /* DetailInfoTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A4C8ABB145D7BC900ED06D4 /* DetailInfoTableViewController.xib */; };
 		2A60B1B91455CA6100E28913 /* TotalTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A60B1B71455CA6100E28913 /* TotalTableViewController.m */; };
@@ -19,6 +23,19 @@
 		2A62E7F3145AC7630054915B /* myFavoriteTab.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A62E7ED145AC7630054915B /* myFavoriteTab.png */; };
 		2A62E7F4145AC7630054915B /* myFavoriteTab@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A62E7EE145AC7630054915B /* myFavoriteTab@2x.png */; };
 		2A62E7F7145AC83D0054915B /* map@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A62E7F6145AC83D0054915B /* map@2x.png */; };
+		2A62F3B2146161800000B6A4 /* LBSbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A62F3B0146161800000B6A4 /* LBSbutton.png */; };
+		2A62F3B3146161800000B6A4 /* LBSbutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A62F3B1146161800000B6A4 /* LBSbutton@2x.png */; };
+		2A62F3B6146161AB0000B6A4 /* 00TaipeiMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A62F3B4146161AB0000B6A4 /* 00TaipeiMap.png */; };
+		2A62F3B7146161AB0000B6A4 /* 00TaipeiMap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A62F3B5146161AB0000B6A4 /* 00TaipeiMap@2x.png */; };
+		2A62F3D114617E4D0000B6A4 /* detailBack.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A62F3CD14617E4D0000B6A4 /* detailBack.png */; };
+		2A62F3D214617E4D0000B6A4 /* detailBack@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A62F3CE14617E4D0000B6A4 /* detailBack@2x.png */; };
+		2A62F3D314617E4D0000B6A4 /* tabbarImg.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A62F3CF14617E4D0000B6A4 /* tabbarImg.png */; };
+		2A62F3D414617E4D0000B6A4 /* tabbarImg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A62F3D014617E4D0000B6A4 /* tabbarImg@2x.png */; };
+		2A62F3D8146182DA0000B6A4 /* tabbarImg1.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A62F3D6146182DA0000B6A4 /* tabbarImg1.png */; };
+		2A62F3D9146182DA0000B6A4 /* tabbarImg1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A62F3D7146182DA0000B6A4 /* tabbarImg1@2x.png */; };
+		2A62F3E2146184B60000B6A4 /* GameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A62F3E0146184B50000B6A4 /* GameView.m */; };
+		2A62F3E3146184B60000B6A4 /* GameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A62F3E1146184B50000B6A4 /* GameView.xib */; };
+		2A62F3E5146184ED0000B6A4 /* GameDisk.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A62F3E4146184ED0000B6A4 /* GameDisk.png */; };
 		2A6411C5145AED4B00910378 /* games.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A6411C3145AED4B00910378 /* games.png */; };
 		2A6411C6145AED4B00910378 /* games@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A6411C4145AED4B00910378 /* games@2x.png */; };
 		2A6411C8145AEE4000910378 /* mail.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2A6411C7145AEE4000910378 /* mail.gif */; };
@@ -27,6 +44,7 @@
 		2A6411CF145AFF1900910378 /* SetSortMethod.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A6411CD145AFF1900910378 /* SetSortMethod.xib */; };
 		2A6411D3145AFF4900910378 /* SetFilterMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A6411D1145AFF4900910378 /* SetFilterMethod.m */; };
 		2A6411D4145AFF4900910378 /* SetFilterMethod.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A6411D2145AFF4900910378 /* SetFilterMethod.xib */; };
+		2AC625AE1461C94E0050A86B /* DetailMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AC625AC1461C94E0050A86B /* DetailMapViewController.xib */; };
 		38176D701455952B008D6537 /* MapDefines.m in Sources */ = {isa = PBXBuildFile; fileRef = 38176D6F1455952B008D6537 /* MapDefines.m */; };
 		38176D7414559552008D6537 /* CombineImages.m in Sources */ = {isa = PBXBuildFile; fileRef = 38176D7314559552008D6537 /* CombineImages.m */; };
 		38176D771455955E008D6537 /* StreetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38176D761455955E008D6537 /* StreetView.m */; };
@@ -69,8 +87,6 @@
 		DDAD3146145A81E5004145A6 /* History@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDAD313A145A81E3004145A6 /* History@2x.png */; };
 		DDAD3147145A81E5004145A6 /* LBS.png in Resources */ = {isa = PBXBuildFile; fileRef = DDAD313B145A81E3004145A6 /* LBS.png */; };
 		DDAD3148145A81E5004145A6 /* LBS@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDAD313C145A81E3004145A6 /* LBS@2x.png */; };
-		DDAD3149145A81E5004145A6 /* LBSbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = DDAD313D145A81E3004145A6 /* LBSbutton.png */; };
-		DDAD314A145A81E5004145A6 /* LBSbutton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDAD313E145A81E4004145A6 /* LBSbutton@2x.png */; };
 		DDAD314B145A81E5004145A6 /* list@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDAD313F145A81E4004145A6 /* list@2x.png */; };
 		DDAD314E145A81E5004145A6 /* zone@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDAD3142145A81E4004145A6 /* zone@2x.png */; };
 		DDDF07071458EF0E0042B157 /* bar1.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06971458EF0E0042B157 /* bar1.png */; };
@@ -103,8 +119,6 @@
 		DDDF07221458EF0E0042B157 /* BTN5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06B41458EF0E0042B157 /* BTN5@2x.png */; };
 		DDDF07231458EF0E0042B157 /* BTN6.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06B51458EF0E0042B157 /* BTN6.png */; };
 		DDDF07241458EF0E0042B157 /* BTN6@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06B61458EF0E0042B157 /* BTN6@2x.png */; };
-		DDDF07251458EF0E0042B157 /* 00TaipeiMap.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06B91458EF0E0042B157 /* 00TaipeiMap.png */; };
-		DDDF07261458EF0E0042B157 /* 00TaipeiMap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06BA1458EF0E0042B157 /* 00TaipeiMap@2x.png */; };
 		DDDF07271458EF0E0042B157 /* 中山區btnD.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06BB1458EF0E0042B157 /* 中山區btnD.png */; };
 		DDDF07281458EF0E0042B157 /* 中山區btnD@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06BC1458EF0E0042B157 /* 中山區btnD@2x.png */; };
 		DDDF07291458EF0E0042B157 /* 中正區btnD.png in Resources */ = {isa = PBXBuildFile; fileRef = DDDF06BD1458EF0E0042B157 /* 中正區btnD.png */; };
@@ -198,6 +212,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A4102361461B55300AAD8DA /* telphone.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = telphone.gif; sourceTree = "<group>"; };
+		2A41023D1461B79000AAD8DA /* DetailMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailMapViewController.h; sourceTree = "<group>"; };
+		2A41023E1461B79000AAD8DA /* DetailMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailMapViewController.m; sourceTree = "<group>"; };
+		2A4102441461B7EB00AAD8DA /* AdvanceSearchPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvanceSearchPage.h; sourceTree = "<group>"; };
+		2A4102451461B7EB00AAD8DA /* AdvanceSearchPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdvanceSearchPage.m; sourceTree = "<group>"; };
+		2A4102461461B7EB00AAD8DA /* AdvanceSearchPage.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdvanceSearchPage.xib; sourceTree = "<group>"; };
 		2A4C8AB9145D7BC900ED06D4 /* DetailInfoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailInfoTableViewController.h; sourceTree = "<group>"; };
 		2A4C8ABA145D7BC900ED06D4 /* DetailInfoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailInfoTableViewController.m; sourceTree = "<group>"; };
 		2A4C8ABB145D7BC900ED06D4 /* DetailInfoTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailInfoTableViewController.xib; sourceTree = "<group>"; };
@@ -212,6 +232,20 @@
 		2A62E7ED145AC7630054915B /* myFavoriteTab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = myFavoriteTab.png; sourceTree = "<group>"; };
 		2A62E7EE145AC7630054915B /* myFavoriteTab@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "myFavoriteTab@2x.png"; sourceTree = "<group>"; };
 		2A62E7F6145AC83D0054915B /* map@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map@2x.png"; sourceTree = "<group>"; };
+		2A62F3B0146161800000B6A4 /* LBSbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LBSbutton.png; sourceTree = "<group>"; };
+		2A62F3B1146161800000B6A4 /* LBSbutton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LBSbutton@2x.png"; sourceTree = "<group>"; };
+		2A62F3B4146161AB0000B6A4 /* 00TaipeiMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 00TaipeiMap.png; sourceTree = "<group>"; };
+		2A62F3B5146161AB0000B6A4 /* 00TaipeiMap@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "00TaipeiMap@2x.png"; sourceTree = "<group>"; };
+		2A62F3CD14617E4D0000B6A4 /* detailBack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = detailBack.png; sourceTree = "<group>"; };
+		2A62F3CE14617E4D0000B6A4 /* detailBack@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "detailBack@2x.png"; sourceTree = "<group>"; };
+		2A62F3CF14617E4D0000B6A4 /* tabbarImg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbarImg.png; sourceTree = "<group>"; };
+		2A62F3D014617E4D0000B6A4 /* tabbarImg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbarImg@2x.png"; sourceTree = "<group>"; };
+		2A62F3D6146182DA0000B6A4 /* tabbarImg1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabbarImg1.png; sourceTree = "<group>"; };
+		2A62F3D7146182DA0000B6A4 /* tabbarImg1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbarImg1@2x.png"; sourceTree = "<group>"; };
+		2A62F3DF146184B50000B6A4 /* GameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameView.h; sourceTree = "<group>"; };
+		2A62F3E0146184B50000B6A4 /* GameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameView.m; sourceTree = "<group>"; };
+		2A62F3E1146184B50000B6A4 /* GameView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameView.xib; sourceTree = "<group>"; };
+		2A62F3E4146184ED0000B6A4 /* GameDisk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GameDisk.png; sourceTree = "<group>"; };
 		2A6411C3145AED4B00910378 /* games.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = games.png; sourceTree = "<group>"; };
 		2A6411C4145AED4B00910378 /* games@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "games@2x.png"; sourceTree = "<group>"; };
 		2A6411C7145AEE4000910378 /* mail.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = mail.gif; sourceTree = "<group>"; };
@@ -222,6 +256,7 @@
 		2A6411D0145AFF4900910378 /* SetFilterMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetFilterMethod.h; sourceTree = "<group>"; };
 		2A6411D1145AFF4900910378 /* SetFilterMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetFilterMethod.m; sourceTree = "<group>"; };
 		2A6411D2145AFF4900910378 /* SetFilterMethod.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetFilterMethod.xib; sourceTree = "<group>"; };
+		2AC625AC1461C94E0050A86B /* DetailMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailMapViewController.xib; sourceTree = "<group>"; };
 		38176D6E1455952B008D6537 /* MapDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapDefines.h; sourceTree = "<group>"; };
 		38176D6F1455952B008D6537 /* MapDefines.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapDefines.m; sourceTree = "<group>"; };
 		38176D7214559552008D6537 /* CombineImages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CombineImages.h; sourceTree = "<group>"; };
@@ -242,7 +277,7 @@
 		38176D921455A253008D6537 /* MapAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapAnnotation.h; sourceTree = "<group>"; };
 		38176D931455A253008D6537 /* MapAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapAnnotation.m; sourceTree = "<group>"; };
 		38176D991455B519008D6537 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
-		38FA2682143F04B700BBE99E /* MapView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		38FA2682143F04B700BBE99E /* 寢在台北.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "寢在台北.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		38FA2686143F04B700BBE99E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		38FA2688143F04B700BBE99E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		38FA268A143F04B700BBE99E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -281,8 +316,6 @@
 		DDAD313A145A81E3004145A6 /* History@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "History@2x.png"; sourceTree = "<group>"; };
 		DDAD313B145A81E3004145A6 /* LBS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LBS.png; sourceTree = "<group>"; };
 		DDAD313C145A81E3004145A6 /* LBS@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LBS@2x.png"; sourceTree = "<group>"; };
-		DDAD313D145A81E3004145A6 /* LBSbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LBSbutton.png; sourceTree = "<group>"; };
-		DDAD313E145A81E4004145A6 /* LBSbutton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LBSbutton@2x.png"; sourceTree = "<group>"; };
 		DDAD313F145A81E4004145A6 /* list@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "list@2x.png"; sourceTree = "<group>"; };
 		DDAD3142145A81E4004145A6 /* zone@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zone@2x.png"; sourceTree = "<group>"; };
 		DDDF06971458EF0E0042B157 /* bar1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bar1.png; sourceTree = "<group>"; };
@@ -315,8 +348,6 @@
 		DDDF06B41458EF0E0042B157 /* BTN5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BTN5@2x.png"; sourceTree = "<group>"; };
 		DDDF06B51458EF0E0042B157 /* BTN6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BTN6.png; sourceTree = "<group>"; };
 		DDDF06B61458EF0E0042B157 /* BTN6@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BTN6@2x.png"; sourceTree = "<group>"; };
-		DDDF06B91458EF0E0042B157 /* 00TaipeiMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 00TaipeiMap.png; sourceTree = "<group>"; };
-		DDDF06BA1458EF0E0042B157 /* 00TaipeiMap@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "00TaipeiMap@2x.png"; sourceTree = "<group>"; };
 		DDDF06BB1458EF0E0042B157 /* 中山區btnD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "中山區btnD.png"; sourceTree = "<group>"; };
 		DDDF06BC1458EF0E0042B157 /* 中山區btnD@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "中山區btnD@2x.png"; sourceTree = "<group>"; };
 		DDDF06BD1458EF0E0042B157 /* 中正區btnD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "中正區btnD.png"; sourceTree = "<group>"; };
@@ -446,7 +477,7 @@
 		38FA2683143F04B700BBE99E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				38FA2682143F04B700BBE99E /* MapView.app */,
+				38FA2682143F04B700BBE99E /* 寢在台北.app */,
 				38FA26A0143F04B700BBE99E /* MapViewTests.octest */,
 			);
 			name = Products;
@@ -492,6 +523,15 @@
 				2A4C8ABA145D7BC900ED06D4 /* DetailInfoTableViewController.m */,
 				2A4C8ABB145D7BC900ED06D4 /* DetailInfoTableViewController.xib */,
 				DDA6D48D145EA30F00C20CCE /* CustomCell_detail.xib */,
+				2A41023D1461B79000AAD8DA /* DetailMapViewController.h */,
+				2A41023E1461B79000AAD8DA /* DetailMapViewController.m */,
+				2AC625AC1461C94E0050A86B /* DetailMapViewController.xib */,
+				2A4102441461B7EB00AAD8DA /* AdvanceSearchPage.h */,
+				2A4102451461B7EB00AAD8DA /* AdvanceSearchPage.m */,
+				2A4102461461B7EB00AAD8DA /* AdvanceSearchPage.xib */,
+				2A62F3DF146184B50000B6A4 /* GameView.h */,
+				2A62F3E0146184B50000B6A4 /* GameView.m */,
+				2A62F3E1146184B50000B6A4 /* GameView.xib */,
 				2A6411CB145AFF1800910378 /* SetSortMethod.h */,
 				2A6411CC145AFF1800910378 /* SetSortMethod.m */,
 				2A6411CD145AFF1900910378 /* SetSortMethod.xib */,
@@ -577,11 +617,19 @@
 		DDDF06A31458EF0E0042B157 /* Icon */ = {
 			isa = PBXGroup;
 			children = (
+				2A4102361461B55300AAD8DA /* telphone.gif */,
+				2A62F3E4146184ED0000B6A4 /* GameDisk.png */,
+				2A62F3D6146182DA0000B6A4 /* tabbarImg1.png */,
+				2A62F3D7146182DA0000B6A4 /* tabbarImg1@2x.png */,
+				2A62F3CD14617E4D0000B6A4 /* detailBack.png */,
+				2A62F3CE14617E4D0000B6A4 /* detailBack@2x.png */,
+				2A62F3CF14617E4D0000B6A4 /* tabbarImg.png */,
+				2A62F3D014617E4D0000B6A4 /* tabbarImg@2x.png */,
 				2A6411C7145AEE4000910378 /* mail.gif */,
 				DDAD313B145A81E3004145A6 /* LBS.png */,
 				DDAD313C145A81E3004145A6 /* LBS@2x.png */,
-				DDAD313D145A81E3004145A6 /* LBSbutton.png */,
-				DDAD313E145A81E4004145A6 /* LBSbutton@2x.png */,
+				2A62F3B0146161800000B6A4 /* LBSbutton.png */,
+				2A62F3B1146161800000B6A4 /* LBSbutton@2x.png */,
 				2A6411C3145AED4B00910378 /* games.png */,
 				2A6411C4145AED4B00910378 /* games@2x.png */,
 				DDAD3127145A746A004145A6 /* list.png */,
@@ -639,8 +687,8 @@
 		DDDF06B81458EF0E0042B157 /* ShowButtonDown */ = {
 			isa = PBXGroup;
 			children = (
-				DDDF06B91458EF0E0042B157 /* 00TaipeiMap.png */,
-				DDDF06BA1458EF0E0042B157 /* 00TaipeiMap@2x.png */,
+				2A62F3B4146161AB0000B6A4 /* 00TaipeiMap.png */,
+				2A62F3B5146161AB0000B6A4 /* 00TaipeiMap@2x.png */,
 				DDDF06BB1458EF0E0042B157 /* 中山區btnD.png */,
 				DDDF06BC1458EF0E0042B157 /* 中山區btnD@2x.png */,
 				DDDF06BD1458EF0E0042B157 /* 中正區btnD.png */,
@@ -748,7 +796,7 @@
 			);
 			name = MapView;
 			productName = MapView;
-			productReference = 38FA2682143F04B700BBE99E /* MapView.app */;
+			productReference = 38FA2682143F04B700BBE99E /* 寢在台北.app */;
 			productType = "com.apple.product-type.application";
 		};
 		38FA269F143F04B700BBE99E /* MapViewTests */ = {
@@ -837,8 +885,6 @@
 				DDDF07221458EF0E0042B157 /* BTN5@2x.png in Resources */,
 				DDDF07231458EF0E0042B157 /* BTN6.png in Resources */,
 				DDDF07241458EF0E0042B157 /* BTN6@2x.png in Resources */,
-				DDDF07251458EF0E0042B157 /* 00TaipeiMap.png in Resources */,
-				DDDF07261458EF0E0042B157 /* 00TaipeiMap@2x.png in Resources */,
 				DDDF07271458EF0E0042B157 /* 中山區btnD.png in Resources */,
 				DDDF07281458EF0E0042B157 /* 中山區btnD@2x.png in Resources */,
 				DDDF07291458EF0E0042B157 /* 中正區btnD.png in Resources */,
@@ -926,8 +972,6 @@
 				DDAD3146145A81E5004145A6 /* History@2x.png in Resources */,
 				DDAD3147145A81E5004145A6 /* LBS.png in Resources */,
 				DDAD3148145A81E5004145A6 /* LBS@2x.png in Resources */,
-				DDAD3149145A81E5004145A6 /* LBSbutton.png in Resources */,
-				DDAD314A145A81E5004145A6 /* LBSbutton@2x.png in Resources */,
 				DDAD314B145A81E5004145A6 /* list@2x.png in Resources */,
 				DDAD314E145A81E5004145A6 /* zone@2x.png in Resources */,
 				2A62E7EF145AC7630054915B /* myFavorite_empty.png in Resources */,
@@ -947,6 +991,21 @@
 				DDA6D48E145EA30F00C20CCE /* CustomCell_detail.xib in Resources */,
 				A9AFB214146040B70015E7D9 /* Default.png in Resources */,
 				A9AFB215146040B70015E7D9 /* Default@2x.png in Resources */,
+				2A62F3B2146161800000B6A4 /* LBSbutton.png in Resources */,
+				2A62F3B3146161800000B6A4 /* LBSbutton@2x.png in Resources */,
+				2A62F3B6146161AB0000B6A4 /* 00TaipeiMap.png in Resources */,
+				2A62F3B7146161AB0000B6A4 /* 00TaipeiMap@2x.png in Resources */,
+				2A62F3D114617E4D0000B6A4 /* detailBack.png in Resources */,
+				2A62F3D214617E4D0000B6A4 /* detailBack@2x.png in Resources */,
+				2A62F3D314617E4D0000B6A4 /* tabbarImg.png in Resources */,
+				2A62F3D414617E4D0000B6A4 /* tabbarImg@2x.png in Resources */,
+				2A62F3D8146182DA0000B6A4 /* tabbarImg1.png in Resources */,
+				2A62F3D9146182DA0000B6A4 /* tabbarImg1@2x.png in Resources */,
+				2A62F3E3146184B60000B6A4 /* GameView.xib in Resources */,
+				2A62F3E5146184ED0000B6A4 /* GameDisk.png in Resources */,
+				2A4102371461B55300AAD8DA /* telphone.gif in Resources */,
+				2A4102481461B7EB00AAD8DA /* AdvanceSearchPage.xib in Resources */,
+				2AC625AE1461C94E0050A86B /* DetailMapViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1001,6 +1060,9 @@
 				DDA6D489145E9CCE00C20CCE /* TableViewItem.m in Sources */,
 				DDA6D48C145EA29400C20CCE /* ImageOnURL.m in Sources */,
 				A9AB706F145F8E4C00268276 /* MapViewController.m in Sources */,
+				2A62F3E2146184B60000B6A4 /* GameView.m in Sources */,
+				2A41023F1461B79000AAD8DA /* DetailMapViewController.m in Sources */,
+				2A4102471461B7EB00AAD8DA /* AdvanceSearchPage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1098,7 +1160,7 @@
 				GCC_PREFIX_HEADER = "MapView/MapView-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "MapView/MapView-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "寢在台北";
 				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1112,7 +1174,7 @@
 				GCC_PREFIX_HEADER = "MapView/MapView-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "MapView/MapView-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "寢在台北";
 				USER_HEADER_SEARCH_PATHS = "";
 				WRAPPER_EXTENSION = app;
 			};

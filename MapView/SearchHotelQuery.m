@@ -11,16 +11,59 @@
 
 @synthesize managedObjectContext, fetchedResultsController;
 
+- (NSMutableArray *)refreshAnnotationsWithArray:(NSArray *)shownHotels mapViewController:(MKMapView *)myMapView
+{
+	NSLog(@"  refreshAnnotationsWithArray : %d",[shownHotels count]);
+	NSMutableArray *shownAnnotations = [NSMutableArray arrayWithCapacity:[shownHotels count]];
+	for (unsigned int i = 0; i < [shownHotels count]; i++)
+		[shownAnnotations addObject:[NSNull null]];
+  
+	NSArray *removedAnnotations = [myMapView.annotations filteredArrayUsingPredicate:[NSPredicate predicateWithBlock: ^ (MapAnnotation *anAnnotation, NSDictionary *bindings) {
+		if (![anAnnotation isKindOfClass:[MapAnnotation class]])
+			return (BOOL)NO;
+		NSUInteger hotelIndex = [shownHotels indexOfObject:anAnnotation.representedObject];
+		if (hotelIndex == NSNotFound)
+			return (BOOL)YES;
+		[shownAnnotations replaceObjectAtIndex:hotelIndex withObject:anAnnotation];
+		return (BOOL)NO;
+	}]];
+	[myMapView removeAnnotations:removedAnnotations];
+	[shownHotels enumerateObjectsUsingBlock: ^ (TableViewItem *aHotel, NSUInteger idx, BOOL *stop) {
+		MapAnnotation *annotation = [shownAnnotations objectAtIndex:idx];
+		if (![annotation isKindOfClass:[MapAnnotation class]]) {
+			annotation = [[[MapAnnotation alloc] init] autorelease];
+			[shownAnnotations replaceObjectAtIndex:idx withObject:annotation];
+		}
+    
+		annotation.coordinate = aHotel.coordinate;
+		annotation.odIdentifier = aHotel.odIdentifier;
+		annotation.title = aHotel.displayName;
+		//annotation.type = aHotel.areaCode.integerValue;
+    annotation.type = 0;
+		annotation.costStay = aHotel.costStay;
+		annotation.costRest = aHotel.costRest;
+		annotation.representedObject = aHotel;
+	}];
+	
+	[myMapView addAnnotations:shownAnnotations];
+}
 
-+ (NSFetchRequest *) fetchRequestInContext:(NSManagedObjectContext *)aContext forPredicateString:(NSString *)PredicateString forSortColumn:(NSString *)SortColumn {
 
+- (NSMutableArray *)listHotelsWithCoordinateRegion:(MKCoordinateRegion)region 
+{
+  NSLog(@"listHotelsWithCoordinateRegion");
+	CLLocationDegrees minLat, maxLat, minLng, maxLng;
+	minLat = region.center.latitude - region.span.latitudeDelta;
+	maxLat = region.center.latitude + region.span.latitudeDelta;
+	minLng = region.center.longitude - region.span.longitudeDelta;
+	maxLng = region.center.longitude + region.span.longitudeDelta;
 	NSFetchRequest *fetchRequest = [[[NSFetchRequest alloc] init] autorelease];
-	fetchRequest.entity = [NSEntityDescription entityForName:@"Hotel" inManagedObjectContext:aContext];
-	fetchRequest.predicate = [NSPredicate predicateWithFormat:PredicateString];
-	fetchRequest.sortDescriptors = [NSArray arrayWithObjects:
-	[NSSortDescriptor sortDescriptorWithKey:SortColumn ascending:YES],nil];
-
-	return fetchRequest;
+	fetchRequest.entity = [NSEntityDescription entityForName:@"Hotel" inManagedObjectContext:self.managedObjectContext];
+	fetchRequest.predicate = [NSPredicate predicateWithFormat:@"(latitude >= %f) AND (latitude <= %f) AND (longitude >= %f) AND longitude <= %f", minLat, maxLat, minLng, maxLng];
+  fetchRequest.ReturnsObjectsAsFaults=NO;
+  NSArray  *searchRequestArray= [self.managedObjectContext executeFetchRequest:fetchRequest error:nil];
+    return [self arrayToMapAnnotation:searchRequestArray];
+  
 }
 
 - (id) initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
@@ -81,6 +124,7 @@
 	
     return self;
 }
+
 
 
 -(NSMutableArray *)resultSearchInSearch:(NSMutableArray *)arrayContent withPredicate:(NSPredicate *)withPredicate arraySort:(NSArray *)arraySort
@@ -162,6 +206,62 @@ return resultArray;
   fetchRequest.ReturnsObjectsAsFaults=NO;
   NSArray  *searchRequestArray= [self.managedObjectContext executeFetchRequest:fetchRequest error:nil];
   return [self arrayToTableViewItem:searchRequestArray];
+}
+
+//TableViewItem轉成MapAnnotation 
+-(NSMutableArray *)TableViewItemArrayToMapAnnotation:(NSMutableArray *)TableViewItemArray 
+{ 
+  NSLog(@"ToDo:TableViewItemArray轉成MapAnnotation:%d",[TableViewItemArray count]); 
+  NSMutableArray *mapAnnotationArray = [[NSMutableArray alloc]init];
+  for (int i=0; i<[TableViewItemArray count]; i++) {
+    TableViewItem *aHotelData = [TableViewItemArray objectAtIndex:i];    
+    MapAnnotation *dataList = [[MapAnnotation alloc]init];
+		dataList.coordinate = aHotelData.coordinate;
+    dataList.odIdentifier= aHotelData.odIdentifier;
+		dataList.title = aHotelData.displayName;
+		dataList.costStay = aHotelData.costStay;
+		dataList.costRest = aHotelData.costRest;
+    dataList.type = 0;
+    if (aHotelData.distance.intValue>1000)
+      dataList.subtitle = [NSString stringWithFormat:@"%4.2f Km",aHotelData.distance.floatValue/1000];
+    else
+      dataList.subtitle = [NSString stringWithFormat:@"%4d m",aHotelData.distance.intValue];
+    dataList.representedObject = aHotelData;
+    [mapAnnotationArray addObject:dataList];
+    [dataList release];
+    [aHotelData release]; 
+  }
+  return mapAnnotationArray;
+}
+
+//搜尋結果searchResultArray轉成MapAnnotation 
+-(NSMutableArray *)searchResultArrayToMapAnnotation:(NSMutableArray *)searchRequestArray 
+{ 
+  NSLog(@"ToDo:搜尋結果searchResultArray轉成MapAnnotation:%d",[searchRequestArray count]); 
+  NSMutableArray *mapAnnotationArray = [[NSMutableArray alloc]init];
+
+  for (int i=0; i<[searchRequestArray count]; i++) {
+    NSManagedObject *resultDataEntity = [searchRequestArray objectAtIndex:i];    
+    MapAnnotation *dataList = [[MapAnnotation alloc]init];
+		dataList.coordinate = (CLLocationCoordinate2D) {
+			[[resultDataEntity valueForKey:@"latitude"] doubleValue],
+			[[resultDataEntity valueForKey:@"longitude"] doubleValue]
+		};
+    dataList.odIdentifier= [resultDataEntity valueForKey:@"odIdentifier"];
+		dataList.title = [resultDataEntity valueForKey:@"displayName"];
+		dataList.costStay = [resultDataEntity valueForKey:@"costStay"];
+		dataList.costRest = [resultDataEntity valueForKey:@"costRest"];
+    dataList.type = 0;
+    if ([[resultDataEntity valueForKey:@"distance"]intValue]>1000)
+        dataList.subtitle = [NSString stringWithFormat:@"%4.2f Km",[[resultDataEntity valueForKey:@"distance"]floatValue]/1000];
+    else
+        dataList.subtitle = [NSString stringWithFormat:@"%4d m",[[resultDataEntity valueForKey:@"distance"]intValue]];
+    dataList.representedObject = resultDataEntity;
+    [mapAnnotationArray addObject:dataList];
+    [dataList release];
+    [resultDataEntity release]; 
+  }
+  return mapAnnotationArray;
 }
 
 //搜尋結果轉成TableViewItem 的NSMutableArray

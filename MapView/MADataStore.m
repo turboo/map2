@@ -181,7 +181,7 @@
 		insertedHotel.costRest          = fromInt(18);
 		insertedHotel.useDate           = fromDate(19);
 		insertedHotel.xurl              = fromText(20);    
-		NSLog(@"i = %d",i++ );
+		//NSLog(@"i = %d",i++ );
 	}
 	
 	BOOL didFinalize = (SQLITE_OK == sqlite3_finalize(statement));

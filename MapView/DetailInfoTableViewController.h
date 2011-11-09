@@ -17,7 +17,7 @@
 #define kColorValueTag  2
 #define KScrowViewTag   3
 
-@interface DetailInfoTableViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface DetailInfoTableViewController : UIViewController <UITableViewDataSource, UITableViewDelegate,UIActionSheetDelegate>
 {	
   UIScrollView *PicScrollView;
   UITableViewCell *tvCell;
@@ -30,5 +30,8 @@
 @property (nonatomic, readwrite, assign) NSNumber *hotelID;
 @property (nonatomic, retain) IBOutlet UITableViewCell *tvCell;
 - (id) initWithHotelID:(NSNumber *)hotelID;
+-(IBAction)SendMail:(id)sender;
+-(IBAction)DialPhone:(id)sender;
+-(IBAction)ShowMap :(id)sender;
 
 @end

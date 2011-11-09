@@ -15,6 +15,7 @@
 @synthesize displayName, tel, address, imagesArray;
 @synthesize costRest,costStay;
 @synthesize favorites;
+@synthesize type;
 
 - (void) dealloc {
 

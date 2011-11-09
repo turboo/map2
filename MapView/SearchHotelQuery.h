@@ -12,6 +12,7 @@
 #import "MADataStore.h"
 #import "MapDefines.h"
 #import "TableViewItem.h"
+#import "MapAnnotation.h"
 #import "MyFavoriteTableViewController.h"
 #import "HistoryTableViewController.h"
 
@@ -25,6 +26,14 @@
 
 + (NSFetchRequest *) fetchRequestInContext:(NSManagedObjectContext *)aContext forPredicateString:(NSString *)PredicateString forSortColumn:(NSString *)SortColumn;
 
+- (NSMutableArray *)refreshAnnotationsWithArray:(NSArray *)shownHotels mapViewController:(MKMapView *)myMapView;
+
+//列出MapAnnotation 
+- (NSMutableArray *)listHotelsWithCoordinateRegion:(MKCoordinateRegion)region;
+//TableViewItem轉成MapAnnotation 
+-(NSMutableArray *)TableViewItemArrayToMapAnnotation:(NSMutableArray *)TableViewItemArray;
+//搜尋結果searchResultArray轉成MapAnnotation 
+-(NSMutableArray *)searchResultArrayToMapAnnotation:(NSMutableArray *)searchRequestArray;
 //搜尋結果轉成TableViewItem 的NSMutableArray
 -(NSMutableArray *)arrayToTableViewItem:(NSArray *)searchRequestArray;
 //列出歷程

@@ -12,9 +12,9 @@
 
 @interface MapViewAppDelegate : NSObject <UIApplicationDelegate>
 {
-	UIWindow			*window_;
+	//UIWindow			*window_;
 }
-@property (nonatomic, retain) IBOutlet UIWindow *window_;
+@property (nonatomic, retain) IBOutlet UIWindow *window;
 
 
 @end

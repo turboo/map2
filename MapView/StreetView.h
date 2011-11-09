@@ -11,6 +11,6 @@
 
 @interface StreetViewController : UIViewController
 
-- (id) initWithCoordinate:(CLLocationCoordinate2D)coordinate;
+- (id) initWithCoordinate:(CLLocationCoordinate2D)coordinate title:(NSString *)hotelTitle;
 
 @end

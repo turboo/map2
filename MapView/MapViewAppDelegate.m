@@ -11,7 +11,7 @@
 
 
 @implementation MapViewAppDelegate
-@synthesize window=window_;
+@synthesize window=_window;
 //@synthesize viewController=viewController_;
 
 
@@ -21,8 +21,15 @@
     //UINavigationController *nac=[[[UINavigationController alloc]initWithRootViewController:lsvc]autorelease];
     
     //self.window.rootViewController=nac;
-    
+        //
+    //   開始動畫淡出
     //
+    UIImageView *imgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Default"]];
+    [self.window addSubview:imgView];
+    [imgView release];
+    [UIView animateWithDuration:3 animations:^(void){imgView.alpha = 0.0f;}];
+    //[imgView removeFromSuperview];
+    [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:YES];    //
     //  Database init
     //
     if (![MADataStore hasPerformedInitialImport])
@@ -43,7 +50,7 @@
 - (void)dealloc
 {
 	//[[CCDirector sharedDirector] end];
-  [window_ release];
+  [_window release];
 	//[viewController_ release];
 	[super dealloc];
 }
@@ -66,65 +73,5 @@
   //	[[director openGLView] swapBuffers];
   //	CC_ENABLE_DEFAULT_GL_STATES();
 }
-
-- (void) applicationDidFinishLaunching:(UIApplication*)application
-{
-	// Init the window
-	window_ = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-	
-	
-	//CCDirector *director = [CCDirector sharedDirector];
-	
-	// Init the View Controller
-	//viewController_ = [[RootViewController alloc] initWithNibName:nil bundle:nil];
-	//viewController_.wantsFullScreenLayout = YES;
-	
-	//
-	// Create the EAGLView manually
-	//  1. Create a RGB565 format. Alternative: RGBA8
-	//	2. depth format of 0 bit. Use 16 or 24 bit for 3d effects, like CCPageTurnTransition
-	//
-	//
-	//EAGLView *glView = [EAGLView viewWithFrame:[window_ bounds]
-                                 //pixelFormat:kEAGLColorFormatRGB565	// kEAGLColorFormatRGBA8
-                                 //depthFormat:0						// GL_DEPTH_COMPONENT16_OES
-                      //];
-	
-	// attach the openglView to the director
-	//[director setOpenGLView:glView];
-	
-  //	// Enables High Res mode (Retina Display) on iPhone 4 and maintains low res on all other devices
-	//if( ! [director enableRetinaDisplay:YES] )
-		//CCLOG(@"Retina Display Not supported");
-  
-	//[director setAnimationInterval:1.0/60];
-	//[director setDisplayFPS:NO];
-	
-	
-	// make the OpenGLView a child of the view controller
-	//[viewController_ setView:glView];
-	
-	// make the View Controller a child of the main window
-	//[window_ addSubview: viewController_.view];
-	
-	[window_ makeKeyAndVisible];
-	
-	// Default texture format for PNG/BMP/TIFF/JPEG/GIF images
-	// It can be RGBA8888, RGBA4444, RGB5_A1, RGB565
-	// You can change anytime.
-	//[CCTexture2D setDefaultAlphaPixelFormat:kCCTexture2DPixelFormat_RGBA4444];
-	
-	// PVR Textures have alpha premultiplied
-	//[CCTexture2D PVRImagesHavePremultipliedAlpha:YES];
-	
-	// Removes the startup flicker
-	[self removeStartupFlicker];
-	
-	// Run the intro Scene
-	//[[CCDirector sharedDirector] runWithScene: [GameDisk scene]];
-}
-
-
-
 
 @end

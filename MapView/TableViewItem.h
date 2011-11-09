@@ -9,6 +9,22 @@
 #import <Foundation/Foundation.h>
 #import <MapKit/MapKit.h>
 
+#ifndef __MapAnnotation__
+#define __MapAnnotation__
+
+enum {
+  
+  AnnotationUnknownType = 0,
+  AnnotationOneStarType,
+  AnnotationTwoStarsType,
+  AnnotationThreeStarsType,
+  AnnotationFourStarsType,
+  AnnotationFiveStarsType
+  
+}; typedef int MapAnnotationType;
+
+#endif
+
 @interface TableViewItem : NSObject <MKAnnotation>
 
 @property (nonatomic, readwrite, assign) CLLocationCoordinate2D coordinate;
@@ -21,4 +37,7 @@
 @property (nonatomic, readwrite, copy) NSNumber *costRest;
 @property (nonatomic, readwrite, copy) NSString *imagesArray;
 @property (nonatomic, readwrite, copy) NSNumber *favorites;
+@property (nonatomic, readwrite, assign) MapAnnotationType type;
+
+@property (nonatomic, readwrite, retain) id representedObject;
 @end

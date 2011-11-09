@@ -7,6 +7,7 @@
 //
 
 #import "DetailInfoTableViewController.h"
+#import "DetailMapViewController.h"
 
 @implementation DetailInfoTableViewController
 
@@ -14,8 +15,8 @@
 @synthesize tvCell;
 
 //@synthesize tvCell;
-const CGFloat kScrollObjHeight	= 200.0;
-const CGFloat kScrollObjWidth	= 285.0;
+const CGFloat kScrollObjHeight	= 210.0;
+const CGFloat kScrollObjWidth	= 280.0;
 const NSUInteger kNumImages		= 3;
 //
 //  self add init
@@ -76,13 +77,82 @@ const NSUInteger kNumImages		= 3;
 
 -(void)setFavorite
 {
-//    UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"This is about myFavorite" message:nil delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil ] autorelease];
-//    
-//    [alert show];
-  SearchHotelQuery *searchQuery = [[[SearchHotelQuery alloc]init]autorelease];
-  self.navigationItem.rightBarButtonItem.image = [searchQuery inputHotelIDAndModifyFavorites:hotelID showStatus:YES];
-  searchQuery = nil;
+    //    UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"This is about myFavorite" message:nil delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil ] autorelease];
+    //    
+    //    [alert show];
+    SearchHotelQuery *searchQuery = [[[SearchHotelQuery alloc]init]autorelease];
+    self.navigationItem.rightBarButtonItem.image = [searchQuery inputHotelIDAndModifyFavorites:hotelID showStatus:YES];
+    searchQuery = nil;
 }
+
+-(IBAction)SendMail:(id)sender{
+    UIActionSheet *theActionSheet = [[UIActionSheet alloc] initWithTitle:@"" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"寄送e-mail", nil];
+    
+    [self.navigationController setToolbarHidden:YES];    
+    
+    [theActionSheet showInView:self.view];
+    [theActionSheet release];
+    /*
+            NSString *stringURL = @"mailto:test@example.com";
+        NSURL *url = [NSURL URLWithString:stringURL];
+        [[UIApplication sharedApplication] openURL:url];
+        */
+}
+
+
+-(IBAction)DialPhone:(id)sender{
+    
+    UIActionSheet *theActionSheet = [[UIActionSheet alloc] initWithTitle:@"" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"撥打電話", nil];
+    
+    [self.navigationController setToolbarHidden:YES];    
+    
+    [theActionSheet showInView:self.view];
+    [theActionSheet release];
+    
+    /*
+        
+    NSLog(@"callphone");
+    
+    NSMutableString *phone = [[@"+ 12 34 567 89 01" mutableCopy] autorelease];
+    [phone replaceOccurrencesOfString:@" " 
+                           withString:@"" 
+                              options:NSLiteralSearch 
+                                range:NSMakeRange(0, [phone length])];
+    [phone replaceOccurrencesOfString:@"(" 
+                           withString:@"" 
+                              options:NSLiteralSearch 
+                                range:NSMakeRange(0, [phone length])];
+    [phone replaceOccurrencesOfString:@")" 
+                           withString:@"" 
+                              options:NSLiteralSearch 
+                                range:NSMakeRange(0, [phone length])];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"tel:%@", phone]];
+    [[UIApplication sharedApplication] openURL:url];
+    
+   */
+}
+
+/*
+- (void)actionSheet:(UIActionSheet *) modalView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    switch (buttonIndex) {
+        case 0:
+        {
+            NSLog(@"case 0");
+            break;
+        }
+        case 1:
+            NSLog(@"case 1");
+            break;
+    }
+}
+*/
+
+-(IBAction)ShowMap :(id)sender{
+    DetailMapViewController *detailMap = [[DetailMapViewController alloc]init];
+    [self.navigationController pushViewController:detailMap animated:YES];
+    [detailMap release];
+}
+
 
 - (void)viewDidUnload
 {
@@ -169,17 +239,41 @@ const NSUInteger kNumImages		= 3;
     }	
     
     // Configure the cell...
-    UILabel *hotelDisplayName = (UILabel *)[cell viewWithTag:1];
+    cell.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"detailBack.png"]];
+    cell.backgroundView.layer.masksToBounds = YES;
+    cell.backgroundView.layer.cornerRadius = 10;
+    
+    int tag =1;
+    
+    UILabel *hotelDisplayName = (UILabel *)[cell viewWithTag:tag++];
     hotelDisplayName.text = hotelDetails.displayName;
 	
-    UILabel *hotelAreaName = (UILabel *)[cell viewWithTag:2];
+    UILabel *hotelAreaName = (UILabel *)[cell viewWithTag:tag++];
     hotelAreaName.text = hotelDetails.areaName;
+    
+    UILabel *hotelxurl = (UILabel *)[cell viewWithTag:tag++];
+    hotelxurl.text = hotelDetails.xurl;
+    
+    UILabel *hotelPhone = (UILabel *)[cell viewWithTag:tag++];
+    hotelPhone.text = hotelDetails.tel;
+    
+    UILabel *hotelMail = (UILabel *)[cell viewWithTag:tag++];
+    hotelMail.text = hotelDetails.email;
+    
+    UILabel *hotelAddr = (UILabel *)[cell viewWithTag:tag++];
+    hotelAddr.text = hotelDetails.address;
+    
+    UILabel *hotelNightCost = (UILabel *)[cell viewWithTag:tag++];
+    hotelNightCost.text =[NSString stringWithFormat:@"%d", [hotelDetails.costStay intValue]];
+    
+    UILabel *hotelRestCost = (UILabel *)[cell viewWithTag:tag++];
+    hotelRestCost.text = [NSString stringWithFormat:@"%d", [hotelDetails.costRest intValue]];
   
     self.navigationItem.title = hotelDetails.displayName;
     //NSLog(@"hotelDetails.areaName = %@",hotelDetails.areaName);
     //NSLog(@"hotelAreaName.text = %@",hotelAreaName.text);
     //self.view.backgroundColor = [UIColor viewFlipsideBackgroundColor];
-    CGRect ScrollSize=CGRectMake(20, 80, kScrollObjWidth, kScrollObjHeight);
+    CGRect ScrollSize=CGRectMake(20, 10, kScrollObjWidth, kScrollObjHeight);
     PicScrollView=[[UIScrollView alloc ]initWithFrame:ScrollSize];
     [PicScrollView setBackgroundColor:[UIColor blackColor]];
     [PicScrollView setCanCancelContentTouches:NO];
@@ -220,6 +314,10 @@ const NSUInteger kNumImages		= 3;
     
     [self layoutScrollImages];
     
+    //
+    //  web view
+    //
+#if 0
     CGRect WebViewSize=CGRectMake(20,280,kScrollObjWidth, 600);
 	UIWebView *detailWebView = [[UIWebView alloc] initWithFrame:WebViewSize];
     //UIWebView *detailWebView = [[UIWebView alloc] init];
@@ -227,7 +325,7 @@ const NSUInteger kNumImages		= 3;
     
  	[detailWebView loadHTMLString:loadedString baseURL:nil];
     [cell addSubview:detailWebView];
-
+#endif
 
     return cell;
 }
@@ -293,7 +391,7 @@ const NSUInteger kNumImages		= 3;
 {
    // CGFloat height=tableView.rowHeight;
    // if(indexPath.section == 5 )
-       return 1200;
+       return 500;
     
    // return height;
 }

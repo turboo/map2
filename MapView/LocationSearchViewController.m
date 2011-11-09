@@ -17,7 +17,7 @@
     //
 	if (![MADataStore hasPerformedInitialImport])
 		[[MADataStore defaultStore] importData];
-
+    
     return YES;
 }
 
@@ -58,14 +58,22 @@
     //
     //  Auto change view frame ...add by EV
     //
-//    __block void (^noclip)(UIView *) = ^ (UIView *aView) {
-//        aView.clipsToBounds = NO;
-//        if (aView.superview)
-//            noclip(aView.superview);
-//    };
-//    noclip(self.view);
-	MapViewController *mapViewController = [[[MapViewController alloc]init]autorelease];
-    [self.navigationController pushViewController:mapViewController animated:YES];
+    //    __block void (^noclip)(UIView *) = ^ (UIView *aView) {
+    //        aView.clipsToBounds = NO;
+    //        if (aView.superview)
+    //            noclip(aView.superview);
+    //    };
+    //    noclip(self.view);
+	//MapViewController *mapViewController = [[[MapViewController alloc]init]autorelease];
+  //  [self.navigationController pushViewController:mapViewController animated:YES];
+
+  
+  TotalTableViewController *hotelMapViewController=[[[TotalTableViewController alloc]init]autorelease];
+    hotelMapViewController.EntryTag = 0;
+  [self.navigationController pushViewController:hotelMapViewController animated:YES];
+  
+  
+  
 }
 
 -(IBAction)hideImage:(UIButton *)sender{ 
@@ -88,23 +96,23 @@
         hotelListTableViewController.EntryTag = [NSNumber numberWithInt:(sender.tag - TAIPEI_AERA_TOTAL)];
     else
         hotelListTableViewController.EntryTag = [NSNumber numberWithInt:sender.tag];
-  
+    
     [self.navigationController pushViewController:hotelListTableViewController animated:YES];
-  
-  //TotalTableAndMapViewController *listAndMapViewController=[[[TotalTableAndMapViewController alloc]init]autorelease];
-  
-//  TotalTableViewController *listAndMapViewController=[[[TotalTableViewController alloc]init]autorelease];
-//  if(sender.tag > TAIPEI_AERA_TOTAL)
-//    listAndMapViewController.EntryTag = [NSNumber numberWithInt:(sender.tag - TAIPEI_AERA_TOTAL)];
-//  else
-//    listAndMapViewController.EntryTag = [NSNumber numberWithInt:sender.tag];
-//  [self.navigationController pushViewController:listAndMapViewController animated:YES];
+    
+    //TotalTableAndMapViewController *listAndMapViewController=[[[TotalTableAndMapViewController alloc]init]autorelease];
+    
+    //  TotalTableViewController *listAndMapViewController=[[[TotalTableViewController alloc]init]autorelease];
+    //  if(sender.tag > TAIPEI_AERA_TOTAL)
+    //    listAndMapViewController.EntryTag = [NSNumber numberWithInt:(sender.tag - TAIPEI_AERA_TOTAL)];
+    //  else
+    //    listAndMapViewController.EntryTag = [NSNumber numberWithInt:sender.tag];
+    //  [self.navigationController pushViewController:listAndMapViewController animated:YES];
 }
 
 -(IBAction)cancelImage:(id)sender{
-  [locationIV setImage:nil];
-  self.title=@"台北行政區";
-  self.navigationController.title=@"區域查詢";
+    [locationIV setImage:nil];
+    self.title=@"台北行政區";
+    self.navigationController.title=@"區域查詢";
 }
 
 -(IBAction)showImage:(id)sender{
@@ -127,7 +135,7 @@
     
     if (randswitch) {
         while (last_result == randomTag){
-        randomTag= 1+random() % TAIPEI_AERA_TOTAL;
+            randomTag= 1+random() % TAIPEI_AERA_TOTAL;
         }
         last_result=randomTag;
         randbtn.tag=randomTag;
@@ -152,7 +160,7 @@
 }
 
 -(void)showLocation:(UIButton *)sender{
-
+    
     NSString *locationName;
     if (sender.tag > TAIPEI_AERA_TOTAL)
         locationName=[NSString stringWithFormat:@"%@LbtnD",[self.allLName objectAtIndex:(sender.tag-TAIPEI_AERA_TOTAL)]];
@@ -225,29 +233,32 @@
                                                          green:177.0/255   
                                                          blue:247.0/255   
                                                          alpha:1]; 
-  self.navigationController.toolbar.tintColor = [UIColor   
-                                                       colorWithRed:138.0/255   
-                                                       green:177.0/255   
-                                                       blue:247.0/255   
-                                                       alpha:1];
-  CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB(); 
-  UIImage *imga=[UIImage imageNamed:@"LBSbutton.png"];
-  [LBSbtn setImage:imga forState:UIControlStateNormal];
-  [LBSbtn.layer setCornerRadius:10]; 
-  LBSbtn.layer.borderWidth = 2;
-  LBSbtn.layer.masksToBounds=YES;
-  //CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
-  CGColorRef colorref = CGColorCreate(colorSpace,(CGFloat[]){ 0.5, 0.5, 0.5, 1 });    
-  [LBSbtn.layer setBorderColor:colorref];//边框颜色
-  
-  UIButton* infoButton = [[UIButton buttonWithType:UIButtonTypeInfoLight]autorelease];  
-  [infoButton addTarget:self action:@selector(aboutUS) forControlEvents:UIControlEventTouchUpInside]; 
-  self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:infoButton]; 
+    self.navigationController.toolbar.tintColor = [UIColor   
+                                                   colorWithRed:138.0/255   
+                                                   green:177.0/255   
+                                                   blue:247.0/255   
+                                                   alpha:1];
+    CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB(); 
+    UIImage *imga=[UIImage imageNamed:@"LBSbutton.png"];
+    [LBSbtn setImage:imga forState:UIControlStateNormal];
+    [LBSbtn.layer setCornerRadius:10]; 
+    LBSbtn.layer.borderWidth = 2;
+    LBSbtn.layer.masksToBounds=YES;
+    //CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+    CGColorRef colorref = CGColorCreate(colorSpace,(CGFloat[]){ 0.5, 0.5, 0.5, 1 });    
+    [LBSbtn.layer setBorderColor:colorref];//边框颜色
+    
+    //UIImage *_tabbarbg = [UIImage imageNamed:@"tabbarImg1.png"];
+    //self.tabBarController.tabBar.layer.contents = (id)_tabbarbg.CGImage;
+    
+    UIButton* infoButton = [[UIButton buttonWithType:UIButtonTypeInfoLight]autorelease];  
+    [infoButton addTarget:self action:@selector(aboutUS) forControlEvents:UIControlEventTouchUpInside]; 
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:infoButton]; 
     
     //localImage=[UIImage imageNamed:@"R"];
     //self.navigationItem.rightBarButtonItem =[[[UIBarButtonItem alloc]initWithImage:localImage style:UIBarButtonItemStylePlain target:self action:@selector(randlocation:)]autorelease];
     //self.navigationItem.rightBarButtonItem =[[[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:self action:@selector(aboutUS)]autorelease];
-
+    
     [[UIAccelerometer sharedAccelerometer] setDelegate:self];
     [super viewDidLoad];
 }
@@ -260,13 +271,13 @@
     
 }
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
-  if (buttonIndex == 0) {     // and they clicked 1.
-    NSLog(@"1 clicked");
-  }else if(buttonIndex==1){
-    NSLog(@"2 clicked");
-  }else if(buttonIndex==2){
-    NSLog(@"3 clicked");
-  }
+    if (buttonIndex == 0) {     // and they clicked 1.
+        NSLog(@"1 clicked");
+    }else if(buttonIndex==1){
+        NSLog(@"2 clicked");
+    }else if(buttonIndex==2){
+        NSLog(@"3 clicked");
+    }
 }
 
 - (void)viewDidUnload{
