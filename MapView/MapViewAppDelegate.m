@@ -27,13 +27,10 @@
     UIImageView *imgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Default"]];
     [self.window addSubview:imgView];
     [imgView release];
-    [UIView animateWithDuration:3 animations:^(void){imgView.alpha = 0.0f;}];
+    [UIView animateWithDuration:2 animations:^(void){imgView.alpha = 0.0f;}];
     //[imgView removeFromSuperview];
     [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:YES];    //
-    //  Database init
-    //
-    if (![MADataStore hasPerformedInitialImport])
-		[[MADataStore defaultStore] importData];
+
         
     self.window.backgroundColor = [UIColor blackColor];
     

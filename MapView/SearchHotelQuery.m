@@ -62,12 +62,12 @@
 	fetchRequest.predicate = [NSPredicate predicateWithFormat:@"(latitude >= %f) AND (latitude <= %f) AND (longitude >= %f) AND longitude <= %f", minLat, maxLat, minLng, maxLng];
   fetchRequest.ReturnsObjectsAsFaults=NO;
   NSArray  *searchRequestArray= [self.managedObjectContext executeFetchRequest:fetchRequest error:nil];
-    return [self arrayToMapAnnotation:searchRequestArray];
+  return [self arrayToMapAnnotation:searchRequestArray];
   
 }
 
 - (id) initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-
+  
 	self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
 	if (!self)
 		return nil;
@@ -82,17 +82,17 @@
 	NSError *fetchingError = nil;
 	if (![self.fetchedResultsController performFetch:&fetchingError])
 		NSLog(@"Error fetching: %@", fetchingError);
-			
+  
 	return self;
-
+  
 }
 
 - (void) dealloc {
-
-//	[persistentStoreCoordinator release];
-//	[managedObjectModel release];
+  
+  //	[persistentStoreCoordinator release];
+  //	[managedObjectModel release];
 	[super dealloc];
-
+  
 }
 
 //- (NSManagedObjectModel *) managedObjectModel {
@@ -112,32 +112,32 @@
 
 - (id)init
 {
-    self = [super init];
-    if (self) {
-      managedObjectContext = [[[MADataStore defaultStore] disposableMOC] retain];
-    }
-    return self;
+  self = [super init];
+  if (self) {
+    managedObjectContext = [[[MADataStore defaultStore] disposableMOC] retain];
+  }
+  return self;
 }
 
 -(NSMutableArray *)resultSearchInSearch:(NSMutableArray *)arrayContent withPredicate:(NSPredicate *)withPredicate arraySort:(NSArray *)arraySort
 {
   NSLog(@"ToDo:用結果再搜尋");
-//arrayContent過濾arrayFilter中的所有item。
-//NSArray *arrayFilter = [NSArray arrayWithObjects:@"abc1", @"abc2", nil];
-//NSArray *arrayContent = [NSArray arrayWithObjects:@"a1", @"abc1", @"abc4", @"abc2", nil];
-//NSPredicate *thePredicate = [NSPredicate predicateWithFormat:@"SELF in %@", arrayFilter];
-//NSPredicate *thePredicate = [NSPredicate predicateWithFormat:@"SELF CONTAINS %@", arrayFilter];
-NSMutableArray *resultArray =[[[NSMutableArray alloc]init ]autorelease];
-[resultArray sortUsingDescriptors:arraySort];
-[resultArray filterUsingPredicate:withPredicate];
-
+  //arrayContent過濾arrayFilter中的所有item。
+  //NSArray *arrayFilter = [NSArray arrayWithObjects:@"abc1", @"abc2", nil];
+  //NSArray *arrayContent = [NSArray arrayWithObjects:@"a1", @"abc1", @"abc4", @"abc2", nil];
+  //NSPredicate *thePredicate = [NSPredicate predicateWithFormat:@"SELF in %@", arrayFilter];
+  //NSPredicate *thePredicate = [NSPredicate predicateWithFormat:@"SELF CONTAINS %@", arrayFilter];
+  NSMutableArray *resultArray =[[[NSMutableArray alloc]init ]autorelease];
+  [resultArray sortUsingDescriptors:arraySort];
+  [resultArray filterUsingPredicate:withPredicate];
   
-return resultArray;
-
-//  fetchRequest.sortDescriptors = [NSArray arrayWithObjects:[NSSortDescriptor sortDescriptorWithKey:@"odIdentifier" ascending:YES],nil];
-//  fetchRequest.ReturnsObjectsAsFaults=NO;
-//  NSArray  *searchRequestArray= [self.managedObjectContext executeFetchRequest:fetchRequest error:nil];
-//  return [self arrayToTableViewItem:searchRequestArray];
+  
+  return resultArray;
+  
+  //  fetchRequest.sortDescriptors = [NSArray arrayWithObjects:[NSSortDescriptor sortDescriptorWithKey:@"odIdentifier" ascending:YES],nil];
+  //  fetchRequest.ReturnsObjectsAsFaults=NO;
+  //  NSArray  *searchRequestArray= [self.managedObjectContext executeFetchRequest:fetchRequest error:nil];
+  //  return [self arrayToTableViewItem:searchRequestArray];
 }
 
 //用關鍵字列出所有相關旅館
@@ -176,13 +176,13 @@ return resultArray;
 	//[NSPredicate predicateWithFormat:[NSString stringWithFormat:@"%@", predicateString ]  ];
 	fetchRequest.sortDescriptors = sortDescription;
 	/*
-	[NSArray arrayWithObjects:
-		[NSSortDescriptor sortDescriptorWithKey:sortString ascending:YES],
-		[NSSortDescriptor sortDescriptorWithKey:@"distance" ascending:YES],
-		[NSSortDescriptor sortDescriptorWithKey:@"favorites" ascending:NO],
-		[NSSortDescriptor sortDescriptorWithKey:@"odIdentifier" ascending:YES],
-		nil];
-		*/
+   [NSArray arrayWithObjects:
+   [NSSortDescriptor sortDescriptorWithKey:sortString ascending:YES],
+   [NSSortDescriptor sortDescriptorWithKey:@"distance" ascending:YES],
+   [NSSortDescriptor sortDescriptorWithKey:@"favorites" ascending:NO],
+   [NSSortDescriptor sortDescriptorWithKey:@"odIdentifier" ascending:YES],
+   nil];
+   */
   fetchRequest.ReturnsObjectsAsFaults=NO;
   NSArray  *searchRequestArray= [self.managedObjectContext executeFetchRequest:fetchRequest error:nil];
   return [self arrayToTableViewItem:searchRequestArray];
@@ -231,7 +231,7 @@ return resultArray;
 { 
   NSLog(@"ToDo:搜尋結果searchResultArray轉成MapAnnotation:%d",[searchRequestArray count]); 
   NSMutableArray *mapAnnotationArray = [[NSMutableArray alloc]init];
-
+  
   for (int i=0; i<[searchRequestArray count]; i++) {
     NSManagedObject *resultDataEntity = [searchRequestArray objectAtIndex:i];    
     MapAnnotation *dataList = [[MapAnnotation alloc]init];
@@ -245,9 +245,9 @@ return resultArray;
 		dataList.costRest = [resultDataEntity valueForKey:@"costRest"];
     dataList.type = 0;
     if ([[resultDataEntity valueForKey:@"distance"]intValue]>1000)
-        dataList.subtitle = [NSString stringWithFormat:@"%4.2f Km",[[resultDataEntity valueForKey:@"distance"]floatValue]/1000];
+      dataList.subtitle = [NSString stringWithFormat:@"%4.2f Km",[[resultDataEntity valueForKey:@"distance"]floatValue]/1000];
     else
-        dataList.subtitle = [NSString stringWithFormat:@"%4d m",[[resultDataEntity valueForKey:@"distance"]intValue]];
+      dataList.subtitle = [NSString stringWithFormat:@"%4d m",[[resultDataEntity valueForKey:@"distance"]intValue]];
     dataList.representedObject = resultDataEntity;
     [mapAnnotationArray addObject:dataList];
     [dataList release];
@@ -276,9 +276,9 @@ return resultArray;
 		dataList.address = [resultDataEntity valueForKey:@"address"];
 		dataList.costStay = [resultDataEntity valueForKey:@"costStay"];
 		dataList.costRest = [resultDataEntity valueForKey:@"costRest"];
-  
+    
 		imageArray = [[resultDataEntity valueForKey:@"imagesArray"] componentsSeparatedByString:@";"];
-
+    
 		if ([[imageArray objectAtIndex:0] length] > 0)
 			dataList.imagesArray = [[imageArray objectAtIndex:0] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
 		else
@@ -330,10 +330,10 @@ return resultArray;
   NSManagedObject *resultDataEntity = [fetchRequestDataArray objectAtIndex:0];
   //if ([resultDataEntity valueForKey:@"useDate"] == nil)
   //{
-    [resultDataEntity setValue:[NSDate date] forKey:@"useDate"];
-    NSError *savingError = nil;
-    if (![self.managedObjectContext save:&savingError])
-      NSLog(@"Error saving: %@", savingError);
+  [resultDataEntity setValue:[NSDate date] forKey:@"useDate"];
+  NSError *savingError = nil;
+  if (![self.managedObjectContext save:&savingError])
+    NSLog(@"Error saving: %@", savingError);
   //}else{
   //  NSLog(@"資料不改變");
   //}  
@@ -356,8 +356,8 @@ return resultArray;
   }
   NSError *savingError = nil;
   if (![self.managedObjectContext save:&savingError])
-      NSLog(@"Error saving: %@", savingError);
-
+    NSLog(@"Error saving: %@", savingError);
+  
   return self;
 }
 
@@ -396,7 +396,7 @@ return resultArray;
       imgFavorite = [UIImage imageNamed:@"myFavorite"];
       NSLog(@"myFavorite");
     }
-
+    
     NSError *savingError = nil;
     if (![self.managedObjectContext save:&savingError])
       NSLog(@"Error saving: %@", savingError);
@@ -439,34 +439,34 @@ return resultArray;
 }
 
 -(void)test{
-//  ，NSDictionary，NSValue，NSEnumerator基本操作
-//  NSEnumerator *enumerator = [myMutableDict keyEnumerator];
-//  id aKey = nil;
-//  while ( (aKey = [enumerator nextObject]) != nil) {
-//    id value = [myMutableDict objectForKey:anObject];
-//    NSLog(@"%@: %@", aKey, value);
-//  }
-//  NSMutableDictionary *glossary = [NSMutableDictionary dictionary];
-//  //Store three entries in the glossary
-//  [glossary setObject: @"A class defined so other classes can inherit from it"
-//               forkey: @"abstract class"];
-//  [glossary setObject: @"To implement all the methods defined in a protocol"
-//               forkey: @"adopt"];
-//  [glossary setObject: @"Storing an object for later use"
-//               forkey: @"archiving"];
-//  for (NSString *key in glossary){
-//    NSLog(@"%@:%@", key, [glossary objectForKey: key]);
-//  }
-//
-//NSMutableSet *useDate = [person mutableSetValueForKey:@"children"]; //查询，可修改
-//[children addObject:child];
-//[children removeObject:childToBeRemoved];
-//[[children managedObjectContext] deleteObject:childToBeRemoved]; //真正的删除
-//NSSet *children = [person valueForKey:@"children"]; //查询，不可修改
-//for (NSManagedObject *oneChild in children) {
-//// do something
-//
-//
+  //  ，NSDictionary，NSValue，NSEnumerator基本操作
+  //  NSEnumerator *enumerator = [myMutableDict keyEnumerator];
+  //  id aKey = nil;
+  //  while ( (aKey = [enumerator nextObject]) != nil) {
+  //    id value = [myMutableDict objectForKey:anObject];
+  //    NSLog(@"%@: %@", aKey, value);
+  //  }
+  //  NSMutableDictionary *glossary = [NSMutableDictionary dictionary];
+  //  //Store three entries in the glossary
+  //  [glossary setObject: @"A class defined so other classes can inherit from it"
+  //               forkey: @"abstract class"];
+  //  [glossary setObject: @"To implement all the methods defined in a protocol"
+  //               forkey: @"adopt"];
+  //  [glossary setObject: @"Storing an object for later use"
+  //               forkey: @"archiving"];
+  //  for (NSString *key in glossary){
+  //    NSLog(@"%@:%@", key, [glossary objectForKey: key]);
+  //  }
+  //
+  //NSMutableSet *useDate = [person mutableSetValueForKey:@"children"]; //查询，可修改
+  //[children addObject:child];
+  //[children removeObject:childToBeRemoved];
+  //[[children managedObjectContext] deleteObject:childToBeRemoved]; //真正的删除
+  //NSSet *children = [person valueForKey:@"children"]; //查询，不可修改
+  //for (NSManagedObject *oneChild in children) {
+  //// do something
+  //
+  //
 }
 
 @end

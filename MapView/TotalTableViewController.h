@@ -104,4 +104,5 @@ enum {
 @property(nonatomic,retain)NSArray *aryBbtnForTableView;
 @property(nonatomic,retain)NSArray *aryBbtnForMapView;
 @property(nonatomic,retain)IBOutlet UILabel *dataCountLabel;
+
 @end

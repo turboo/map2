@@ -7,7 +7,7 @@
 //
 
 #import "DetailInfoTableViewController.h"
-#import "DetailMapViewController.h"
+#import "HotelMapViewController.h"
 
 @implementation DetailInfoTableViewController
 
@@ -39,6 +39,7 @@ const NSUInteger kNumImages		= 3;
 //
 //  system init
 //
+/*
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -47,7 +48,7 @@ const NSUInteger kNumImages		= 3;
     }
     return self;
 }
-
+*/
 - (void)didReceiveMemoryWarning
 {
     // Releases the view if it doesn't have a superview.
@@ -67,11 +68,11 @@ const NSUInteger kNumImages		= 3;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    SearchHotelQuery *searchQuery = [[[SearchHotelQuery alloc]init]autorelease];
+    SearchHotelQuery *searchQuery = [[SearchHotelQuery alloc]init];
     UIImage *hotelFavorite = [searchQuery inputHotelIDAndShowFavorites:hotelID];
     self.navigationItem.rightBarButtonItem =[[[UIBarButtonItem alloc]initWithImage:hotelFavorite style:UIBarButtonItemStylePlain target:self action:@selector(setFavorite)]autorelease];
-    hotelFavorite = nil;
-    searchQuery = nil;
+    [hotelFavorite release];
+    [searchQuery release];
     [super viewDidLoad];
 }
 
@@ -80,9 +81,9 @@ const NSUInteger kNumImages		= 3;
     //    UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"This is about myFavorite" message:nil delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil ] autorelease];
     //    
     //    [alert show];
-    SearchHotelQuery *searchQuery = [[[SearchHotelQuery alloc]init]autorelease];
+    SearchHotelQuery *searchQuery = [[SearchHotelQuery alloc]init];
     self.navigationItem.rightBarButtonItem.image = [searchQuery inputHotelIDAndModifyFavorites:hotelID showStatus:YES];
-    searchQuery = nil;
+    [searchQuery release];
 }
 
 -(IBAction)SendMail:(id)sender{
@@ -132,7 +133,7 @@ const NSUInteger kNumImages		= 3;
    */
 }
 
-/*
+
 - (void)actionSheet:(UIActionSheet *) modalView clickedButtonAtIndex:(NSInteger)buttonIndex{
     switch (buttonIndex) {
         case 0:
@@ -145,10 +146,17 @@ const NSUInteger kNumImages		= 3;
             break;
     }
 }
-*/
+
 
 -(IBAction)ShowMap :(id)sender{
-    DetailMapViewController *detailMap = [[DetailMapViewController alloc]init];
+    SearchHotelQuery *HotelQuery=[[[SearchHotelQuery alloc] init]autorelease];
+    Hotel *hotelDetails =[[[Hotel alloc] init]autorelease];
+    hotelDetails = [HotelQuery inputHotelIDAndListDataAndChange:self.hotelID];
+    HotelMapViewController *detailMap = [[HotelMapViewController alloc]init];
+    detailMap.hotelLat = hotelDetails.latitude;
+    detailMap.hotelLon = hotelDetails.longitude;
+    detailMap.hotelName = hotelDetails.displayName;
+
     [self.navigationController pushViewController:detailMap animated:YES];
     [detailMap release];
 }
@@ -208,8 +216,8 @@ const NSUInteger kNumImages		= 3;
     //
     //  database init
     //
-    SearchHotelQuery *HotelQuery=[[SearchHotelQuery alloc] init];
-    Hotel *hotelDetails =[[Hotel alloc] init];
+    SearchHotelQuery *HotelQuery=[[[SearchHotelQuery alloc] init]autorelease];
+    Hotel *hotelDetails =[[[Hotel alloc] init]autorelease];
     hotelDetails = [HotelQuery inputHotelIDAndListDataAndChange:self.hotelID];
     NSString *loadedString = [NSString stringWithFormat:
                               @"<html>"
@@ -239,7 +247,8 @@ const NSUInteger kNumImages		= 3;
     }	
     
     // Configure the cell...
-    cell.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"detailBack.png"]];
+    cell.selectionStyle  = UITableViewCellSelectionStyleNone;
+    cell.backgroundView = [[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"detailBack.png"]]autorelease];
     cell.backgroundView.layer.masksToBounds = YES;
     cell.backgroundView.layer.cornerRadius = 10;
     
@@ -287,13 +296,13 @@ const NSUInteger kNumImages		= 3;
     NSArray * imagesArray = [hotelDetails.imagesArray componentsSeparatedByString:@";"];
     
     int i=0;
-    ImageOnURL *ImageURL=[[ImageOnURL alloc]init];
+    ImageOnURL *ImageURL=[[[ImageOnURL alloc]init]autorelease];
     for(NSString* imagesURL in imagesArray){
         imagesURL = [imagesURL stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
         if ([imagesURL length]>0){
             
             i++;  
-            //NSLog(@"imagesURL字串：%@",imagesURL);
+            NSLog(@"imagesURL字串：%@",imagesURL);
             //UIImageView *myImageView=[[UIImageView alloc] initWithImage:[[UIImage description:[NSString stringWithFormat:@"%@",hotelDetails.displayName]] sendURLReturnImage:imagesURL]];
             
             UIImageView *myImageView=[[UIImageView alloc] initWithImage:[ImageURL sendURLReturnImage:imagesURL]];
@@ -303,6 +312,7 @@ const NSUInteger kNumImages		= 3;
             CGRect rect = myImageView.frame;
             rect.size.height = kScrollObjHeight;
             rect.size.width = kScrollObjWidth;
+            myImageView.clipsToBounds = YES;
             myImageView.frame = rect;
             myImageView.tag = i;	
             [PicScrollView addSubview:myImageView];
@@ -311,7 +321,7 @@ const NSUInteger kNumImages		= 3;
     }
     imagesArray = nil;
     [cell addSubview:PicScrollView];
-    
+    [PicScrollView release];     
     [self layoutScrollImages];
     
     //
@@ -325,6 +335,7 @@ const NSUInteger kNumImages		= 3;
     
  	[detailWebView loadHTMLString:loadedString baseURL:nil];
     [cell addSubview:detailWebView];
+    [detailWebView release];
 #endif
 
     return cell;
@@ -397,8 +408,6 @@ const NSUInteger kNumImages		= 3;
 }
 
 - (void)dealloc {
-  [PicScrollView release];
-  [detailWebView release];
   [super dealloc];
 }
 

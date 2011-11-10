@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "LocationSearchViewController.h"
-#import "MADataStore.h"
 
 @interface MapViewAppDelegate : NSObject <UIApplicationDelegate>
 {

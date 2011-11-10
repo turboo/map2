@@ -12,12 +12,13 @@ static const int kMapViewController_Accessory_StreetView = 1;
 static const int kMapViewController_Accessory_Disclose = 2;
 
 //取得現在位置
+/*
 const MKCoordinateRegion hereIam = (MKCoordinateRegion){
 		//(CLLocationCoordinate2D) {	25.041349, 121.557802 },	//忠孝敦化捷運站 需配合0.006,0.006
 		(CLLocationCoordinate2D) {25.110603,121.52764},			//天母棒球場附近	需配合0.01, 0.01 
 		//mapView.userLocation.location.coordinate,				//手機GPS座標
 		(MKCoordinateSpan) { 0.01, 0.01 }};
-
+*/
 @implementation MapViewController
 @synthesize managedObjectContext, fetchedResultsController;
 @synthesize mapView;
@@ -59,7 +60,8 @@ const MKCoordinateRegion hereIam = (MKCoordinateRegion){
 	return fetchRequest;
 }
 
-- (MKMapView *)showMapWithSearchQuery:(NSMutableArray *)resultDataList predicate:(NSPredicate *)predicateDescription{
+- (MKMapView *)showMapWithSearchQuery:(NSMutableArray *)resultDataList predicate:(NSPredicate *)predicateDescription
+{
 
 
 }
@@ -120,7 +122,7 @@ const MKCoordinateRegion hereIam = (MKCoordinateRegion){
 	mapView.multipleTouchEnabled = YES;
 	mapView.mapType = MKMapTypeStandard;
 	mapView.scrollEnabled = YES;
-	[mapView setRegion:hereIam animated:YES];
+//	[mapView setRegion:hereIam animated:YES];
 }
 
 - (void) mapView:(MKMapView *)aMapView regionDidChangeAnimated:(BOOL)animated {

@@ -8,9 +8,16 @@
 
 #import "LocationSearchViewController.h"
 
-
 @implementation LocationSearchViewController
 @synthesize allLName;
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    //  Database init
+    //
+    if (![MADataStore hasPerformedInitialImport])
+		[[MADataStore defaultStore] importData];
+}
 
 - (BOOL) application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {    
     //
@@ -59,22 +66,15 @@
     //
     //  Auto change view frame ...add by EV
     //
-    //    __block void (^noclip)(UIView *) = ^ (UIView *aView) {
-    //        aView.clipsToBounds = NO;
-    //        if (aView.superview)
-    //            noclip(aView.superview);
-    //    };
-    //    noclip(self.view);
-	//MapViewController *mapViewController = [[[MapViewController alloc]init]autorelease];
-  //  [self.navigationController pushViewController:mapViewController animated:YES];
-
-  
-  TotalTableViewController *hotelMapViewController=[[[TotalTableViewController alloc]init]autorelease];
-    hotelMapViewController.EntryTag = 0;
-  [self.navigationController pushViewController:hotelMapViewController animated:YES];
-  
-  
-  
+    __block void (^noclip)(UIView *) = ^ (UIView *aView) {
+        aView.clipsToBounds = NO;
+        if (aView.superview)
+            noclip(aView.superview);
+    };
+    noclip(self.view);
+    TotalTableViewController *mapViewController = [[[TotalTableViewController alloc]init]autorelease];
+    mapViewController.EntryTag = TAIPEI_AERA_LBS;
+    [self.navigationController pushViewController:mapViewController animated:YES];
 }
 
 -(IBAction)hideImage:(UIButton *)sender{ 
@@ -89,7 +89,7 @@
     
     noclip(self.view);
     self.title=@"台北行政區";
-    //self.navigationController.title=@"區域查詢";
+
     [locationIV setImage:nil];
     
     TotalTableViewController *hotelListTableViewController=[[[TotalTableViewController alloc]init]autorelease];
@@ -99,15 +99,7 @@
         hotelListTableViewController.EntryTag = [NSNumber numberWithInt:sender.tag];
     
     [self.navigationController pushViewController:hotelListTableViewController animated:YES];
-    
-    //TotalTableAndMapViewController *listAndMapViewController=[[[TotalTableAndMapViewController alloc]init]autorelease];
-    
-    //  TotalTableViewController *listAndMapViewController=[[[TotalTableViewController alloc]init]autorelease];
-    //  if(sender.tag > TAIPEI_AERA_TOTAL)
-    //    listAndMapViewController.EntryTag = [NSNumber numberWithInt:(sender.tag - TAIPEI_AERA_TOTAL)];
-    //  else
-    //    listAndMapViewController.EntryTag = [NSNumber numberWithInt:sender.tag];
-    //  [self.navigationController pushViewController:listAndMapViewController animated:YES];
+
 }
 
 -(IBAction)cancelImage:(id)sender{
@@ -213,32 +205,22 @@
     self.allLName=[[[NSArray alloc]init]autorelease];
     self.allLName=[NSArray arrayWithObjects:
                    [NSNull null],
-                   @"北投區",
-                   @"士林區",
-                   @"內湖區",
-                   @"松山區",
-                   @"中山區",
-                   @"大同區",
-                   @"南港區",
-                   @"信義區",
-                   @"大安區",
-                   @"中正區",
-                   @"萬華區",
-                   @"文山區",
-                   nil];
-    
+                   @"北投區",@"士林區",@"內湖區",
+                   @"松山區",@"中山區",@"大同區",
+                   @"南港區",@"信義區",@"大安區",
+                   @"中正區",@"萬華區",@"文山區",nil];
     self.title=@"台北行政區";
     
     self.navigationController.navigationBar.tintColor = [UIColor   
-                                                         colorWithRed:138.0/255   
-                                                         green:177.0/255   
-                                                         blue:247.0/255   
-                                                         alpha:1]; 
+            colorWithRed:138.0/255   
+            green:177.0/255   
+            blue:247.0/255   
+            alpha:1]; 
     self.navigationController.toolbar.tintColor = [UIColor   
-                                                   colorWithRed:138.0/255   
-                                                   green:177.0/255   
-                                                   blue:247.0/255   
-                                                   alpha:1];
+            colorWithRed:138.0/255   
+            green:177.0/255   
+            blue:247.0/255   
+            alpha:1];
     CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB(); 
     UIImage *imga=[UIImage imageNamed:@"LBSbutton.png"];
     [LBSbtn setImage:imga forState:UIControlStateNormal];
@@ -273,10 +255,7 @@
 }
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
     if (buttonIndex == 0) {     // and they clicked 1.
-      NSLog(@"1 clicked");
-      XMLParser *updateHotel = [[XMLParser alloc]init];
-      [updateHotel updateHotelData];
-      [updateHotel release];
+        NSLog(@"1 clicked");
     }else if(buttonIndex==1){
         NSLog(@"2 clicked");
     }else if(buttonIndex==2){

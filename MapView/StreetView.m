@@ -19,7 +19,6 @@
 - (id) initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self.tabBarController.tabBar.hidden = YES;
 	return [self initWithCoordinate:(CLLocationCoordinate2D){ 0, 0 }];
-
 }
 
 - (id) initWithCoordinate:(CLLocationCoordinate2D)coordinate title:(NSString *)hotelTitle{

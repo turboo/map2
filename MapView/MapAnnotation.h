@@ -13,7 +13,6 @@
 #define __MapAnnotation__
 
 enum {
-    
     AnnotationUnknownType = 0,
     AnnotationOneStarType,
     AnnotationTwoStarsType,
@@ -26,14 +25,13 @@ enum {
 #endif
 
 @interface MapAnnotation : NSObject <MKAnnotation>{
-    NSString *mapTtitle;
+    NSString *title;
     NSString *subtitle;
-    CLLocationCoordinate2D mapCoordinate;
+    CLLocationCoordinate2D coordinate;
 }
-@property (nonatomic , copy) NSString *barTitle;
-@property (nonatomic , readonly) CLLocationCoordinate2D mapCoordinate;
--(id)initWithTitle:(NSString *)ttl andCoordinate: (CLLocationCoordinate2D) c2d;
 
+
+-(id)initWithTitle:(NSString *)ttl andCoordinate: (CLLocationCoordinate2D) c2d;
 
 @property (nonatomic, readwrite, assign) CLLocationCoordinate2D coordinate;
 @property (nonatomic, readwrite, copy) NSNumber *odIdentifier;

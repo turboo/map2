@@ -14,13 +14,12 @@
 @synthesize coordinate, title, subtitle, type, representedObject;
 @synthesize costRest,costStay;
 
-@synthesize barTitle,mapCoordinate;
 
 -(id) initWithTitle:(id)ttl andCoordinate:(CLLocationCoordinate2D)c2d
-{
-    [super init];
-    barTitle=ttl;
-    mapCoordinate =c2d;
+{    
+    self = [super init];
+    if (self != nil) coordinate = c2d;
+    title=ttl;
     return self;
 }
 
@@ -34,7 +33,7 @@
     [costStay release];
     [representedObject release];
     
-    [barTitle release];
+    [title release];
     [super dealloc];
     
 }

@@ -8,9 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "MADataStore.h"
-#import "MapViewController.h"
 #import "TotalTableViewController.h"
-#import "XMLParser.h"
 
 #define AERA_STRING_1    @"北投區"
 #define AERA_STRING_2    @"士林區"
