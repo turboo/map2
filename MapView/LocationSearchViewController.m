@@ -8,6 +8,7 @@
 
 #import "LocationSearchViewController.h"
 
+
 @implementation LocationSearchViewController
 @synthesize allLName;
 
@@ -272,7 +273,10 @@
 }
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
     if (buttonIndex == 0) {     // and they clicked 1.
-        NSLog(@"1 clicked");
+      NSLog(@"1 clicked");
+      XMLParser *updateHotel = [[XMLParser alloc]init];
+      [updateHotel updateHotelData];
+      [updateHotel release];
     }else if(buttonIndex==1){
         NSLog(@"2 clicked");
     }else if(buttonIndex==2){

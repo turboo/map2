@@ -72,6 +72,9 @@
 		A9AB706F145F8E4C00268276 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9AB706E145F8E4C00268276 /* MapViewController.m */; };
 		A9AFB214146040B70015E7D9 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = A9AFB212146040B70015E7D9 /* Default.png */; };
 		A9AFB215146040B70015E7D9 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A9AFB213146040B70015E7D9 /* Default@2x.png */; };
+		A9B442E5146AE0C000174AD7 /* XMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B442E4146AE0C000174AD7 /* XMLParser.m */; };
+		A9B70130146BC21900A732D8 /* XMLPark.m in Sources */ = {isa = PBXBuildFile; fileRef = A9B7012F146BC21900A732D8 /* XMLPark.m */; };
+		A9DFC545146B80BF00EBD18A /* XMLHotel.m in Sources */ = {isa = PBXBuildFile; fileRef = A9DFC544146B80BF00EBD18A /* XMLHotel.m */; };
 		DDA6D485145E9C7400C20CCE /* SearchHotelQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA6D484145E9C7400C20CCE /* SearchHotelQuery.m */; };
 		DDA6D489145E9CCE00C20CCE /* TableViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA6D488145E9CCE00C20CCE /* TableViewItem.m */; };
 		DDA6D48C145EA29400C20CCE /* ImageOnURL.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA6D48B145EA29400C20CCE /* ImageOnURL.m */; };
@@ -297,6 +300,12 @@
 		A9AB706E145F8E4C00268276 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		A9AFB212146040B70015E7D9 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		A9AFB213146040B70015E7D9 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		A9B442E3146AE0C000174AD7 /* XMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLParser.h; sourceTree = "<group>"; };
+		A9B442E4146AE0C000174AD7 /* XMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLParser.m; sourceTree = "<group>"; };
+		A9B7012E146BC21900A732D8 /* XMLPark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLPark.h; sourceTree = "<group>"; };
+		A9B7012F146BC21900A732D8 /* XMLPark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLPark.m; sourceTree = "<group>"; };
+		A9DFC543146B80BE00EBD18A /* XMLHotel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLHotel.h; sourceTree = "<group>"; };
+		A9DFC544146B80BF00EBD18A /* XMLHotel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLHotel.m; sourceTree = "<group>"; };
 		DDA6D483145E9C7400C20CCE /* SearchHotelQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchHotelQuery.h; sourceTree = "<group>"; };
 		DDA6D484145E9C7400C20CCE /* SearchHotelQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchHotelQuery.m; sourceTree = "<group>"; };
 		DDA6D487145E9CCE00C20CCE /* TableViewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewItem.h; sourceTree = "<group>"; };
@@ -546,6 +555,12 @@
 		38FA268D143F04B700BBE99E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A9B442E3146AE0C000174AD7 /* XMLParser.h */,
+				A9B442E4146AE0C000174AD7 /* XMLParser.m */,
+				A9DFC543146B80BE00EBD18A /* XMLHotel.h */,
+				A9DFC544146B80BF00EBD18A /* XMLHotel.m */,
+				A9B7012E146BC21900A732D8 /* XMLPark.h */,
+				A9B7012F146BC21900A732D8 /* XMLPark.m */,
 				DDA6D48A145EA29400C20CCE /* ImageOnURL.h */,
 				DDA6D48B145EA29400C20CCE /* ImageOnURL.m */,
 				DDA6D487145E9CCE00C20CCE /* TableViewItem.h */,
@@ -1063,6 +1078,9 @@
 				2A62F3E2146184B60000B6A4 /* GameView.m in Sources */,
 				2A41023F1461B79000AAD8DA /* DetailMapViewController.m in Sources */,
 				2A4102471461B7EB00AAD8DA /* AdvanceSearchPage.m in Sources */,
+				A9B442E5146AE0C000174AD7 /* XMLParser.m in Sources */,
+				A9DFC545146B80BF00EBD18A /* XMLHotel.m in Sources */,
+				A9B70130146BC21900A732D8 /* XMLPark.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

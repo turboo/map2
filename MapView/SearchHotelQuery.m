@@ -112,20 +112,12 @@
 
 - (id)init
 {
-
     self = [super init];
-
     if (self) {
-
-		managedObjectContext = [[[MADataStore defaultStore] disposableMOC] retain];
-
+      managedObjectContext = [[[MADataStore defaultStore] disposableMOC] retain];
     }
-	
-	
     return self;
 }
-
-
 
 -(NSMutableArray *)resultSearchInSearch:(NSMutableArray *)arrayContent withPredicate:(NSPredicate *)withPredicate arraySort:(NSArray *)arraySort
 {
