@@ -141,12 +141,12 @@
 }
 
 //用關鍵字列出所有相關旅館
--(NSMutableArray *)inputKeyWordAndListData:(NSString *)inputHotelName
+-(NSMutableArray *)inputKeyWordAndListData:(NSString *)inputpredicate
 {
-  NSLog(@"ToDo:用關鍵字( %@ )列出所有相關旅館",inputHotelName);
+  NSLog(@"ToDo:用關鍵字列出所有相關旅館[%@]",inputpredicate);
 	NSFetchRequest *fetchRequest = [[[NSFetchRequest alloc] init] autorelease];
 	fetchRequest.entity = [NSEntityDescription entityForName:@"Hotel" inManagedObjectContext:self.managedObjectContext];
-	fetchRequest.predicate = [NSPredicate predicateWithFormat:@"displayName like %s",inputHotelName];
+	fetchRequest.predicate = [NSPredicate predicateWithFormat:@"%@",inputpredicate];
   fetchRequest.sortDescriptors = [NSArray arrayWithObjects:[NSSortDescriptor sortDescriptorWithKey:@"odIdentifier" ascending:YES],nil];
   fetchRequest.ReturnsObjectsAsFaults=NO;
   NSArray  *searchRequestArray= [self.managedObjectContext executeFetchRequest:fetchRequest error:nil];

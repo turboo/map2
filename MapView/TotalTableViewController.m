@@ -13,6 +13,8 @@
 static const int kMapViewController_Accessory_StreetView = 1;
 static const int kMapViewController_Accessory_Disclose = 2;
 
+static const int AdvanceSearch = 999;
+
 @interface TotalTableViewController () <NSFetchedResultsControllerDelegate>
 
 + (NSString *) imageNameForAnnotationType:(MapAnnotationType)aType;
@@ -27,7 +29,7 @@ static const int kMapViewController_Accessory_Disclose = 2;
 @implementation TotalTableViewController
 
 @synthesize hotelSortString;
-@synthesize hotelPredicateString;
+@synthesize hotelPredicateString,hotelPredicate;
 @synthesize SetSortView,SetFilterView;
 @synthesize TotalMapView,TotalTableView;
 @synthesize Hotels;
@@ -94,6 +96,13 @@ static const int kMapViewController_Accessory_Disclose = 2;
 #endif
 }
 
+-(id)initWithPredicateString:(NSString *)PredicateString EntryTag:(NSNumber *)entryTag
+{
+  self.hotelPredicateString = PredicateString;
+  self.EntryTag = entryTag;
+  NSLog(@"initWithPredicateString:%@:%@", self.EntryTag ,self.hotelPredicateString);
+  return self;
+}
 - (void) refreshAnnotations {
     NSArray *shownHotels = self.fetchedResultsController.fetchedObjects;
 	NSMutableArray *shownAnnotations = [NSMutableArray arrayWithCapacity:[shownHotels count]];
@@ -296,7 +305,7 @@ static const int kMapViewController_Accessory_Disclose = 2;
 - (void)viewDidLoad
 { 
     [super viewDidLoad];
-
+    NSLog(@"viewDidLoad");
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -480,16 +489,26 @@ static const int kMapViewController_Accessory_Disclose = 2;
     
 	SearchHotelQuery *searchQuery = [[[SearchHotelQuery alloc]init]autorelease];
 	//搜尋條件uint
+  
+  if ([hotelPredicateString length]==0)
+  {
     if(self.EntryTag == TAIPEI_AERA_LBS)
-        hotelPredicateString = [NSPredicate predicateWithFormat:[NSString stringWithFormat:@"areaCode > 0"]];
-    else
-        hotelPredicateString = [NSPredicate predicateWithFormat:[NSString stringWithFormat:@"areaCode == %@",self.EntryTag]];
+        hotelPredicateString = [NSString stringWithFormat:@"areaCode > 0"];   
+    else 
+        hotelPredicateString = [NSString stringWithFormat:@"areaCode == %@",self.EntryTag];
+  }else{
+    NSLog(@"ToDo:Advance Search ~");
+  }
+  NSLog(@"ToDo:Search:%@",hotelPredicateString);    
+  hotelPredicate = [NSPredicate predicateWithFormat:hotelPredicateString];
+  
+  
 	//排序順序
 	hotelSortString = [NSArray arrayWithObjects:
-                       //[NSSortDescriptor sortDescriptorWithKey:@"distance" ascending:YES],
+        //[NSSortDescriptor sortDescriptorWithKey:@"distance" ascending:YES],
         [NSSortDescriptor sortDescriptorWithKey:@"favorites" ascending:NO],
         [NSSortDescriptor sortDescriptorWithKey:@"odIdentifier" ascending:YES],nil];
-    hotelDataList = [[NSMutableArray alloc]initWithArray:[searchQuery inputPredicateShowHotelList:hotelPredicateString sortWith:hotelSortString]];
+  hotelDataList = [[NSMutableArray alloc]initWithArray:[searchQuery inputPredicateShowHotelList:hotelPredicate sortWith:hotelSortString]];
     [dataCountLabel setText:[NSString stringWithFormat:@"%d",[hotelDataList count]]];
     resultDataList = [hotelDataList copy];
     

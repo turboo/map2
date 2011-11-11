@@ -43,7 +43,7 @@
 //列出符合條件的旅館 
 -(NSMutableArray *)inputPredicateShowHotelList:(NSPredicate *)predicateDescription sortWith:(NSArray *)sortDescription;
 //用關鍵字列出所有旅館欄位
--(NSMutableArray *)inputKeyWordAndListData:(NSString *)inputHotelName;
+-(NSMutableArray *)inputKeyWordAndListData:(NSString *)inputpredicate;
 
 //[useDate]欄位全部改Null
 -(id)allDeleteuseDate;

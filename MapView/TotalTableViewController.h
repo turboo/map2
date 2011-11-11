@@ -60,7 +60,8 @@ enum {
     NSMutableArray *hotelDataList;
     NSMutableArray *resultDataList;
     NSArray *hotelSortString;
-    NSPredicate *hotelPredicateString;
+    NSString *hotelPredicateString;
+    NSPredicate *hotelPredicate;
     IBOutlet UISegmentedControl *FilterBtn_1;
     IBOutlet UISegmentedControl *FilterBtn_2;
     IBOutlet UISegmentedControl *FilterBtn_3;
@@ -72,7 +73,7 @@ enum {
 - (IBAction)FilterBtnAction_2:(id)sender;
 - (IBAction)FilterBtnAction_3:(id)sender;
 
-
+- (id) initWithPredicateString:(NSString *)PredicateString;
 - (void) showDetailsViewFromAnnotation:(id<MKAnnotation>)anAnnotation;
 - (void) showStreetViewFromAnnotation:(id<MKAnnotation>)anAnnotation;
 - (void) setAnnotationsWithArray:(MapAnnotation *)shownHotels;
@@ -81,8 +82,8 @@ enum {
 @property(nonatomic,retain)   NSMutableArray *hotelDataList;
 @property(nonatomic,retain)   NSMutableArray *resultDataList;
 @property(nonatomic,retain) 	NSArray *hotelSortString;
-@property(nonatomic,retain) 	NSPredicate *hotelPredicateString;
-
+@property(nonatomic,retain) 	NSPredicate *hotelPredicate;
+@property(nonatomic,retain) 	NSString *hotelPredicateString;
 @property(nonatomic,retain)		MADataStore *MAD;
 @property(nonatomic,retain)		Hotel *Hotels;
 

@@ -212,11 +212,49 @@
 							<reference ref="4"/>
 						</object>
 					</object>
+					<object class="IBUISegmentedControl" id="456543101">
+						<reference key="NSNextResponder" ref="774585933"/>
+						<int key="NSvFlags">303</int>
+						<string key="NSFrame">{{70, 162}, {174, 44}}</string>
+						<reference key="NSSuperview" ref="774585933"/>
+						<reference key="NSNextKeyView" ref="893488648"/>
+						<string key="NSReuseIdentifierKey">_NS:262</string>
+						<bool key="IBUIOpaque">NO</bool>
+						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+						<int key="IBNumberOfSegments">2</int>
+						<int key="IBSelectedSegmentIndex">0</int>
+						<object class="NSArray" key="IBSegmentTitles">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>住宿價格</string>
+							<string>休息價格</string>
+						</object>
+						<object class="NSMutableArray" key="IBSegmentWidths">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<real value="0.0"/>
+							<real value="0.0"/>
+						</object>
+						<object class="NSMutableArray" key="IBSegmentEnabledStates">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<boolean value="YES"/>
+							<boolean value="YES"/>
+						</object>
+						<object class="NSMutableArray" key="IBSegmentContentOffsets">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>{0, 0}</string>
+							<string>{0, 0}</string>
+						</object>
+						<object class="NSMutableArray" key="IBSegmentImages">
+							<bool key="EncodedWithXMLCoder">YES</bool>
+							<reference ref="4"/>
+							<reference ref="4"/>
+						</object>
+					</object>
 					<object class="IBUIButton" id="400073798">
 						<reference key="NSNextResponder" ref="774585933"/>
 						<int key="NSvFlags">303</int>
 						<string key="NSFrame">{{15, 296}, {285, 38}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
+						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:222</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -246,43 +284,6 @@
 							<string key="NSName">Helvetica</string>
 							<double key="NSSize">18</double>
 							<int key="NSfFlags">16</int>
-						</object>
-					</object>
-					<object class="IBUISegmentedControl" id="456543101">
-						<reference key="NSNextResponder" ref="774585933"/>
-						<int key="NSvFlags">303</int>
-						<string key="NSFrame">{{70, 162}, {174, 44}}</string>
-						<reference key="NSSuperview" ref="774585933"/>
-						<reference key="NSNextKeyView" ref="893488648"/>
-						<string key="NSReuseIdentifierKey">_NS:262</string>
-						<bool key="IBUIOpaque">NO</bool>
-						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-						<int key="IBNumberOfSegments">2</int>
-						<int key="IBSelectedSegmentIndex">0</int>
-						<object class="NSArray" key="IBSegmentTitles">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>住宿價格</string>
-							<string>過夜價格</string>
-						</object>
-						<object class="NSMutableArray" key="IBSegmentWidths">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<real value="0.0"/>
-							<real value="0.0"/>
-						</object>
-						<object class="NSMutableArray" key="IBSegmentEnabledStates">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<boolean value="YES"/>
-							<boolean value="YES"/>
-						</object>
-						<object class="NSMutableArray" key="IBSegmentContentOffsets">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<string>{0, 0}</string>
-							<string>{0, 0}</string>
-						</object>
-						<object class="NSMutableArray" key="IBSegmentImages">
-							<bool key="EncodedWithXMLCoder">YES</bool>
-							<reference ref="4"/>
-							<reference ref="4"/>
 						</object>
 					</object>
 				</object>
@@ -315,27 +316,27 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">WordSC</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="626895743"/>
-					</object>
-					<int key="connectionID">32</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">WordSearhText</string>
+						<string key="label">wordSearhText</string>
 						<reference key="source" ref="372490531"/>
 						<reference key="destination" ref="609289916"/>
 					</object>
-					<int key="connectionID">33</int>
+					<int key="connectionID">51</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">ChangeSC</string>
+						<string key="label">sendBtn</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="456543101"/>
+						<reference key="destination" ref="400073798"/>
 					</object>
-					<int key="connectionID">42</int>
+					<int key="connectionID">52</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">wordSC</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="626895743"/>
+					</object>
+					<int key="connectionID">53</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
@@ -343,41 +344,42 @@
 						<reference key="source" ref="372490531"/>
 						<reference key="destination" ref="893488648"/>
 					</object>
-					<int key="connectionID">44</int>
+					<int key="connectionID">59</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">nightSC</string>
+						<string key="label">staySC</string>
 						<reference key="source" ref="372490531"/>
 						<reference key="destination" ref="397785902"/>
 					</object>
-					<int key="connectionID">45</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">SBtn</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="400073798"/>
-					</object>
-					<int key="connectionID">48</int>
+					<int key="connectionID">60</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">ADsearch:</string>
+						<string key="label">changeKeywordItem:</string>
+						<reference key="source" ref="626895743"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">13</int>
+					</object>
+					<int key="connectionID">56</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">doAdvancedSearch</string>
 						<reference key="source" ref="400073798"/>
 						<reference key="destination" ref="372490531"/>
 						<int key="IBEventType">7</int>
 					</object>
-					<int key="connectionID">47</int>
+					<int key="connectionID">54</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">changeSegmentItem:</string>
+						<string key="label">changePriceItemPrice:</string>
 						<reference key="source" ref="456543101"/>
 						<reference key="destination" ref="372490531"/>
 						<int key="IBEventType">13</int>
 					</object>
-					<int key="connectionID">43</int>
+					<int key="connectionID">57</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -410,9 +412,9 @@
 							<reference ref="609289916"/>
 							<reference ref="893488648"/>
 							<reference ref="397785902"/>
-							<reference ref="400073798"/>
-							<reference ref="456543101"/>
 							<reference ref="626895743"/>
+							<reference ref="456543101"/>
+							<reference ref="400073798"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -460,6 +462,7 @@
 					<string>-2.IBPluginDependency</string>
 					<string>11.IBPluginDependency</string>
 					<string>12.IBPluginDependency</string>
+					<string>12.IUISegmentedControlInspectorSelectedSegmentMetadataKey</string>
 					<string>13.IBPluginDependency</string>
 					<string>26.IBPluginDependency</string>
 					<string>26.IUISegmentedControlInspectorSelectedSegmentMetadataKey</string>
@@ -475,9 +478,10 @@
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+					<integer value="1"/>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-					<integer value="0"/>
+					<integer value="1"/>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -495,7 +499,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">48</int>
+			<int key="maxID">60</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes"/>
 		<int key="IBDocument.localizationMode">0</int>

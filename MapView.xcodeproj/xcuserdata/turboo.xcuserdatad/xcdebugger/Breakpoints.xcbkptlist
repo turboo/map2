@@ -9,13 +9,27 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "MapView/TotalTableViewController.m"
-         timestampString = "342612279.163051"
+         timestampString = "342675064.809592"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "557"
-         endingLineNumber = "557"
+         startingLineNumber = "576"
+         endingLineNumber = "576"
          landmarkName = "-actionSheet:clickedButtonAtIndex:"
          landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "MapView/AdvancedSearch.h"
+         timestampString = "342673411.704129"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "27"
+         endingLineNumber = "27"
+         landmarkName = "wordSearhText"
+         landmarkType = "19">
       </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>
