@@ -76,11 +76,11 @@
       switch (wordSC.selectedSegmentIndex){
           case 0:
               NSLog(@"旅館名稱:%@",searchText);
-              predicateString = [predicateString stringByAppendingFormat:@" AND (displayName like %@)",searchText];
+              predicateString = [predicateString stringByAppendingFormat:@" AND (displayName contains '%@')",searchText];
               break;
           case 1:
               NSLog(@"旅館地址:%@",searchText);
-              predicateString = [predicateString stringByAppendingFormat:@" AND (address like %@)",searchText];
+              predicateString = [predicateString stringByAppendingFormat:@" AND (address contains '%@')",searchText];
               break;
       }
     }
