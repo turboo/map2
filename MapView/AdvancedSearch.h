@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SearchHotelQuery.h"
 #import "TotalTableViewController.h"
 
 @interface AdvancedSearch : UIViewController<UITextFieldDelegate>

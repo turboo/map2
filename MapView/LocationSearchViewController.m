@@ -248,19 +248,30 @@
 
 -(void)aboutUS
 {
-    UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"about us" message:nil delegate:self cancelButtonTitle:@"OK" otherButtonTitles:@"4 people", @" team",nil ] autorelease];
+    UIAlertView *alert = [[[UIAlertView alloc] initWithTitle:@"about us" message:nil delegate:self cancelButtonTitle:@"OK" otherButtonTitles:@"4 people", @"team",@"update from XML",nil ] autorelease];
     
     [alert show];
     
 }
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
-    if (buttonIndex == 0) {     // and they clicked 1.
-        NSLog(@"1 clicked");
-    }else if(buttonIndex==1){
-        NSLog(@"2 clicked");
-    }else if(buttonIndex==2){
-        NSLog(@"3 clicked");
-    }
+  
+  switch (buttonIndex) {
+    case 0:
+      NSLog(@"OK clicked");
+      break;
+    case 1:
+      NSLog(@"4 people clicked");
+      break;
+    case 2:
+      NSLog(@"team clicked");
+      break;
+    case 3:
+      NSLog(@"update from xml clicked");
+      
+      break;
+    default:
+      break;
+  }
 }
 
 - (void)viewDidUnload{
